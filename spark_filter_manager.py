@@ -200,49 +200,171 @@ def push_filter_to_device(zip_bytes, filter_filename, launch=True):
     return True
 
 
+def extract_effect_download_info(json_data):
+    """
+    Mencari URI download dan nama efek dari struktur JSON GraphQL Instagram secara rekursif.
+    """
+    found_uris = []
+    found_titles = []
+
+    def _walk(item):
+        if isinstance(item, dict):
+            for k, v in item.items():
+                if k in ("name", "title", "display_name") and isinstance(v, str) and len(v) > 0:
+                    found_titles.append(v)
+                if k in ("uri", "url", "download_url") and isinstance(v, str) and v.startswith("http"):
+                    # Prioritaskan file AR (.arfx, tar, brotli, lookaside, fbcdn)
+                    lower_v = v.lower()
+                    if any(s in lower_v for s in ["lookaside.fbsbx.com", "fbcdn.net", ".arfx", "tar", "brotli"]):
+                        found_uris.insert(0, v)
+                    else:
+                        found_uris.append(v)
+                else:
+                    _walk(v)
+        elif isinstance(item, list):
+            for x in item:
+                _walk(x)
+
+    _walk(json_data)
+    title = found_titles[0] if found_titles else None
+    # Filter URI yang relevan (bukan foto profil / thumbnail kecil jika ada asset package)
+    best_uri = None
+    for u in found_uris:
+        if any(ext in u.lower() for ext in [".arfx", "lookaside.fbsbx.com", "ardelivery", "tar", "brotli"]):
+            best_uri = u
+            break
+    if not best_uri and found_uris:
+        best_uri = found_uris[0]
+
+    return best_uri, title
+
+
 def fetch_instagram_effect(effect_url_or_id, session_id=None):
     """
-    Mengambil file .arfx dari link Instagram atau Effect ID.
-    Jika diberikan session_id (cookie akun sekunder), digunakan untuk autentikasi request.
+    Mengambil file .arfx dari link Instagram atau Effect ID menggunakan Instagram GraphQL API.
+    Memerlukan session cookie akun (sessionid) untuk query metadata resmi IGAREffectsByIdQuery.
     """
+    # 1. Cek apakah input langsung merupakan direct CDN URL
+    if effect_url_or_id.startswith("http") and any(k in effect_url_or_id for k in [".arfx", "fbcdn.net", "lookaside.fbsbx.com"]):
+        print(f"[*] Mengunduh langsung dari direct CDN URL: {effect_url_or_id}")
+        session = requests.Session()
+        dl_resp = session.get(effect_url_or_id, timeout=30)
+        if dl_resp.status_code == 200:
+            return dl_resp.content, "cdn_effect"
+        else:
+            print(f"[!] Gagal download dari CDN: HTTP {dl_resp.status_code}")
+            return None, None
+
     # Ekstrak numerik effect ID jika URL diberikan
     match = re.search(r'/ar/(\d+)', effect_url_or_id)
     effect_id = match.group(1) if match else effect_url_or_id.strip()
 
-    print(f"[*] Mengambil metadata untuk Effect ID: {effect_id}")
+    print(f"[*] Mengambil metadata via Instagram GraphQL untuk Effect ID: {effect_id}")
     
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "User-Agent": "Instagram 315.0.0.28.109 Android (34/14; 450dpi; 1080x2340; samsung; SM-A546E; a54x; s5e8835; in_ID; 557342934)",
         "X-IG-App-ID": "936619743392459",
+        "x-graphql-client-library": "minimal",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
         "Accept": "*/*",
     }
+    
     cookies = {}
     if session_id:
-        cookies["sessionid"] = session_id
+        # Dukung string cookie lengkap maupun hanya nilai sessionid
+        if "sessionid=" in session_id:
+            for part in session_id.split(";"):
+                if "=" in part:
+                    k, v = part.strip().split("=", 1)
+                    cookies[k] = v
+        else:
+            cookies["sessionid"] = session_id.strip()
 
-    # 1. Coba query info via web endpoint
-    api_url = f"https://www.instagram.com/api/v1/effects/{effect_id}/"
     session = requests.Session()
-    
-    try:
-        resp = session.get(api_url, headers=headers, cookies=cookies, timeout=15)
-        if resp.status_code == 200:
-            data = resp.json()
-            # Cari URI download
-            download_url = data.get("uri") or data.get("package", {}).get("uri")
-            title = data.get("name") or data.get("title") or f"ig_{effect_id}"
-            if download_url:
-                print(f"[+] Ditemukan download link untuk '{title}': {download_url}")
-                dl_resp = session.get(download_url, timeout=30)
-                return dl_resp.content, title
-    except Exception as e:
-        print(f"[-] Gagal pada endpoint v1: {e}")
+    graphql_endpoint = "https://i.instagram.com/api/v1/wwwgraphql/ig/query/"
 
-    # 2. Cek apakah input langsung merupakan direct CDN URL
-    if effect_url_or_id.startswith("http") and (".arfx" in effect_url_or_id or "fbcdn.net" in effect_url_or_id):
-        print(f"[*] Mengunduh langsung dari CDN URL: {effect_url_or_id}")
-        dl_resp = session.get(effect_url_or_id, timeout=30)
-        return dl_resp.content, f"filter_{effect_id}"
+    # Query 1: IGAREffectsByIdQuery (Query utama aplikasi Instagram)
+    print(f"[*] Menjalankan IGAREffectsByIdQuery...")
+    headers["X-FB-Friendly-Name"] = "IGAREffectsByIdQuery"
+    var1 = {
+        "requested_effect_ids": [effect_id],
+        "target_effect_id": effect_id,
+        "preview_width": 240,
+        "preview_height": 240,
+        "include_preview_image": True,
+        "supported_compression_types": ["TAR_BROTLI", "ZIP"],
+        "surface_identity": "INSTAGRAM__DIRECT__RTC__EFFECTS_BY_ID",
+        "formatted_media_count_enabled": True
+    }
+    data1 = {
+        "signed_body": "SIGNATURE.",
+        "client_doc_id": "221300837212613742979169665279",
+        "strip_nulls": "true",
+        "strip_defaults": "true",
+        "variables": json.dumps(var1)
+    }
+
+    try:
+        resp = session.post(graphql_endpoint, data=data1, headers=headers, cookies=cookies, timeout=15)
+        if resp.status_code == 200:
+            res_json = resp.json()
+            if "errors" in res_json and not res_json.get("data"):
+                err_msg = res_json["errors"][0].get("message", "")
+                print(f"[-] Respons GraphQL: {err_msg}")
+                if "logged out" in err_msg.lower() or "unauthorized" in err_msg.lower():
+                    print("[!] Sesi Instagram diperlukan. Silakan sertakan --session \"<sessionid>\".")
+            else:
+                download_url, title = extract_effect_download_info(res_json)
+                if download_url:
+                    effect_name = title or f"ig_{effect_id}"
+                    print(f"[+] Ditemukan file efek '{effect_name}': {download_url}")
+                    print(f"[*] Mengunduh paket filter dari CDN...")
+                    dl_resp = session.get(download_url, timeout=45)
+                    if dl_resp.status_code == 200:
+                        return dl_resp.content, effect_name
+    except Exception as e:
+        print(f"[-] Percobaan 1 gagal: {e}")
+
+    # Query 2: IGAREffectPreviewByIdQuery (Query pratinjau alternatif)
+    print(f"[*] Menjalankan IGAREffectPreviewByIdQuery (fallback)...")
+    headers["X-FB-Friendly-Name"] = "IGAREffectPreviewByIdQuery"
+    var2 = {
+        "requested_effect_ids": [effect_id],
+        "surface": "camera",
+        "device_capabilities": {
+            "manifest_capabilities": [
+                "faceTracker", "segmentation", "hairSegmentation", "worldTracker",
+                "bodyTracking", "bodyTracking3D", "deviceMotion", "halfFloatRenderPass",
+                "depthShaderRead", "multipleRenderTargets", "vertexTextureFetch",
+                "renderSettingsHigh", "sensor"
+            ],
+            "supported_sdk_versions": {"min_version": 100.0, "max_version": 204.0},
+            "supported_beta_sdk_versions": {"min_version": 182.0, "max_version": 202.0},
+            "texture_compression": "etc"
+        }
+    }
+    data2 = {
+        "signed_body": "SIGNATURE.",
+        "client_doc_id": "117635323116403746990375595472",
+        "strip_nulls": "true",
+        "strip_defaults": "true",
+        "variables": json.dumps(var2)
+    }
+
+    try:
+        resp = session.post(graphql_endpoint, data=data2, headers=headers, cookies=cookies, timeout=15)
+        if resp.status_code == 200:
+            res_json = resp.json()
+            download_url, title = extract_effect_download_info(res_json)
+            if download_url:
+                effect_name = title or f"ig_{effect_id}"
+                print(f"[+] Ditemukan file efek '{effect_name}': {download_url}")
+                print(f"[*] Mengunduh paket filter dari CDN...")
+                dl_resp = session.get(download_url, timeout=45)
+                if dl_resp.status_code == 200:
+                    return dl_resp.content, effect_name
+    except Exception as e:
+        print(f"[-] Percobaan 2 gagal: {e}")
 
     return None, None
 
