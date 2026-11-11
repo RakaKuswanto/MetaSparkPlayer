@@ -1,0 +1,6 @@
+# Daftar Filter AR Instagram untuk Batch Fetch
+# Baris komentar dan baris kosong akan diabaikan secara otomatis
+# Format per baris: <URL atau ID Efek> [, <Nama Filter Opsional>]
+
+# Filter 1: Direct CDN dengan nama kustom (menguji sanitasi nama emoji & simbol)
+https://instagram.fcgk6-3.fna.fbcdn.net/v/t39.9024-6/323920324_574720087774114_7314154960901777720_n.bin?_nc_cat=1&ccb=7-5&_nc_sid=baab1e&_nc_ohc=9s7YAZAUs3YQ7kNvwHXIr-F&_nc_oc=AdriuFNQMw0bOjLPN0yndJeqzZsQgt-DtbFtle__D9-Hx91PKYxorGndoi1IfxOSbW4&_nc_ad=z-m&_nc_cid=0&_nc_zt=9&_nc_ht=instagram.fcgk6-3.fna&_nc_gid=HXVhS5hISJzSoinkitrH6g&_nc_ss=703ba&oh=00_AQQHPLxbJXPrCjrg_qCLT7zIqZUtscQhd5gWBKS61UfToQ&oe=6AF9D7F0, Vintage Cinema ✨

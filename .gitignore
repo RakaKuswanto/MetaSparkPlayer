@@ -35,3 +35,17 @@ bundletool-all-1.18.2.jar
 # Test / filter sample files
 *.arexport
 *.arfx
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Configuration & Credentials
+config.json
+.spark_config.json
+*.session
+
+# Local downloaded filters folder
+downloaded_filters/
+
+

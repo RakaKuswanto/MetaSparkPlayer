@@ -61,21 +61,69 @@ Script akan otomatis:
 
 ## ⚡ Spark Filter Manager (CLI Helper)
 
-Untuk mempermudah pengelolaan dan sinkronisasi filter dari PC ke HP tanpa harus membuka file satu per satu, disediakan script CLI **`spark_filter_manager.py`**:
+Untuk mempermudah pengelolaan, pengunduhan, pem-patch-an SDK ke 175.0, dan sinkronisasi filter dari PC ke HP tanpa harus membuka file satu per satu, disediakan script CLI **`spark_filter_manager.py`**:
 
+### 1. Manajemen Sesi Instagram (`auth`)
+Simpan cookie `sessionid` akun sekunder sekali saja di `config.json` lokal (file ini aman dan otomatis diabaikan oleh `.gitignore`):
 ```bash
-# 1. Patch & Push 1 filter lokal ke HP (langsung aktif di kamera):
+# Simpan cookie sessionid akun
+python spark_filter_manager.py auth set "12345678%3A..."
+
+# Lihat status sesi saat ini (tersamar secara aman)
+python spark_filter_manager.py auth show
+
+# Uji apakah sesi aktif atau kadaluarsa via live Instagram GraphQL ping
+python spark_filter_manager.py auth check
+
+# Hapus sesi tersimpan
+python spark_filter_manager.py auth clear
+```
+
+### 2. Download Efek Tunggal (`fetch`)
+Unduh filter langsung menggunakan Effect ID, link Instagram, atau CDN URL. Sesi tersimpan di `config.json` akan otomatis digunakan tanpa perlu mengetik ulang `--session`:
+```bash
+# Download via URL efek Instagram (otomatis patch SDK 175 & push ke kamera HP)
+python spark_filter_manager.py fetch "https://www.instagram.com/ar/703846377811561"
+
+# Simpan ke riwayat HP tanpa membuka kamera otomatis
+python spark_filter_manager.py fetch "703846377811561" --no-launch
+
+# Hanya unduh dan simpan lokal di PC (tanpa push via ADB)
+python spark_filter_manager.py fetch "703846377811561" --no-push
+```
+
+### 3. Batch Download dari File Daftar (`fetch-list`)
+Unduh banyak filter sekaligus secara berurutan dari file teks:
+```bash
+# Download semua filter yang terdaftar di sample_filters.txt
+python spark_filter_manager.py fetch-list sample_filters.txt
+
+# Download dengan jeda 3 detik dan hanya buka kamera pada filter terakhir
+python spark_filter_manager.py fetch-list filters.txt --delay 3.0 --launch-last
+
+# Format isi file teks (mendukung komentar '#', URL, ID, dan nama kustom):
+# https://www.instagram.com/ar/703846377811561
+# 703846377811561, Filter Keren Saya
+# https://instagram.../filter.bin | Vintage Film
+```
+
+### 4. Push & Batch Folder Lokal
+```bash
+# Patch & Push 1 file filter lokal (.arexport / .arfx):
 python spark_filter_manager.py push "path/to/filter.arexport" --name "Quiz_Otak"
 
-# 2. Patch & Push filter mentah dari CDN Instagram (.arfx / .tar.br):
-python spark_filter_manager.py push "275421100_..._n.arfx" --name "IG_Face_Tattoo"
-
-# 3. Batch import semua filter di dalam satu folder sekaligus ke History HP:
+# Batch import seluruh folder filter lokal ke riwayat player HP:
 python spark_filter_manager.py batch "D:/Downloads/My_Filters"
-
-# 4. Fetch langsung dari CDN / Instagram link (opsional dengan sessionid akun sekunder):
-python spark_filter_manager.py fetch "https://...fbcdn.net/...arfx" --name "Keren"
 ```
+
+### 5. Otomatisasi Penamaan & Katalog Metadata (`informasi.json`)
+Setiap kali filter diunduh via `fetch` atau `fetch-list`:
+- **Auto Safe-Naming**: Nama efek yang mengandung font matematika Unicode (misal `Cinematic 𝐇𝐃`), emoji, atau simbol terlarang Windows/Linux otomatis dinormalisasi menjadi nama aman (contoh: `Cinematic HD.arfx`).
+- **File Output**:
+  - `downloaded_filters/<NamaFilter>.arfx` (File paket siap pakai yang sudah dipatch ke SDK 175.0)
+  - `downloaded_filters/<NamaFilter>.info.json` (Detail metadata individual filter)
+  - `downloaded_filters/informasi.json` (Katalog master berformat JSON yang mendata seluruh filter, tanggal unduh, versi SDK asli, MD5 hash, dan URL unduhan)
+
 
 ---
 
