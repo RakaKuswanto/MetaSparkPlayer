@@ -59,6 +59,26 @@ Script akan otomatis:
 
 ---
 
+## ⚡ Spark Filter Manager (CLI Helper)
+
+Untuk mempermudah pengelolaan dan sinkronisasi filter dari PC ke HP tanpa harus membuka file satu per satu, disediakan script CLI **`spark_filter_manager.py`**:
+
+```bash
+# 1. Patch & Push 1 filter lokal ke HP (langsung aktif di kamera):
+python spark_filter_manager.py push "path/to/filter.arexport" --name "Quiz_Otak"
+
+# 2. Patch & Push filter mentah dari CDN Instagram (.arfx / .tar.br):
+python spark_filter_manager.py push "275421100_..._n.arfx" --name "IG_Face_Tattoo"
+
+# 3. Batch import semua filter di dalam satu folder sekaligus ke History HP:
+python spark_filter_manager.py batch "D:/Downloads/My_Filters"
+
+# 4. Fetch langsung dari CDN / Instagram link (opsional dengan sessionid akun sekunder):
+python spark_filter_manager.py fetch "https://...fbcdn.net/...arfx" --name "Keren"
+```
+
+---
+
 ## 📁 Struktur Proyek
 
 ```text
@@ -70,6 +90,7 @@ MetaSparkStudio/
 │   ├── AndroidManifest.xml               # Manifest modifikasi (debuggable, permissions)
 │   ├── smali_classes2/                   # Hook EffectListActivity & MainActivity
 │   └── smali_classes4/                   # Injeksi ArfxLoader & Brotli runtime
+├── spark_filter_manager.py               # CLI Sync & Downloader tool (PC -> HP ADB)
 ├── brotli-dec.jar                        # Pure-Java library dekompresi Brotli stream
 ├── my-debug.keystore                     # Keystore penandatangan APK (alias: mykey)
 ├── build.bat                             # Script 1-klik build & sign APK
