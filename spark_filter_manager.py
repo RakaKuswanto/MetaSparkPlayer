@@ -201,6 +201,8 @@ def push_filter_to_device(zip_bytes, filter_filename, launch=True):
             "-e", "effect_id", effect_id
         ], device=device)
         print(f"[+] Selesai! Filter aktif di layar kamera.")
+    else:
+        print(f"[*] Mode --no-launch: Filter tersimpan di History player HP (kamera tidak dibuka otomatis).")
     return True
 
 
@@ -451,7 +453,8 @@ def main():
     p_fetch.add_argument("target", help="Link Instagram (/ar/<id>), Effect ID, atau direct CDN URL")
     p_fetch.add_argument("--session", help="Session ID cookie akun sekunder (opsional)", default=None)
     p_fetch.add_argument("--name", help="Nama filter kustom", default=None)
-    p_fetch.add_argument("--no-launch", action="store_true", help="Jangan langsung buka kamera HP")
+    p_fetch.add_argument("--no-launch", action="store_true", help="Jangan langsung buka kamera HP (hanya simpan di History)")
+    p_fetch.add_argument("--no-push", action="store_true", help="Hanya unduh dan simpan lokal di PC, jangan push via ADB")
 
     args = parser.parse_args()
 
@@ -521,7 +524,19 @@ def main():
         
         final_name = (args.name or detected_title or target_name) + ".arfx"
         final_name = re.sub(r'[\/:*?"<>|]', '_', final_name).strip()
-        push_filter_to_device(zip_bytes, final_name, launch=not args.no_launch)
+
+        # Simpan salinan file .arfx yang sudah dipatch di direktori lokal PC
+        local_dir = os.path.join(os.getcwd(), "downloaded_filters")
+        os.makedirs(local_dir, exist_ok=True)
+        local_path = os.path.join(local_dir, final_name)
+        with open(local_path, "wb") as f:
+            f.write(zip_bytes)
+        print(f"[+] Salinan lokal tersimpan di: {local_path}")
+
+        if args.no_push:
+            print(f"[*] Mode --no-push aktif: Melewati upload ADB ke HP.")
+        else:
+            push_filter_to_device(zip_bytes, final_name, launch=not args.no_launch)
 
 
 if __name__ == "__main__":
