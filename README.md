@@ -107,7 +107,100 @@ python spark_filter_manager.py fetch-list filters.txt --delay 3.0 --launch-last
 # https://instagram.../filter.bin | Vintage Film
 ```
 
-### 4. Push & Batch Folder Lokal
+### 4. Jelajah Galeri Filter AR Instagram (`explore`)
+Jelajahi dan pilih filter AR langsung dari galeri resmi Instagram (`TRENDING`, `FOR_YOU`, `APPEARANCE`, `STUDIO`, `GAMES`, `HUMOR`, `SPECIAL_EFFECTS`, `SAVED`):
+```bash
+# Lihat daftar kategori resmi Instagram
+python spark_filter_manager.py explore --list-categories
+
+# Tampilkan tabel filter yang sedang tren (TRENDING)
+python spark_filter_manager.py explore TRENDING
+
+# Tampilkan filter kategori estetis (STUDIO)
+python spark_filter_manager.py explore STUDIO
+
+# Unduh filter nomor 1 dari galeri dan langsung pasang ke kamera HP
+python spark_filter_manager.py explore TRENDING --download 1
+
+# Unduh beberapa filter sekaligus (nomor 1, 3, dan 5)
+python spark_filter_manager.py explore TRENDING --download 1,3,5
+
+# Unduh rentang nomor 1 sampai 5
+python spark_filter_manager.py explore TRENDING --download 1-5
+
+# Unduh semua filter dalam kategori
+python spark_filter_manager.py explore GAMES --download-all
+
+# Ekspor seluruh daftar filter kategori ke file teks untuk dipakai di fetch-list
+python spark_filter_manager.py explore TRENDING --save-list daftar_trending.txt
+```
+
+### 5. Pencarian Filter AR Berdasarkan Kata Kunci (`search`)
+Cari efek AR di seluruh kategori galeri atau di kategori tertentu berdasarkan judul atau nama kreator:
+```bash
+# Cari semua filter yang mengandung kata "iphone"
+python spark_filter_manager.py search "iphone"
+
+# Cari filter vintage hanya di kategori estetis (STUDIO)
+python spark_filter_manager.py search "vintage" --category STUDIO
+
+# Cari dan langsung unduh hasil nomor 1
+python spark_filter_manager.py search "aesthetic" --download 1
+
+# Ekspor hasil pencarian ke file teks
+python spark_filter_manager.py search "cyberpunk" --save-list cyberpunk_filters.txt
+```
+
+### 6. Filter Tersimpan di Akun Anda (`saved`)
+Tampilkan dan unduh seluruh koleksi efek AR yang Anda bookmark / simpan di akun Instagram Anda:
+```bash
+# Tampilkan daftar filter yang Anda simpan di Instagram
+python spark_filter_manager.py saved
+
+# Unduh semua filter tersimpan di akun Anda dan sinkronkan ke HP
+python spark_filter_manager.py saved --download-all
+
+# Ekspor daftar filter tersimpan ke file
+python spark_filter_manager.py saved --save-list koleksi_saya.txt
+```
+
+### 7. Audit & Inspeksi Teknis Efek (`info`)
+Periksa spesifikasi teknis mendalam suatu filter sebelum mengunduh (fitur AR apa saja yang dipakai, versi SDK asli, ukuran file terkompresi vs hasil unpack, MD5 hash, dan link CDN langsung):
+```bash
+# Inspeksi efek via Effect ID atau Link Instagram
+python spark_filter_manager.py info 703846377811561
+python spark_filter_manager.py info "https://www.instagram.com/ar/470585988662298"
+```
+Contoh output audit:
+```text
+================================================================================
+AUDIT & SPESIFIKASI TEKNIS FILTER AR INSTAGRAM
+================================================================================
+ID Efek               : 703846377811561
+Judul Efek            : Cinematic 𝐇𝐃
+Nama File Bersih      : Cinematic HD.arfx
+Kreator / Pemilik     : @creators
+Versi SDK Asli        : 153.0
+Target SDK Player     : 175.0 (Auto-patched untuk Meta Spark Player)
+Ukuran Paket (CDN)    : 1.16 MB (1,218,061 bytes)
+Ukuran Setelah Unpack : 1.47 MB (1,541,229 bytes)
+Tipe Kompresi         : TAR_BROTLI
+MD5 Checksum          : 164e714c57b9e183a57060eadebe1758
+
+Fitur & Kemampuan AR (Capabilities) [9 fitur terdeteksi]:
+  * Pelacak Wajah (Face Tracking) [maxFaces: 5]
+  * Instruksi Interaktif Layar (Tap / Gesture Prompts) [gestur: tap_to_change, tap_and_slide_to_change]
+  * Komputasi Logika (Variadic Math)
+  * Pelacakan Wajah 3D
+  * 96 Titik Landmark Wajah
+  * Shader Visual / Visual Shaders
+  * Evaluasi Komponen Realtime
+  * Penghalus Kulit (Skin Retouch / Smoothing)
+  * Distorsi Citra Akurat (Sharp Warp)
+================================================================================
+```
+
+### 8. Push & Batch Folder Lokal
 ```bash
 # Patch & Push 1 file filter lokal (.arexport / .arfx):
 python spark_filter_manager.py push "path/to/filter.arexport" --name "Quiz_Otak"
@@ -116,8 +209,8 @@ python spark_filter_manager.py push "path/to/filter.arexport" --name "Quiz_Otak"
 python spark_filter_manager.py batch "D:/Downloads/My_Filters"
 ```
 
-### 5. Otomatisasi Penamaan & Katalog Metadata (`informasi.json`)
-Setiap kali filter diunduh via `fetch` atau `fetch-list`:
+### 9. Otomatisasi Penamaan & Katalog Metadata (`informasi.json`)
+Setiap kali filter diunduh via `fetch`, `fetch-list`, `explore`, atau `search`:
 - **Auto Safe-Naming**: Nama efek yang mengandung font matematika Unicode (misal `Cinematic 𝐇𝐃`), emoji, atau simbol terlarang Windows/Linux otomatis dinormalisasi menjadi nama aman (contoh: `Cinematic HD.arfx`).
 - **File Output**:
   - `downloaded_filters/<NamaFilter>.arfx` (File paket siap pakai yang sudah dipatch ke SDK 175.0)

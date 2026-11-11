@@ -19,6 +19,7 @@ import argparse
 import subprocess
 import unicodedata
 from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor
 import requests
 
 # Konfigurasi encoding stdout/stderr agar aman di Windows console
@@ -41,6 +42,76 @@ MAIN_ACTIVITY = f"{PACKAGE_NAME}/.MainActivity"
 CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
 DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "downloaded_filters")
 CATALOG_FILE = os.path.join(DOWNLOAD_DIR, "informasi.json")
+
+# Kategori resmi Galeri Efek Instagram (dari IGAREffectsGalleryCategoriesQuery)
+OFFICIAL_CATEGORIES = {
+    "TRENDING": "Sedang Tren (Viral Global Instagram)",
+    "FOR_YOU": "Untuk Anda (Rekomendasi Personal)",
+    "APPEARANCE": "Tampilan & Makeup (Beauty)",
+    "STUDIO": "Estetis & Filter Mood/Warna (Color Grading)",
+    "GAMES": "Game & Filter Interaktif (Interaksi Wajah/Tangan)",
+    "HUMOR": "Humor & Efek Lucu (Meme)",
+    "SPECIAL_EFFECTS": "Efek Khusus & Sci-Fi (World AR / Shaders)",
+    "SAVED": "Tersimpan (Koleksi Bookmark Akun Instagram Anda)"
+}
+
+CATEGORY_ALIASES = {
+    "trend": "TRENDING",
+    "trending": "TRENDING",
+    "tren": "TRENDING",
+    "viral": "TRENDING",
+    "foryou": "FOR_YOU",
+    "for_you": "FOR_YOU",
+    "rekomendasi": "FOR_YOU",
+    "appearance": "APPEARANCE",
+    "tampilan": "APPEARANCE",
+    "makeup": "APPEARANCE",
+    "beauty": "APPEARANCE",
+    "studio": "STUDIO",
+    "estetis": "STUDIO",
+    "aesthetic": "STUDIO",
+    "warna": "STUDIO",
+    "games": "GAMES",
+    "game": "GAMES",
+    "interaktif": "GAMES",
+    "humor": "HUMOR",
+    "lucu": "HUMOR",
+    "komedi": "HUMOR",
+    "special": "SPECIAL_EFFECTS",
+    "special_effects": "SPECIAL_EFFECTS",
+    "efek_khusus": "SPECIAL_EFFECTS",
+    "scifi": "SPECIAL_EFFECTS",
+    "saved": "SAVED",
+    "tersimpan": "SAVED",
+    "bookmark": "SAVED"
+}
+
+CAPABILITY_DESCRIPTIONS = {
+    "faceTracker": "Pelacak Wajah (Face Tracking)",
+    "faceTracker3D": "Pelacakan Wajah 3D",
+    "exposeFaceTracker96": "96 Titik Landmark Wajah",
+    "faceWarp": "Distorsi / Deformasi Wajah (Face Mesh Warp)",
+    "skinSmoothing": "Penghalus Kulit (Skin Retouch / Smoothing)",
+    "hairSegmentation": "Segmentasi Rambut (Hair Color / Mask)",
+    "segmentation": "Segmentasi Orang / Background Cutout",
+    "bodyTracking": "Pelacak Gerakan Tubuh (Body Tracking)",
+    "bodyTracking3D": "Pelacak Tubuh 3D (3D Body Pose)",
+    "handTracking": "Pelacak Gerakan Tangan (Hand Tracking)",
+    "worldTracker": "Pelacak Bidang Datar Dunia Nyata (Plane / World AR)",
+    "visualShaders": "Shader Visual / Visual Shaders",
+    "visualShadersSdf": "SDF Visual Shaders",
+    "composedMaterial": "Material Berlapis (Composed Materials)",
+    "sharpWarp": "Distorsi Citra Akurat (Sharp Warp)",
+    "variadicMath": "Komputasi Logika (Variadic Math)",
+    "componentEvaluation": "Evaluasi Komponen Realtime",
+    "instruction": "Instruksi Interaktif Layar (Tap / Gesture Prompts)",
+    "audio": "Pemrosesan Audio / Mikrofon",
+    "touchGestures": "Deteksi Sentuhan Layar (Touch Gestures)",
+    "deviceMotion": "Sensor Gerak HP (Gyroscope / Accelerometer)",
+    "depthShaderRead": "Membaca Peta Kedalaman (Depth Buffer)",
+    "renderSettingsHigh": "Pengaturan Rendering Kualitas Tinggi",
+    "targetTracking": "Pelacak Gambar / Target Image Marker"
+}
 
 
 # ==========================================
@@ -408,6 +479,10 @@ def extract_effect_metadata(json_data, target_id=None):
     - compression_type
     - md5_hash
     - icon_url
+    - sdk_version
+    - filesize_bytes
+    - uncompressed_filesize_bytes
+    - manifest_json
     """
     metadata = {
         "id": target_id,
@@ -416,7 +491,11 @@ def extract_effect_metadata(json_data, target_id=None):
         "download_url": None,
         "compression_type": None,
         "md5_hash": None,
-        "icon_url": None
+        "icon_url": None,
+        "sdk_version": None,
+        "filesize_bytes": None,
+        "uncompressed_filesize_bytes": None,
+        "manifest_json": None
     }
     fallback_urls = []
 
@@ -454,6 +533,14 @@ def extract_effect_metadata(json_data, target_id=None):
                         elif isinstance(val, dict) and "uri" in val:
                             metadata["icon_url"] = val["uri"]
 
+            # Cek best_instance
+            if "best_instance" in item and isinstance(item["best_instance"], dict):
+                bi = item["best_instance"]
+                if not metadata["sdk_version"] and "required_sdk_version" in bi:
+                    metadata["sdk_version"] = bi.get("required_sdk_version")
+                if not metadata["manifest_json"] and "manifest_json" in bi:
+                    metadata["manifest_json"] = bi.get("manifest_json")
+
             # Cek packaged_file pada best_instance atau root
             candidates = []
             if "best_instance" in item and isinstance(item["best_instance"], dict):
@@ -470,6 +557,10 @@ def extract_effect_metadata(json_data, target_id=None):
                         metadata["download_url"] = uri
                         metadata["compression_type"] = pf.get("compression_type")
                         metadata["md5_hash"] = pf.get("md5_hash")
+                        if not metadata["filesize_bytes"] and "filesize_bytes" in pf:
+                            metadata["filesize_bytes"] = pf.get("filesize_bytes")
+                        if not metadata["uncompressed_filesize_bytes"] and "uncompressed_filesize_bytes" in pf:
+                            metadata["uncompressed_filesize_bytes"] = pf.get("uncompressed_filesize_bytes")
 
             for k, v in item.items():
                 if k in ("uri", "url", "download_url") and isinstance(v, str) and v.startswith("http"):
@@ -744,6 +835,684 @@ def check_instagram_session(session_id):
 
 
 # ==========================================
+# UTILITAS FORMAT & SELEKSI
+# ==========================================
+
+def format_bytes(num_bytes):
+    """Mengubah ukuran bytes ke representasi KB / MB yang mudah dibaca."""
+    if not num_bytes or not isinstance(num_bytes, (int, float)):
+        return "-"
+    if num_bytes < 1024:
+        return f"{num_bytes} B"
+    elif num_bytes < 1024 * 1024:
+        return f"{num_bytes / 1024:.1f} KB"
+    else:
+        return f"{num_bytes / (1024 * 1024):.2f} MB"
+
+
+def resolve_category_key(raw_input):
+    """Mencocokkan alias atau nama kategori input dengan key resmi Instagram."""
+    if not raw_input:
+        return "TRENDING"
+    clean = str(raw_input).strip().lower()
+    if clean in CATEGORY_ALIASES:
+        return CATEGORY_ALIASES[clean]
+    upper = str(raw_input).strip().upper()
+    if upper in OFFICIAL_CATEGORIES:
+        return upper
+    return upper
+
+
+def parse_selection_indices(selection_str, max_len):
+    """
+    Mengurai string seleksi seperti '1', '1,3,5', '1-5', 'all'.
+    Mengembalikan daftar index 0-based yang valid.
+    """
+    if not selection_str:
+        return []
+    s = str(selection_str).strip().lower()
+    if s == "all":
+        return list(range(max_len))
+    indices = set()
+    parts = s.split(",")
+    for part in parts:
+        part = part.strip()
+        if not part:
+            continue
+        if "-" in part:
+            sub = part.split("-", 1)
+            try:
+                start = int(sub[0])
+                end = int(sub[1])
+                for idx in range(min(start, end), max(start, end) + 1):
+                    if 1 <= idx <= max_len:
+                        indices.add(idx - 1)
+            except ValueError:
+                pass
+        else:
+            try:
+                idx = int(part)
+                if 1 <= idx <= max_len:
+                    indices.add(idx - 1)
+            except ValueError:
+                pass
+    return sorted(list(indices))
+
+
+# ==========================================
+# QUERY GALERI & INSPEKSI EFEK INSTAGRAM
+# ==========================================
+
+def fetch_gallery_categories(session_id=None):
+    """
+    Mengambil daftar kategori galeri efek resmi dari Instagram via IGAREffectsGalleryCategoriesQuery.
+    """
+    endpoint = "https://i.instagram.com/api/v1/wwwgraphql/ig/query/"
+    headers = {
+        "User-Agent": "Instagram 315.0.0.28.109 Android (34/14; 450dpi; 1080x2340; samsung; SM-A546E; a54x; s5e8835; in_ID; 557342934)",
+        "X-IG-App-ID": "936619743392459",
+        "x-graphql-client-library": "minimal",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "Accept": "*/*",
+        "X-FB-Friendly-Name": "IGAREffectsGalleryCategoriesQuery"
+    }
+    cookies = {}
+    if session_id:
+        if "sessionid=" in session_id:
+            for part in session_id.split(";"):
+                if "=" in part:
+                    k, v = part.strip().split("=", 1)
+                    cookies[k] = v
+        else:
+            cookies["sessionid"] = session_id.strip()
+
+    device_caps = {
+        "manifest_capabilities": ["faceTracker", "segmentation", "worldTracker"],
+        "supported_sdk_versions": {"min_version": 100.0, "max_version": 204.0},
+        "supported_beta_sdk_versions": {"min_version": 182.0, "max_version": 202.0},
+        "texture_compression": "etc"
+    }
+    var = {"product": "STORIES", "device_capabilities": device_caps}
+    data = {
+        "signed_body": "SIGNATURE.",
+        "client_doc_id": "336239785817217212229034758422",
+        "strip_nulls": "true",
+        "strip_defaults": "true",
+        "variables": json.dumps(var)
+    }
+
+    try:
+        session = requests.Session()
+        resp = session.post(endpoint, data=data, headers=headers, cookies=cookies, timeout=10)
+        if resp.status_code == 200:
+            j = resp.json()
+            cats = j.get("data", {}).get("ar_effect_categories", {}).get("product_categories", [])
+            if cats:
+                res = {}
+                for c in cats:
+                    cid = c.get("product_category_identifier")
+                    dname = c.get("display_name")
+                    if cid and dname:
+                        res[cid] = dname
+                return res
+    except Exception:
+        pass
+    return OFFICIAL_CATEGORIES
+
+
+def fetch_category_effects(category_key="TRENDING", session_id=None):
+    """
+    Mengambil daftar efek AR dalam kategori tertentu menggunakan IGAREffectCollectionQuery.
+    Mengembalikan tuple: (display_name: str, effects_list: list).
+    """
+    resolved_cat = resolve_category_key(category_key)
+    endpoint = "https://i.instagram.com/api/v1/wwwgraphql/ig/query/"
+    headers = {
+        "User-Agent": "Instagram 315.0.0.28.109 Android (34/14; 450dpi; 1080x2340; samsung; SM-A546E; a54x; s5e8835; in_ID; 557342934)",
+        "X-IG-App-ID": "936619743392459",
+        "x-graphql-client-library": "minimal",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "Accept": "*/*",
+        "X-FB-Friendly-Name": "IGAREffectCollectionQuery"
+    }
+    cookies = {}
+    if session_id:
+        if "sessionid=" in session_id:
+            for part in session_id.split(";"):
+                if "=" in part:
+                    k, v = part.strip().split("=", 1)
+                    cookies[k] = v
+        else:
+            cookies["sessionid"] = session_id.strip()
+
+    device_caps = {
+        "manifest_capabilities": [
+            "faceTracker", "segmentation", "hairSegmentation", "worldTracker",
+            "bodyTracking", "bodyTracking3D", "deviceMotion", "halfFloatRenderPass",
+            "depthShaderRead", "multipleRenderTargets", "vertexTextureFetch",
+            "renderSettingsHigh", "sensor"
+        ],
+        "supported_sdk_versions": {"min_version": 100.0, "max_version": 204.0},
+        "supported_beta_sdk_versions": {"min_version": 182.0, "max_version": 202.0},
+        "texture_compression": "etc"
+    }
+
+    var = {
+        "product": "STORIES",
+        "product_category_identifier": resolved_cat,
+        "device_capabilities": device_caps,
+        "preview_width": 240,
+        "preview_height": 240,
+        "supported_compression_types": ["TAR_BROTLI", "ZIP"]
+    }
+    data = {
+        "signed_body": "SIGNATURE.",
+        "client_doc_id": "224196792816793989860755450137",
+        "strip_nulls": "true",
+        "strip_defaults": "true",
+        "variables": json.dumps(var)
+    }
+
+    try:
+        session = requests.Session()
+        resp = session.post(endpoint, data=data, headers=headers, cookies=cookies, timeout=15)
+        if resp.status_code != 200:
+            return None, []
+        j = resp.json()
+        res = j.get("data", {}).get("ar_effect_categories", {}).get("results", {})
+        display_name = res.get("display_name") or OFFICIAL_CATEGORIES.get(resolved_cat, resolved_cat)
+        raw_effects = res.get("effect_page", {}).get("effects", [])
+
+        parsed_effects = []
+        for eff in raw_effects:
+            eff_id = eff.get("id")
+            raw_title = eff.get("name")
+            clean_title = sanitize_filename(raw_title, fallback=f"filter_{eff_id}")
+            author = eff.get("attribution_user", {}).get("username") if isinstance(eff.get("attribution_user"), dict) else None
+            bi = eff.get("best_instance") or {}
+            pf = bi.get("packaged_file") or {}
+            sdk = bi.get("required_sdk_version") or "unknown"
+            manifest_raw = bi.get("manifest_json")
+            caps = []
+            if manifest_raw:
+                try:
+                    m = json.loads(manifest_raw)
+                    caps = [c.get("name") for c in m.get("capabilities", []) if c.get("name")]
+                except Exception:
+                    pass
+
+            item = {
+                "id": eff_id,
+                "title": raw_title,
+                "clean_title": clean_title,
+                "author": author,
+                "sdk_version": sdk,
+                "capabilities": caps,
+                "filesize_bytes": pf.get("filesize_bytes"),
+                "uncompressed_filesize_bytes": pf.get("uncompressed_filesize_bytes"),
+                "compression_type": pf.get("compression_type"),
+                "md5_hash": pf.get("md5_hash"),
+                "download_url": pf.get("uri"),
+                "category": resolved_cat,
+                "category_name": display_name
+            }
+            parsed_effects.append(item)
+
+        return display_name, parsed_effects
+    except Exception as e:
+        print(f"[!] Error fetching category {resolved_cat}: {e}")
+        return None, []
+
+
+def search_gallery_effects(keyword, category_key=None, session_id=None):
+    """
+    Mencari efek AR berdasarkan judul atau username kreator di kategori tertentu atau seluruh kategori.
+    """
+    if category_key:
+        cats_to_query = [resolve_category_key(category_key)]
+    else:
+        cats_to_query = list(OFFICIAL_CATEGORIES.keys())
+
+    def _worker(cat):
+        _, effs = fetch_category_effects(cat, session_id=session_id)
+        return effs
+
+    with ThreadPoolExecutor(max_workers=min(len(cats_to_query), 6)) as ex:
+        results_lists = list(ex.map(_worker, cats_to_query))
+
+    all_matched = []
+    seen_ids = set()
+    kw = keyword.strip().lower()
+
+    for eff_list in results_lists:
+        for eff in eff_list:
+            eid = eff.get("id")
+            if eid in seen_ids:
+                continue
+            title = (eff.get("title") or "").lower()
+            clean_t = (eff.get("clean_title") or "").lower()
+            author = (eff.get("author") or "").lower()
+            if kw in title or kw in clean_t or kw in author or kw == str(eid):
+                seen_ids.add(eid)
+                all_matched.append(eff)
+
+    return all_matched
+
+
+def inspect_effect_info(effect_url_or_id, session_id=None):
+    """
+    Mengaudit spesifikasi teknis mendalam dari suatu efek AR:
+    - ID, Nama asli & nama sanitasi, Author
+    - Versi SDK asli vs target 175.0
+    - Ukuran paket (compressed & uncompressed)
+    - Hash MD5 & Tipe Kompresi
+    - Fitur & Kemampuan AR (Capabilities)
+    - URL Download CDN
+    """
+    match = re.search(r'/ar/(\d+)', effect_url_or_id)
+    if not match:
+        match = re.search(r'effect_id=(\d+)', effect_url_or_id)
+    effect_id = match.group(1) if match else effect_url_or_id.strip()
+
+    endpoint = "https://i.instagram.com/api/v1/wwwgraphql/ig/query/"
+    headers = {
+        "User-Agent": "Instagram 315.0.0.28.109 Android (34/14; 450dpi; 1080x2340; samsung; SM-A546E; a54x; s5e8835; in_ID; 557342934)",
+        "X-IG-App-ID": "936619743392459",
+        "x-graphql-client-library": "minimal",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "Accept": "*/*",
+        "X-FB-Friendly-Name": "IGAREffectsByIdQuery"
+    }
+    cookies = {}
+    if session_id:
+        if "sessionid=" in session_id:
+            for part in session_id.split(";"):
+                if "=" in part:
+                    k, v = part.strip().split("=", 1)
+                    cookies[k] = v
+        else:
+            cookies["sessionid"] = session_id.strip()
+
+    device_caps = {
+        "manifest_capabilities": [
+            "faceTracker", "segmentation", "hairSegmentation", "worldTracker",
+            "bodyTracking", "bodyTracking3D", "deviceMotion", "halfFloatRenderPass",
+            "depthShaderRead", "multipleRenderTargets", "vertexTextureFetch",
+            "renderSettingsHigh", "sensor"
+        ],
+        "supported_sdk_versions": {"min_version": 100.0, "max_version": 204.0},
+        "supported_beta_sdk_versions": {"min_version": 182.0, "max_version": 202.0},
+        "texture_compression": "etc"
+    }
+
+    var = {
+        "device_capabilities": device_caps,
+        "target_effect_params": {"effect_id": effect_id},
+        "requested_effect_ids": [effect_id],
+        "target_effect_id": effect_id,
+        "preview_width": 240,
+        "preview_height": 240,
+        "include_preview_image": False,
+        "supported_compression_types": ["TAR_BROTLI", "ZIP"],
+        "formatted_media_count_enabled": False
+    }
+    data = {
+        "signed_body": "SIGNATURE.",
+        "client_doc_id": "221300837212613742979169665279",
+        "strip_nulls": "true",
+        "strip_defaults": "true",
+        "variables": json.dumps(var)
+    }
+
+    try:
+        session = requests.Session()
+        resp = session.post(endpoint, data=data, headers=headers, cookies=cookies, timeout=15)
+        if resp.status_code != 200:
+            print(f"[!] Gagal mengambil info dari server: HTTP {resp.status_code}")
+            return None
+
+        j = resp.json()
+        effects = j.get("data", {}).get("ar_effects", {}).get("effects_by_id", [])
+        if not effects:
+            target_eff = j.get("data", {}).get("ar_effects", {}).get("target_effect")
+            if target_eff:
+                effects = [target_eff]
+
+        if not effects:
+            print(f"[-] Efek dengan ID '{effect_id}' tidak ditemukan di respons GraphQL.")
+            return None
+
+        eff = effects[0]
+        name = eff.get("name")
+        clean_name = sanitize_filename(name, fallback=f"filter_{effect_id}")
+        author = eff.get("attribution_user", {}).get("username") if eff.get("attribution_user") else "unknown"
+        bi = eff.get("best_instance") or {}
+        pf = bi.get("packaged_file") or {}
+        sdk = bi.get("required_sdk_version") or "unknown"
+        manifest_raw = bi.get("manifest_json")
+
+        caps_parsed = []
+        if manifest_raw:
+            try:
+                m = json.loads(manifest_raw)
+                for c in m.get("capabilities", []):
+                    cname = c.get("name")
+                    cfg = c.get("config")
+                    caps_parsed.append((cname, cfg))
+            except Exception:
+                pass
+
+        return {
+            "id": effect_id,
+            "title": name,
+            "clean_title": clean_name,
+            "author": author,
+            "sdk_original": sdk,
+            "sdk_target": TARGET_SDK_VERSION,
+            "size_bytes": pf.get("filesize_bytes"),
+            "uncompressed_bytes": pf.get("uncompressed_filesize_bytes"),
+            "compression": pf.get("compression_type") or "TAR_BROTLI",
+            "md5": pf.get("md5_hash"),
+            "download_url": pf.get("uri"),
+            "capabilities": caps_parsed
+        }
+    except Exception as e:
+        print(f"[!] Error saat inspeksi efek: {e}")
+        return None
+
+
+# ==========================================
+# EKSEKUTOR DOWNLOAD & SINKRONISASI UNIFIED
+# ==========================================
+
+def download_and_install_effect(target_meta, custom_name=None, launch=False, no_push=False, session_id=None):
+    """
+    Mengunduh payload filter dari direct download_url (atau fetch_instagram_effect jika belum ada),
+    memproses payload (patch SDK 175.0), menyimpan ke downloaded_filters/, mencatat metadata ke
+    informasi.json, dan mengunggah ke HP via ADB (jika no_push=False).
+    Mengembalikan tuple: (success: bool, info_record: dict, error_msg: str).
+    """
+    target_id = target_meta.get("id")
+    dl_url = target_meta.get("download_url")
+    user_or_meta_title = custom_name or target_meta.get("title")
+    title_hint = user_or_meta_title or f"ig_{target_id or 'filter'}"
+    clean_title = sanitize_filename(title_hint, fallback=f"filter_{target_id or 'custom'}")
+    final_filename = f"{clean_title}.arfx"
+
+    payload = None
+    meta = dict(target_meta)
+
+    # 1. Download payload jika direct CDN URL tersedia
+    if dl_url and dl_url.startswith("http"):
+        clean_check = dl_url.split("?")[0].lower()
+        if not clean_check.endswith((".jpg", ".jpeg", ".png", ".webp")):
+            print(f"[*] Mengunduh paket filter dari CDN...")
+            try:
+                dl_resp = requests.get(dl_url, timeout=45)
+                if dl_resp.status_code == 200:
+                    payload = dl_resp.content
+                else:
+                    print(f"[!] CDN HTTP error {dl_resp.status_code}, mencoba fallback GraphQL...")
+            except Exception as e:
+                print(f"[!] Gagal unduh langsung dari CDN ({e}), mencoba fallback GraphQL...")
+
+    # 2. Fallback ke GraphQL jika payload belum didapatkan
+    if not payload and target_id:
+        payload, fetched_meta = fetch_instagram_effect(str(target_id), session_id=session_id)
+        if fetched_meta:
+            meta.update(fetched_meta)
+
+    if not payload:
+        return False, None, "Gagal mengunduh binary payload efek dari CDN/GraphQL."
+
+    # 3. Proses payload (patch manifest SDK ke 175.0)
+    try:
+        zip_bytes, detected_title, old_sdk_ver = process_ar_payload(payload, default_name=clean_title)
+    except Exception as e:
+        return False, None, f"Gagal memproses payload AR: {e}"
+
+    best_title = custom_name or meta.get("title") or detected_title or clean_title
+
+    # 4. Simpan salinan lokal .arfx
+    os.makedirs(DOWNLOAD_DIR, exist_ok=True)
+    local_path = os.path.join(DOWNLOAD_DIR, final_filename)
+    with open(local_path, "wb") as f:
+        f.write(zip_bytes)
+    print(f"[+] Salinan lokal tersimpan di: {local_path}")
+
+    # 5. Catat metadata & perbarui katalog informasi.json
+    md5_val = hashlib.md5(zip_bytes).hexdigest()
+    info_record = {
+        "id": meta.get("id") or target_id,
+        "title": best_title,
+        "clean_title": clean_title,
+        "filename": final_filename,
+        "author": meta.get("author"),
+        "downloaded_at": datetime.now().isoformat(),
+        "sdk_version_original": old_sdk_ver or meta.get("sdk_version") or "unknown",
+        "sdk_version_patched": TARGET_SDK_VERSION,
+        "file_size_bytes": len(zip_bytes),
+        "md5_hash": md5_val,
+        "download_url": meta.get("download_url") or dl_url
+    }
+    save_filter_metadata(info_record)
+
+    # 6. Push via ADB ke HP
+    if no_push:
+        print(f"[*] Mode --no-push aktif: Melewati upload ADB ke HP.")
+        return True, info_record, None
+    else:
+        ok = push_filter_to_device(zip_bytes, final_filename, launch=launch)
+        if ok:
+            return True, info_record, None
+        else:
+            return False, info_record, "Gagal upload via ADB"
+
+
+def batch_install_effects(selected_effects, launch_mode="none", no_push=False, session_id=None, delay=1.5):
+    """Mengunduh dan menyinkronkan sekumpulan efek AR dengan progress logging rapi."""
+    total = len(selected_effects)
+    print(f"\n" + "=" * 68)
+    print(f"[*] MEMULAI PROSES UNDUH & SINKRONISASI ({total} FILTER)")
+    print("=" * 68)
+
+    success_count = 0
+    failed_count = 0
+    results = []
+
+    for idx, eff in enumerate(selected_effects, 1):
+        clean_title = eff.get("clean_title") or sanitize_filename(eff.get("title") or f"filter_{eff.get('id')}")
+        print(f"\n>>> [{idx}/{total}] Memproses: '{clean_title}' (ID: {eff.get('id')})")
+        do_launch = (launch_mode == "last" and idx == total)
+
+        ok, record, err = download_and_install_effect(
+            eff,
+            custom_name=clean_title,
+            launch=do_launch,
+            no_push=no_push,
+            session_id=session_id
+        )
+
+        if ok:
+            success_count += 1
+            old_sdk = record.get("sdk_version_original") if record else "?"
+            results.append({
+                "index": idx,
+                "name": clean_title,
+                "id": eff.get("id"),
+                "status": "SUKSES",
+                "sdk": f"{old_sdk}->{TARGET_SDK_VERSION}"
+            })
+        else:
+            failed_count += 1
+            results.append({
+                "index": idx,
+                "name": clean_title,
+                "id": eff.get("id"),
+                "status": f"GAGAL: {err}"
+            })
+
+        if idx < total and delay > 0:
+            time.sleep(delay)
+
+    print("\n" + "=" * 68)
+    print("RINGKASAN PROSES BATCH")
+    print("=" * 68)
+    print(f"Total Filter : {total}")
+    print(f"Berhasil     : {success_count}")
+    print(f"Gagal        : {failed_count}")
+    print("-" * 68)
+    for r in results:
+        print(f"[{r['status']}] #{r['index']} {r['name']} ({r['id']})")
+    print("=" * 68 + "\n")
+
+
+def export_effects_to_file(effects, file_path):
+    """Menyimpan daftar efek ke file teks yang kompatibel dengan fetch-list."""
+    try:
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write("# Daftar Filter AR Instagram\n")
+            f.write("# Format: ID,Nama Filter\n")
+            for eff in effects:
+                eid = eff.get("id")
+                clean_name = eff.get("clean_title") or sanitize_filename(eff.get("title") or "Filter")
+                if eid:
+                    f.write(f"{eid},{clean_name}\n")
+        print(f"[+] Berhasil mengekspor {len(effects)} filter ke file: {file_path}")
+        print(f"[*] Anda dapat mengunduh seluruh daftar ini kapan saja dengan:")
+        print(f"    python spark_filter_manager.py fetch-list \"{file_path}\"")
+    except Exception as e:
+        print(f"[!] Gagal mengekspor daftar efek ke {file_path}: {e}")
+
+
+# ==========================================
+# FORMAT TAMPILAN KONSOL (TABLE & REPORT)
+# ==========================================
+
+def print_categories_list():
+    """Mencetak daftar kategori galeri AR Instagram yang didukung."""
+    print("\n" + "=" * 78)
+    print("KATEGORI RESMI GALERI FILTER AR INSTAGRAM")
+    print("=" * 78)
+    for idx, (cat_key, desc) in enumerate(OFFICIAL_CATEGORIES.items(), 1):
+        print(f"{idx}. {cat_key:<16} - {desc}")
+    print("=" * 78)
+    print("Contoh Perintah Jelajah:")
+    print("  python spark_filter_manager.py explore TRENDING")
+    print("  python spark_filter_manager.py explore STUDIO --download 1")
+    print("  python spark_filter_manager.py explore GAMES --download 1-3")
+    print("  python spark_filter_manager.py explore SAVED --download-all")
+    print("  python spark_filter_manager.py explore APPEARANCE --save-list daftar_beauty.txt")
+    print("=" * 78 + "\n")
+
+
+def print_effects_table(effects, title_banner="DAFTAR FILTER AR", category_key=None):
+    """Mencetak tabel daftar filter AR dengan informasi rapi dan tips interaksi."""
+    print("\n" + "=" * 96)
+    print(f" {title_banner} ({len(effects)} Efek)")
+    print("=" * 96)
+    print(f"{'No.':<4} {'ID Efek':<18} {'Nama Filter':<32} {'Author':<16} {'SDK':<8} {'Ukuran':<10}")
+    print("-" * 96)
+    for idx, eff in enumerate(effects, 1):
+        clean_title = eff.get("clean_title") or sanitize_filename(eff.get("title") or "Filter")
+        if len(clean_title) > 30:
+            clean_title = clean_title[:27] + "..."
+        author = ("@" + eff.get("author")) if eff.get("author") else "-"
+        if len(author) > 15:
+            author = author[:13] + ".."
+        sdk = str(eff.get("sdk_version") or "-")
+        size_str = format_bytes(eff.get("filesize_bytes"))
+        print(f"{idx:<4} {str(eff.get('id')):<18} {clean_title:<32} {author:<16} {sdk:<8} {size_str:<10}")
+    print("=" * 96)
+
+    cat_target = category_key or "TRENDING"
+    print("Tips Perintah:")
+    print(f"  - Download 1 filter   : python spark_filter_manager.py explore {cat_target} --download 1")
+    print(f"  - Download beberapa   : python spark_filter_manager.py explore {cat_target} --download 1,3,5 (atau 1-5)")
+    print(f"  - Download semua      : python spark_filter_manager.py explore {cat_target} --download-all")
+    print(f"  - Simpan ke file teks : python spark_filter_manager.py explore {cat_target} --save-list {cat_target.lower()}.txt")
+    print(f"  - Inspeksi teknis     : python spark_filter_manager.py info <ID_EFEK>")
+    print("=" * 96 + "\n")
+
+
+def print_search_table(effects, keyword):
+    """Mencetak tabel hasil pencarian filter AR."""
+    print("\n" + "=" * 105)
+    print(f" HASIL PENCARIAN FILTER AR: '{keyword}' ({len(effects)} Ditemukan)")
+    print("=" * 105)
+    print(f"{'No.':<4} {'Kategori':<15} {'ID Efek':<18} {'Nama Filter':<28} {'Author':<15} {'SDK':<7} {'Ukuran':<10}")
+    print("-" * 105)
+    for idx, eff in enumerate(effects, 1):
+        cat = eff.get("category") or "GALLERY"
+        clean_title = eff.get("clean_title") or sanitize_filename(eff.get("title") or "Filter")
+        if len(clean_title) > 26:
+            clean_title = clean_title[:23] + "..."
+        author = ("@" + eff.get("author")) if eff.get("author") else "-"
+        if len(author) > 14:
+            author = author[:12] + ".."
+        sdk = str(eff.get("sdk_version") or "-")
+        size_str = format_bytes(eff.get("filesize_bytes"))
+        print(f"{idx:<4} {cat:<15} {str(eff.get('id')):<18} {clean_title:<28} {author:<15} {sdk:<7} {size_str:<10}")
+    print("=" * 105)
+    print("Tips Perintah:")
+    print(f"  - Download dari hasil : python spark_filter_manager.py search \"{keyword}\" --download 1")
+    print(f"  - Download semua hasil: python spark_filter_manager.py search \"{keyword}\" --download-all")
+    print(f"  - Ekspor hasil        : python spark_filter_manager.py search \"{keyword}\" --save-list hasil_cari.txt")
+    print("=" * 105 + "\n")
+
+
+def print_effect_info_report(info):
+    """Mencetak laporan audit teknis lengkap dari suatu efek AR."""
+    print("\n" + "=" * 80)
+    print("AUDIT & SPESIFIKASI TEKNIS FILTER AR INSTAGRAM")
+    print("=" * 80)
+    print(f"ID Efek               : {info.get('id')}")
+    print(f"Judul Efek            : {info.get('title')}")
+    print(f"Nama File Bersih      : {info.get('clean_title')}.arfx")
+    author_str = f"@{info.get('author')}" if info.get('author') else "-"
+    print(f"Kreator / Pemilik     : {author_str}")
+    print(f"Versi SDK Asli        : {info.get('sdk_original')}")
+    print(f"Target SDK Player     : {info.get('sdk_target')} (Auto-patched untuk Meta Spark Player)")
+
+    size_b = info.get("size_bytes")
+    uncomp_b = info.get("uncompressed_bytes")
+    print(f"Ukuran Paket (CDN)    : {format_bytes(size_b)} ({size_b:,} bytes)" if size_b else "Ukuran Paket (CDN)    : -")
+    print(f"Ukuran Setelah Unpack : {format_bytes(uncomp_b)} ({uncomp_b:,} bytes)" if uncomp_b else "Ukuran Setelah Unpack : -")
+    print(f"Tipe Kompresi         : {info.get('compression')}")
+    print(f"MD5 Checksum          : {info.get('md5')}")
+
+    caps = info.get("capabilities", [])
+    print(f"\nFitur & Kemampuan AR (Capabilities) [{len(caps)} fitur terdeteksi]:")
+    if caps:
+        for cname, cfg in caps:
+            desc = CAPABILITY_DESCRIPTIONS.get(cname, cname)
+            extra = ""
+            if cfg and isinstance(cfg, dict):
+                details = []
+                if "maxFaces" in cfg:
+                    details.append(f"maxFaces: {cfg['maxFaces']}")
+                if "dynamic" in cfg and isinstance(cfg["dynamic"], dict) and "tokens" in cfg["dynamic"]:
+                    toks = cfg["dynamic"]["tokens"]
+                    if toks:
+                        details.append(f"gestur: {', '.join(toks)}")
+                if details:
+                    extra = f" [{'; '.join(details)}]"
+            print(f"  * {desc}{extra}")
+    else:
+        print("  * (Standar Spark AR Shader / Render)")
+
+    dl_url = info.get("download_url")
+    if dl_url:
+        print(f"\nURL Unduh Langsung:\n  {dl_url}")
+
+    print("=" * 80)
+    print("Tips Cepat:")
+    print(f"  - Unduh & Push ke HP : python spark_filter_manager.py fetch {info.get('id')}")
+    print(f"  - Unduh ke PC saja   : python spark_filter_manager.py fetch {info.get('id')} --no-push")
+    print("=" * 80 + "\n")
+
+
+# ==========================================
 # CLI MAIN ENTRYPOINT
 # ==========================================
 
@@ -782,6 +1551,48 @@ def main():
     p_fetchlist.add_argument("--no-launch", action="store_true", help="Jangan meluncurkan kamera HP sama sekali")
     p_fetchlist.add_argument("--launch-last", action="store_true", help="Hanya luncurkan filter terakhir di kamera HP")
     p_fetchlist.add_argument("--no-push", action="store_true", help="Hanya unduh dan simpan lokal di PC, jangan push ke HP")
+
+    # Command: explore
+    p_explore = subparsers.add_parser("explore", help="Jelajahi galeri filter AR Instagram berdasarkan kategori resmi")
+    p_explore.add_argument("category", nargs="?", default="TRENDING", help="Kategori: TRENDING, FOR_YOU, APPEARANCE, STUDIO, GAMES, HUMOR, SPECIAL_EFFECTS, SAVED (default: TRENDING)")
+    p_explore.add_argument("--list-categories", action="store_true", help="Tampilkan semua daftar kategori yang tersedia dan keluar")
+    p_explore.add_argument("--download", help="Index atau rentang nomor efek untuk diunduh (misal: '1', '1,3,5', '1-5')")
+    p_explore.add_argument("--download-all", action="store_true", help="Unduh semua efek dalam kategori ini")
+    p_explore.add_argument("--save-list", help="Simpan daftar efek ke file teks untuk digunakan dengan fetch-list")
+    p_explore.add_argument("--session", help="Session ID cookie akun (opsional, default memakai config.json)", default=None)
+    p_explore.add_argument("--delay", type=float, default=1.5, help="Jeda waktu antar unduhan (default: 1.5s)")
+    p_explore.add_argument("--no-launch", action="store_true", help="Jangan meluncurkan kamera HP setelah unduh")
+    p_explore.add_argument("--launch-last", action="store_true", help="Hanya luncurkan filter terakhir di kamera HP")
+    p_explore.add_argument("--no-push", action="store_true", help="Hanya unduh dan simpan lokal di PC, jangan push ke HP")
+
+    # Command: search
+    p_search = subparsers.add_parser("search", help="Cari filter AR berdasarkan kata kunci judul atau username kreator")
+    p_search.add_argument("keyword", help="Kata kunci pencarian (nama filter atau username kreator)")
+    p_search.add_argument("--category", help="Batasi pencarian ke kategori tertentu (opsional, default: seluruh kategori)", default=None)
+    p_search.add_argument("--download", help="Index atau rentang nomor efek untuk diunduh (misal: '1', '1,3,5', '1-5')")
+    p_search.add_argument("--download-all", action="store_true", help="Unduh semua efek hasil pencarian")
+    p_search.add_argument("--save-list", help="Simpan daftar hasil ke file teks untuk digunakan dengan fetch-list")
+    p_search.add_argument("--session", help="Session ID cookie akun (opsional, default memakai config.json)", default=None)
+    p_search.add_argument("--delay", type=float, default=1.5, help="Jeda waktu antar unduhan (default: 1.5s)")
+    p_search.add_argument("--no-launch", action="store_true", help="Jangan meluncurkan kamera HP setelah unduh")
+    p_search.add_argument("--launch-last", action="store_true", help="Hanya luncurkan filter terakhir di kamera HP")
+    p_search.add_argument("--no-push", action="store_true", help="Hanya unduh dan simpan lokal di PC, jangan push ke HP")
+
+    # Command: saved
+    p_saved = subparsers.add_parser("saved", help="Tampilkan dan unduh filter AR yang tersimpan di akun Instagram Anda")
+    p_saved.add_argument("--download", help="Index atau rentang nomor efek untuk diunduh (misal: '1', '1,3,5', '1-5')")
+    p_saved.add_argument("--download-all", action="store_true", help="Unduh semua filter tersimpan")
+    p_saved.add_argument("--save-list", help="Simpan daftar filter tersimpan ke file teks")
+    p_saved.add_argument("--session", help="Session ID cookie akun (opsional, default memakai config.json)", default=None)
+    p_saved.add_argument("--delay", type=float, default=1.5, help="Jeda waktu antar unduhan (default: 1.5s)")
+    p_saved.add_argument("--no-launch", action="store_true", help="Jangan meluncurkan kamera HP setelah unduh")
+    p_saved.add_argument("--launch-last", action="store_true", help="Hanya luncurkan filter terakhir di kamera HP")
+    p_saved.add_argument("--no-push", action="store_true", help="Hanya unduh dan simpan lokal di PC, jangan push ke HP")
+
+    # Command: info
+    p_info = subparsers.add_parser("info", help="Inspeksi mendalam spesifikasi teknis filter AR (SDK, capabilities, hash, ukuran, dll)")
+    p_info.add_argument("target", help="Link Instagram (/ar/<id>) atau Effect ID")
+    p_info.add_argument("--session", help="Session ID cookie akun (opsional, default memakai config.json)", default=None)
 
     args = parser.parse_args()
 
@@ -902,47 +1713,26 @@ def main():
             print("[!] Peringatan: Tidak ada session ID yang disetel. Query mungkin gagal jika efek memerlukan autentikasi.")
             print("[!] Jalankan 'python spark_filter_manager.py auth set <sessionid>' untuk menyimpan sesi.")
 
-        payload, meta = fetch_instagram_effect(args.target, session_id=session_id)
-        if not payload:
-            print("[!] Gagal mengunduh payload efek. Pastikan URL/ID benar, atau gunakan direct CDN URL.")
+        target_meta = {"id": args.target if args.target.isdigit() else None}
+        if args.target.startswith("http"):
+            match = re.search(r'/ar/(\d+)', args.target)
+            if not match:
+                match = re.search(r'effect_id=(\d+)', args.target)
+            if match:
+                target_meta["id"] = match.group(1)
+            else:
+                target_meta["download_url"] = args.target
+
+        ok, record, err = download_and_install_effect(
+            target_meta,
+            custom_name=args.name,
+            launch=not args.no_launch,
+            no_push=args.no_push,
+            session_id=session_id
+        )
+        if not ok:
+            print(f"[!] Gagal: {err}")
             sys.exit(1)
-
-        user_or_meta_title = args.name or (meta.get("title") if meta and meta.get("title") != "cdn_effect" else None)
-        raw_title = user_or_meta_title or f"ig_{meta.get('id') if meta and meta.get('id') else 'filter'}"
-        clean_title = sanitize_filename(raw_title, fallback=f"filter_{meta.get('id') if meta and meta.get('id') else 'custom'}")
-        final_filename = f"{clean_title}.arfx"
-
-        zip_bytes, detected_title, old_sdk_ver = process_ar_payload(payload, default_name=clean_title)
-        best_title = user_or_meta_title or detected_title or clean_title
-
-        # Simpan file .arfx di folder downloaded_filters/
-        os.makedirs(DOWNLOAD_DIR, exist_ok=True)
-        local_path = os.path.join(DOWNLOAD_DIR, final_filename)
-        with open(local_path, "wb") as f:
-            f.write(zip_bytes)
-        print(f"[+] Salinan lokal tersimpan di: {local_path}")
-
-        # Catat metadata & perbarui katalog informasi.json
-        md5_val = hashlib.md5(zip_bytes).hexdigest()
-        info_record = {
-            "id": meta.get("id") if meta else None,
-            "title": best_title,
-            "clean_title": clean_title,
-            "filename": final_filename,
-            "author": meta.get("author") if meta else None,
-            "downloaded_at": datetime.now().isoformat(),
-            "sdk_version_original": old_sdk_ver or "unknown",
-            "sdk_version_patched": TARGET_SDK_VERSION,
-            "file_size_bytes": len(zip_bytes),
-            "md5_hash": md5_val,
-            "download_url": meta.get("download_url") if meta else None
-        }
-        save_filter_metadata(info_record)
-
-        if args.no_push:
-            print(f"[*] Mode --no-push aktif: Melewati upload ADB ke HP.")
-        else:
-            push_filter_to_device(zip_bytes, final_filename, launch=not args.no_launch)
 
     # ----------------------------------------------------
     # 5. COMMAND: FETCH-LIST (BATCH DOWNLOAD DARI DAFTAR)
@@ -994,69 +1784,42 @@ def main():
             if custom_name:
                 print(f"[*] Nama kustom: {custom_name}")
 
-            try:
-                payload, meta = fetch_instagram_effect(target_item, session_id=session_id)
-                if not payload:
-                    print(f"[-] Gagal mengunduh payload untuk: {target_item}")
-                    failed_count += 1
-                    results.append({"index": idx, "target": target_item, "name": "-", "status": "GAGAL"})
-                    continue
-
-                user_or_meta_title = custom_name or (meta.get("title") if meta and meta.get("title") != "cdn_effect" else None)
-                chosen_title = user_or_meta_title or f"ig_{meta.get('id') if meta and meta.get('id') else 'filter'}"
-                clean_title = sanitize_filename(chosen_title, fallback=f"filter_{meta.get('id') if meta and meta.get('id') else idx}")
-                final_filename = f"{clean_title}.arfx"
-
-                zip_bytes, detected_title, old_sdk_ver = process_ar_payload(payload, default_name=clean_title)
-                best_title = user_or_meta_title or detected_title or clean_title
-
-                os.makedirs(DOWNLOAD_DIR, exist_ok=True)
-                local_path = os.path.join(DOWNLOAD_DIR, final_filename)
-                with open(local_path, "wb") as f:
-                    f.write(zip_bytes)
-                print(f"[+] Salinan lokal tersimpan: {local_path}")
-
-                md5_val = hashlib.md5(zip_bytes).hexdigest()
-                info_record = {
-                    "id": meta.get("id") if meta else None,
-                    "title": best_title,
-                    "clean_title": clean_title,
-                    "filename": final_filename,
-                    "author": meta.get("author") if meta else None,
-                    "downloaded_at": datetime.now().isoformat(),
-                    "sdk_version_original": old_sdk_ver or "unknown",
-                    "sdk_version_patched": TARGET_SDK_VERSION,
-                    "file_size_bytes": len(zip_bytes),
-                    "md5_hash": md5_val,
-                    "download_url": meta.get("download_url") if meta else None
-                }
-                save_filter_metadata(info_record)
-
-                if args.no_push:
-                    print(f"[*] Mode --no-push aktif: Melewati upload ADB ke HP.")
+            target_meta = {"id": target_item if target_item.isdigit() else None}
+            if target_item.startswith("http"):
+                match = re.search(r'/ar/(\d+)', target_item)
+                if not match:
+                    match = re.search(r'effect_id=(\d+)', target_item)
+                if match:
+                    target_meta["id"] = match.group(1)
                 else:
-                    if args.no_launch:
-                        do_launch = False
-                    elif args.launch_last:
-                        do_launch = (idx == total)
-                    else:
-                        do_launch = False
+                    target_meta["download_url"] = target_item
 
-                    push_filter_to_device(zip_bytes, final_filename, launch=do_launch)
+            do_launch = False
+            if not args.no_launch and args.launch_last and idx == total:
+                do_launch = True
 
+            ok, record, err = download_and_install_effect(
+                target_meta,
+                custom_name=custom_name,
+                launch=do_launch,
+                no_push=args.no_push,
+                session_id=session_id
+            )
+
+            if ok:
                 success_count += 1
+                c_name = record.get("clean_title") if record else (custom_name or target_item)
+                old_v = record.get("sdk_version_original") if record else "?"
                 results.append({
                     "index": idx,
                     "target": target_item,
-                    "name": clean_title,
+                    "name": c_name,
                     "status": "SUKSES",
-                    "sdk": f"{old_sdk_ver}->{TARGET_SDK_VERSION}"
+                    "sdk": f"{old_v}->{TARGET_SDK_VERSION}"
                 })
-
-            except Exception as e:
-                print(f"[!] Error saat memproses {target_item}: {e}")
+            else:
                 failed_count += 1
-                results.append({"index": idx, "target": target_item, "name": "-", "status": f"ERROR: {e}"})
+                results.append({"index": idx, "target": target_item, "name": "-", "status": f"GAGAL: {err}"})
 
             if idx < total and args.delay > 0:
                 print(f"[*] Jeda {args.delay} detik sebelum filter berikutnya...")
@@ -1072,6 +1835,122 @@ def main():
         for r in results:
             print(f"[{r['status']}] #{r['index']} {r['name']} ({r['target']})")
         print("=" * 65)
+
+    # ----------------------------------------------------
+    # 6. COMMAND: EXPLORE CATEGORIES
+    # ----------------------------------------------------
+    elif args.command == "explore":
+        if args.list_categories:
+            print_categories_list()
+            sys.exit(0)
+
+        session_id = get_saved_session(args.session)
+        cat_key = resolve_category_key(args.category)
+        print(f"[*] Menjelajahi galeri AR Instagram: {cat_key} ...")
+        display_name, effects = fetch_category_effects(cat_key, session_id=session_id)
+
+        if not effects:
+            print(f"[-] Tidak ada efek yang ditemukan untuk kategori '{cat_key}'.")
+            if cat_key == "SAVED":
+                print("    Tips: Pastikan akun Anda memiliki filter tersimpan dan sesi Instagram valid.")
+            sys.exit(0)
+
+        if args.save_list:
+            export_effects_to_file(effects, args.save_list)
+
+        if args.download or args.download_all:
+            selected_indices = range(len(effects)) if args.download_all else parse_selection_indices(args.download, len(effects))
+            if not selected_indices:
+                print(f"[!] Pilihan efek '{args.download}' tidak valid (tersedia nomor 1 - {len(effects)}).")
+                sys.exit(1)
+            selected_items = [effects[i] for i in selected_indices]
+            batch_install_effects(
+                selected_items,
+                launch_mode="last" if args.launch_last else "none",
+                no_push=args.no_push,
+                session_id=session_id,
+                delay=args.delay
+            )
+        elif not args.save_list:
+            print_effects_table(effects, f"GALERI AR INSTAGRAM: {display_name} ({cat_key})", cat_key)
+
+    # ----------------------------------------------------
+    # 7. COMMAND: SEARCH GALLERY
+    # ----------------------------------------------------
+    elif args.command == "search":
+        session_id = get_saved_session(args.session)
+        scope_str = f"kategori '{args.category}'" if args.category else "seluruh kategori galeri"
+        print(f"[*] Mencari filter AR dengan kata kunci: '{args.keyword}' di {scope_str} ...")
+
+        matched_effects = search_gallery_effects(args.keyword, category_key=args.category, session_id=session_id)
+
+        if not matched_effects:
+            print(f"[-] Tidak ditemukan filter AR dengan kata kunci '{args.keyword}'.")
+            sys.exit(0)
+
+        if args.save_list:
+            export_effects_to_file(matched_effects, args.save_list)
+
+        if args.download or args.download_all:
+            selected_indices = range(len(matched_effects)) if args.download_all else parse_selection_indices(args.download, len(matched_effects))
+            if not selected_indices:
+                print(f"[!] Pilihan efek '{args.download}' tidak valid (tersedia nomor 1 - {len(matched_effects)}).")
+                sys.exit(1)
+            selected_items = [matched_effects[i] for i in selected_indices]
+            batch_install_effects(
+                selected_items,
+                launch_mode="last" if args.launch_last else "none",
+                no_push=args.no_push,
+                session_id=session_id,
+                delay=args.delay
+            )
+        elif not args.save_list:
+            print_search_table(matched_effects, args.keyword)
+
+    # ----------------------------------------------------
+    # 8. COMMAND: SAVED (BOOKMARKED FILTERS)
+    # ----------------------------------------------------
+    elif args.command == "saved":
+        session_id = get_saved_session(args.session)
+        if not session_id:
+            print("[!] Perhatian: Anda belum login / menyetel sesi Instagram.")
+            print("    Gunakan 'python spark_filter_manager.py auth set <sessionid>' untuk menghubungkan akun.")
+
+        print("[*] Mengambil daftar filter AR yang tersimpan di akun Instagram Anda...")
+        display_name, effects = fetch_category_effects("SAVED", session_id=session_id)
+
+        if not effects:
+            print("[-] Tidak ada filter tersimpan yang ditemukan di akun Anda (atau sesi tidak memiliki akses).")
+            sys.exit(0)
+
+        if args.save_list:
+            export_effects_to_file(effects, args.save_list)
+
+        if args.download or args.download_all:
+            selected_indices = range(len(effects)) if args.download_all else parse_selection_indices(args.download, len(effects))
+            if not selected_indices:
+                print(f"[!] Pilihan efek '{args.download}' tidak valid (tersedia nomor 1 - {len(effects)}).")
+                sys.exit(1)
+            selected_items = [effects[i] for i in selected_indices]
+            batch_install_effects(
+                selected_items,
+                launch_mode="last" if args.launch_last else "none",
+                no_push=args.no_push,
+                session_id=session_id,
+                delay=args.delay
+            )
+        elif not args.save_list:
+            print_effects_table(effects, "FILTER AR TERSIMPAN DI AKUN ANDA", "SAVED")
+
+    # ----------------------------------------------------
+    # 9. COMMAND: INFO (DEEP TECHNICAL INSPECTION)
+    # ----------------------------------------------------
+    elif args.command == "info":
+        session_id = get_saved_session(args.session)
+        print(f"[*] Melakukan inspeksi teknis untuk: {args.target} ...")
+        info = inspect_effect_info(args.target, session_id=session_id)
+        if info:
+            print_effect_info_report(info)
 
 
 if __name__ == "__main__":
