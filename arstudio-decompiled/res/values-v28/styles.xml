@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V28.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V28.Theme.AppCompat.Light" />
+    <style name="MigMaterialAlertDialog.Dark.Material3" parent="@style/MigMaterialAlertDialog.Dark.SentenceCase">
+        <item name="android:windowBackground">@drawable/mds_dialog_background_dark_material3</item>
+        <item name="android:windowTitleStyle">@style/MigMaterialAlertDialogTitle.Dark.Material3</item>
+        <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
+        <item name="android:letterSpacing">@dimen/mds_alert_dialog_body_letter_spacing_material3</item>
+        <item name="android:lineHeight">@dimen/abc_text_size_title_material</item>
+        <item name="buttonBarNegativeButtonStyle">@style/MigMaterialAlertDialog.Button.Dark.Material3</item>
+        <item name="buttonBarNeutralButtonStyle">@style/MigMaterialAlertDialog.Button.Dark.Material3</item>
+        <item name="buttonBarPositiveButtonStyle">@style/MigMaterialAlertDialog.Button.Dark.Material3</item>
+        <item name="buttonBarStyle">@style/MigMaterialAlertDialogButtonBar.Material3</item>
+    </style>
+    <style name="MigMaterialAlertDialog.Light.Material3" parent="@style/MigMaterialAlertDialog.Light.SentenceCase">
+        <item name="android:windowBackground">@drawable/mds_dialog_background_light_material3</item>
+        <item name="android:windowTitleStyle">@style/MigMaterialAlertDialogTitle.Light.Material3</item>
+        <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
+        <item name="android:letterSpacing">@dimen/mds_alert_dialog_body_letter_spacing_material3</item>
+        <item name="android:lineHeight">@dimen/abc_text_size_title_material</item>
+        <item name="buttonBarNegativeButtonStyle">@style/MigMaterialAlertDialog.Button.Light.Material3</item>
+        <item name="buttonBarNeutralButtonStyle">@style/MigMaterialAlertDialog.Button.Light.Material3</item>
+        <item name="buttonBarPositiveButtonStyle">@style/MigMaterialAlertDialog.Button.Light.Material3</item>
+        <item name="buttonBarStyle">@style/MigMaterialAlertDialogButtonBar.Material3</item>
+    </style>
+    <style name="MigMaterialAlertDialogTitle.Material3" parent="@style/MigMaterialAlertDialogTitle">
+        <item name="android:textSize">@dimen/fbui_text_size_xxxlarge_1</item>
+        <item name="android:layout_marginTop">@dimen/abc_button_padding_horizontal_material</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">@dimen/fbui_popover_window_anim_enter_min_alpha</item>
+        <item name="android:lineHeight">@dimen/fbui_text_size_xxxlarge_5</item>
+    </style>
+    <style name="autofillPaymentSaveBottomDescription" parent="@style/bondi_regularText">
+        <item name="android:textSize">@dimen/autofill_data_migration_disclosure_description</item>
+        <item name="android:textColor">?fds_usage_secondary_text</item>
+        <item name="android:lineHeight">@dimen/abc_text_size_menu_material</item>
+    </style>
+    <style name="autofillPaymentSaveDescription" parent="@style/bondi_regularText">
+        <item name="android:textSize">@dimen/autofill_data_migration_disclosure_description</item>
+        <item name="android:textColor">?fds_usage_secondary_text</item>
+        <item name="android:paddingLeft">@dimen/abc_button_padding_horizontal_material</item>
+        <item name="android:paddingTop">@dimen/autofill_payment_autofill_save_description_text_padding_top</item>
+        <item name="android:paddingRight">@dimen/abc_button_padding_horizontal_material</item>
+        <item name="android:paddingStart">@dimen/abc_button_padding_horizontal_material</item>
+        <item name="android:paddingEnd">@dimen/abc_button_padding_horizontal_material</item>
+        <item name="android:lineHeight">@dimen/abc_text_size_menu_material</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat">
+        <item name="dialogCornerRadius">?android:dialogCornerRadius</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light">
+        <item name="dialogCornerRadius">?android:dialogCornerRadius</item>
+    </style>
+</resources>

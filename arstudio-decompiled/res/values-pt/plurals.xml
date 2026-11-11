@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s curtidas na Página</item>
+        <item quantity="one">%1$s curtida na Página</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s curtidas</item>
+        <item quantity="one">%1$s curtida</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">Há %1$d horas</item>
+        <item quantity="one">Há 1 hora</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">Daqui a %1$d horas</item>
+        <item quantity="one">Daqui a 1 hora</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">Daqui a %1$d minutos</item>
+        <item quantity="one">Daqui a 1 minuto</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">há %1$d minutos</item>
+        <item quantity="one">há 1 minuto</item>
+    </plurals>
+</resources>

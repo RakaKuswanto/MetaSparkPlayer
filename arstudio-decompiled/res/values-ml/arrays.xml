@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>ചാറ്റുകള്‍</item>
+        <item>തടയുക/തടഞ്ഞത് മാറ്റുക</item>
+        <item>കോളുകൾ</item>
+        <item>ആക്‌റ്റിവ് സ്‌റ്റാറ്റസ്</item>
+        <item>തിരയുക</item>
+        <item>അറിയിപ്പുകള്‍</item>
+        <item>ഹൈലൈറ്റുകൾ ടാബ്</item>
+        <item>മറ്റുള്ളവ</item>
+    </string-array>
+</resources>

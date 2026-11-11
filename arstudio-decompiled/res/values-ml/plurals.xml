@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s പേജ് ലൈക്കുകൾ</item>
+        <item quantity="one">%1$s പേജ് ലൈക്ക്</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s ലൈക്കുകൾ</item>
+        <item quantity="one">%1$s ലൈക്ക്</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d മണിക്കൂര്‍ മുമ്പ്</item>
+        <item quantity="one">1 മണിക്കൂര്‍ മുമ്പ്</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">ഇപ്പോള്‍ മുതല്‍ %1$d മണിക്കൂര്‍</item>
+        <item quantity="one">ഇപ്പോള്‍ മുതല്‍ 1 മണിക്കൂര്‍</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">ഇപ്പോള്‍ മുതല്‍ %1$d മിനിറ്റ്</item>
+        <item quantity="one">ഇപ്പോള്‍ മുതല്‍ 1 മിനിറ്റ്</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d മിനിറ്റ് മുമ്പ്</item>
+        <item quantity="one">1 മിനിറ്റ് മുമ്പ്</item>
+    </plurals>
+</resources>

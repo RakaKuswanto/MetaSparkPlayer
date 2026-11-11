@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>聊天室</item>
+        <item>封鎖／解除封鎖</item>
+        <item>通話</item>
+        <item>上線狀態</item>
+        <item>搜尋</item>
+        <item>通知</item>
+        <item>精選內容頁籤</item>
+        <item>其他</item>
+    </string-array>
+</resources>

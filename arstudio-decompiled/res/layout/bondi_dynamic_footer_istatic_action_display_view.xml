@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <X.4OG android:id="@id/bondi_dfiad_button_1" android:background="@drawable/bondi_dfiad_button_background" android:visibility="gone" android:layout_width="@dimen/autofill_bottom_sheet_margin_top" android:layout_height="@dimen/autofill_bottom_sheet_margin_top" android:scaleType="centerInside" fb:glyphColor="?fds_usage_primary_icon" />
+    <X.4OG android:id="@id/bondi_dfiad_button_2" android:background="@drawable/bondi_dfiad_button_background" android:visibility="gone" android:layout_width="@dimen/autofill_bottom_sheet_margin_top" android:layout_height="@dimen/autofill_bottom_sheet_margin_top" android:scaleType="centerInside" fb:glyphColor="?fds_usage_primary_icon" />
+    <X.4OG android:id="@id/bondi_dfiad_button_3" android:background="@drawable/bondi_dfiad_button_background" android:visibility="gone" android:layout_width="@dimen/autofill_bottom_sheet_margin_top" android:layout_height="@dimen/autofill_bottom_sheet_margin_top" android:scaleType="centerInside" fb:glyphColor="?fds_usage_primary_icon" />
+</merge>

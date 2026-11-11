@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Чаты</item>
+        <item>Заблокировать/разблокировать</item>
+        <item>Вызовы</item>
+        <item>Статус \"В сети\"</item>
+        <item>Поиск</item>
+        <item>Уведомления</item>
+        <item>Вкладка \"Актуальное\"</item>
+        <item>Другое</item>
+    </string-array>
+</resources>

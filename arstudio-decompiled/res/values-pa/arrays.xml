@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>ਚੈਟ</item>
+        <item>ਬਲੌਕ/ਅਣਬਲੌਕ ਕਰੋ</item>
+        <item>ਕਾੱਲਾਂ</item>
+        <item>ਕਿਰਿਆਸ਼ੀਲ ਸਥਿਤੀ</item>
+        <item>ਖੋਜੋ</item>
+        <item>ਸੂਚਨਾਵਾਂ</item>
+        <item>ਹਾਈਲਾਈਟ ਟੈਬ</item>
+        <item>ਹੋਰ</item>
+    </string-array>
+</resources>

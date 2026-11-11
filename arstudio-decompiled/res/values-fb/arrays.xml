@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>[Chats#14d902e45f88eca1564563c3b15b514c:1]</item>
+        <item>[Block/Unblock#653d062e2cca8aee169963221c634fff:1]</item>
+        <item>[Calls#c952c1261ffa570ca43e32a483b6f5d2:1]</item>
+        <item>[Active Status#dd66ca2e922913926206f70f6e9362c1:1]</item>
+        <item>[Search#bd0688ee1184c5d735789817cba966dc:1]</item>
+        <item>[Notifications#0639c92e3bc545348cd904a4a235aa48:1]</item>
+        <item>[Highlights Tab#0b770f35e17463dcc6cd15b97e8abd0a:1]</item>
+        <item>[Other#cfcedcc4813a918310b5bc750f10dc43:1]</item>
+    </string-array>
+</resources>

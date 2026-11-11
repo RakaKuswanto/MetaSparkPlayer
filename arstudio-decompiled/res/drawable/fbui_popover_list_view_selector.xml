@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_first="true" android:state_last="true" android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/fbui_popover_list_view_selector" />
+            <corners android:radius="@dimen/autofill_missing_payment_info_button_top_margin" />
+        </shape>
+    </item>
+    <item android:state_first="true" android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/fbui_popover_list_view_selector" />
+            <corners android:topLeftRadius="@dimen/autofill_missing_payment_info_button_top_margin" android:topRightRadius="@dimen/autofill_missing_payment_info_button_top_margin" />
+        </shape>
+    </item>
+    <item android:state_last="true" android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/fbui_popover_list_view_selector" />
+            <corners android:bottomLeftRadius="@dimen/autofill_missing_payment_info_button_top_margin" android:bottomRightRadius="@dimen/autofill_missing_payment_info_button_top_margin" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/fbui_popover_list_view_selector" />
+        </shape>
+    </item>
+</selector>

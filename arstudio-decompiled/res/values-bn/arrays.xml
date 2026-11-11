@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>চ্যাট</item>
+        <item>ব্লক/আনব্লক</item>
+        <item>কল</item>
+        <item>অ্যাক্টিভ স্ট্যাটাস</item>
+        <item>সার্চ</item>
+        <item>নোটিফিকেশন</item>
+        <item>হাইলাইট ট্যাব</item>
+        <item>অন্যকিছু</item>
+    </string-array>
+</resources>

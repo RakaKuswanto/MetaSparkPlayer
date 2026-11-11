@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<X.4KI android:orientation="vertical" android:id="@id/autofill_bar_list_entry" android:background="@drawable/autofill_bar_entry_background" android:padding="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <X.4Qk android:textAppearance="@style/TextAppearance.Fig.LargeSize.WhiteColor" android:ellipsize="end" android:gravity="start" android:id="@id/autofill_bar_list_entry_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:maxEms="15" android:includeFontPadding="false" />
+</X.4KI>

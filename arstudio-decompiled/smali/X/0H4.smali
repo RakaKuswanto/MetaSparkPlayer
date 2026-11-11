@@ -1,0 +1,45 @@
+.class public final LX/0H4;
+.super Ljava/lang/Exception;
+.source ""
+
+
+# instance fields
+.field public final mParsedUri:LX/0Gc;
+
+
+# direct methods
+.method public constructor <init>(LX/0Gc;)V
+    .locals 1
+
+    .line 0
+    const-string v0, "Empty uriString"
+
+    .line 1
+    .line 2
+    invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    .line 3
+    .line 4
+    .line 5
+    iput-object p1, p0, LX/0H4;->mParsedUri:LX/0Gc;
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public constructor <init>(LX/0Gc;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    .line 268435456
+    invoke-direct {p0, p2, p3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    iput-object p1, p0, LX/0H4;->mParsedUri:LX/0Gc;
+
+    .line 268435460
+    .line 268435461
+    return-void
+.end method

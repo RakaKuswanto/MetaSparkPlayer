@@ -1,0 +1,37 @@
+# Temporary & Generated APKs
+*.apk
+*.idsig
+*.bin
+*.so
+temp_repo/
+dummy_decoded/
+dummy.apk
+spark_ar_player_flutter/
+430310675_947153480460624_59510426178593036_n/
+
+# Screenshots & Local Test Dumps
+*.png
+current_ui.xml
+
+# Apktool build cache & CodeGraph
+arstudio-decompiled/build/
+arstudio-decompiled/.codegraph/
+
+# Java & DEX build caches
+build_loader/bin/
+build_loader/dex_out/
+
+# Android Studio / VS Code
+.idea/
+.vscode/
+*.iml
+.superpowers/
+
+# Redundant JAR tools (we keep apktool_2.12.1.jar, uber-apk-signer-1.3.0.jar, and brotli-dec.jar)
+APKEditor-1.4.5.jar
+apktool_2.7.0.jar
+bundletool-all-1.18.2.jar
+
+# Test / filter sample files
+*.arexport
+*.arfx

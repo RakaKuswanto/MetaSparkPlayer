@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/parentPanel" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/topImage" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:id="@id/topPanel" android:paddingLeft="@dimen/abc_dialog_padding_material" android:paddingTop="@dimen/abc_select_dialog_padding_start_material" android:paddingRight="@dimen/abc_dialog_padding_material" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@id/alertTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="?alertDialogWindowTitleStyle" />
+    </LinearLayout>
+    <FrameLayout android:orientation="vertical" android:id="@id/contentPanel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_weight="1.0">
+        <View android:layout_gravity="top" android:id="@id/scrollIndicatorUp" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <ScrollView android:id="@id/scrollView" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="ifContentScrolls">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <X.4Qk android:id="@id/message" android:paddingLeft="@dimen/abc_dialog_padding_material" android:paddingTop="@dimen/abc_select_dialog_padding_start_material" android:paddingRight="@dimen/abc_dialog_padding_material" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?alertDialogMessageStyle" />
+                <TextView android:id="@id/disclaimer" android:paddingLeft="@dimen/abc_dialog_padding_material" android:paddingTop="@dimen/abc_select_dialog_padding_start_material" android:paddingRight="@dimen/abc_dialog_padding_material" android:paddingBottom="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <View android:id="@id/textSpacerNoButtons" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/abc_select_dialog_padding_start_material" />
+            </LinearLayout>
+        </ScrollView>
+        <View android:layout_gravity="bottom" android:id="@id/scrollIndicatorDown" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/customPanel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/custom" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/buttonPanel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <X.4L0 android:id="@id/buttonBar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?alertDialogButtonBarStyle">
+            <Button android:id="@id/button3" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?alertDialogButtonStyle" />
+            <Button android:id="@id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?alertDialogButtonStyle" />
+            <Button android:id="@id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?alertDialogPrimaryButtonStyle" />
+        </X.4L0>
+    </LinearLayout>
+</LinearLayout>

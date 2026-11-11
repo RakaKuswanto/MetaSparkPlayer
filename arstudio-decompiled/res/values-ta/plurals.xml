@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s பக்க விருப்பங்கள்</item>
+        <item quantity="one">%1$sபக்க விருப்பம்</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s விருப்பங்கள்</item>
+        <item quantity="one">%1$s விருப்பம்</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d மணிநேரத்திற்கு முன்பு</item>
+        <item quantity="one">ஒரு மணிநேரத்திற்கு முன்பு</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%1$d மணிநேரம் உள்ளன</item>
+        <item quantity="one">ஒரு மணிநேரம் உள்ளது</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%1$d நிமிடங்கள் உள்ளன</item>
+        <item quantity="one">ஒரு நிமிடம் உள்ளது</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d நிமிடங்களுக்கு முன்பு</item>
+        <item quantity="one">ஒரு நிமிடத்திற்கு முன்பு</item>
+    </plurals>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>அரட்டைகள்</item>
+        <item>தடைசெய்திடுக/அனுமதித்திடுக</item>
+        <item>அழைப்புகள்</item>
+        <item>செயல் நிலை</item>
+        <item>தேடல்</item>
+        <item>அறிவிப்புகள்</item>
+        <item>ஹைலைட்டுகள் பிரிவு</item>
+        <item>மற்றவை</item>
+    </string-array>
+</resources>

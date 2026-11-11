@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Čavrljanja</item>
+        <item>Blokiraj/Deblokiraj</item>
+        <item>Pozivi</item>
+        <item>Status \"Aktivan\"</item>
+        <item>Pretraživanje</item>
+        <item>Obavještenja</item>
+        <item>Kartica Istaknuto</item>
+        <item>Ostalo</item>
+    </string-array>
+</resources>

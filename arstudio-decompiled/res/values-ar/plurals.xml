@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s تسجيل إعجاب</item>
+        <item quantity="one">تسجيل إعجاب واحد</item>
+        <item quantity="two">تسجيلا إعجاب</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s تسجيل إعجاب</item>
+        <item quantity="one">تسجيل إعجاب واحد</item>
+        <item quantity="two">تسجيلا إعجاب</item>
+        <item quantity="few">%1$s تسجيلات إعجاب</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">منذ %1$d ساعة</item>
+        <item quantity="one">منذ ساعة واحدة</item>
+        <item quantity="two">منذ ساعتين</item>
+        <item quantity="few">منذ %1$d ساعات</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">بعد %1$d ساعة من الآن</item>
+        <item quantity="one">بعد ساعة واحدة من الآن</item>
+        <item quantity="two">بعد ساعتين من الآن</item>
+        <item quantity="few">بعد %1$d ساعات من الآن</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">بعد %1$d دقيقة من الآن</item>
+        <item quantity="one">بعد دقيقة واحدة من الآن</item>
+        <item quantity="two">بعد دقيقتين من الآن</item>
+        <item quantity="few">بعد %1$d دقائق من الآن</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">منذ %1$d دقيقة</item>
+        <item quantity="one">منذ دقيقة واحدة</item>
+        <item quantity="two">منذ دقيقتين</item>
+        <item quantity="few">منذ %1$d دقائق</item>
+    </plurals>
+</resources>

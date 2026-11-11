@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Czaty</item>
+        <item>Zablokuj/Odblokuj</item>
+        <item>Połączenia</item>
+        <item>Status aktywności</item>
+        <item>Szukaj</item>
+        <item>Powiadomienia</item>
+        <item>Karta wyróżnionych</item>
+        <item>Inna odpowiedź</item>
+    </string-array>
+</resources>

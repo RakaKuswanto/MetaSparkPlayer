@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>แชท</item>
+        <item>การบล็อก/เลิกบล็อก</item>
+        <item>การโทร</item>
+        <item>สถานะกำลังใช้งาน</item>
+        <item>การค้นหา</item>
+        <item>การแจ้งเตือน</item>
+        <item>แท็บไฮไลท์</item>
+        <item>อื่นๆ</item>
+    </string-array>
+</resources>

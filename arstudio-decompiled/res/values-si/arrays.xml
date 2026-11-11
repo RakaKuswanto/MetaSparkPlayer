@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>කතාබස්</item>
+        <item>අවහිර කරන්න/අවහිරය ඉවත් කරන්න</item>
+        <item>ඇමතුම්</item>
+        <item>සක්‍රිය තත්ත්වය</item>
+        <item>සොයන්න</item>
+        <item>දැනුම්දීම්</item>
+        <item>විශේෂ ඉස්මතු කිරීම් ටැබය</item>
+        <item>වෙනත්</item>
+    </string-array>
+</resources>

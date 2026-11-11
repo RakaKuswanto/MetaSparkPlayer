@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">පිටුවට කැමැත්ත දැක්වීම් %1$s</item>
+        <item quantity="one">පිටුවට කැමැත්ත දැක් වූ ගණන %1$s</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s කැමතියි</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">පැය %1$d කට පෙර</item>
+        <item quantity="one">පැය 1කට පෙර</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">දැන් සිට පැය %1$dක්</item>
+        <item quantity="one">දැන් සිට පැයකින්</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">දැන් සිට මිනිත්තු %1$dකින්</item>
+        <item quantity="one">දැන් සිට මිනිත්තුවකින්</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">විනාඩි %1$dකට පෙර</item>
+        <item quantity="one">මිනිත්තුවකට පෙර</item>
+    </plurals>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>چیٹس</item>
+        <item>بلاک/ان بلاک کریں</item>
+        <item>کالز</item>
+        <item>فعال سٹیٹس</item>
+        <item>تلاش كريں</item>
+        <item>نوٹیفیکیشنز</item>
+        <item>جھلکیوں کا ٹیب</item>
+        <item>دیگر</item>
+    </string-array>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">การกดถูกใจเพจ %1$s ครั้ง</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s คนถูกใจ</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d ชั่วโมงที่แล้ว</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%1$d ชั่วโมงจากนี้</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%1$d นาทีจากนี้</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d นาทีที่แล้ว</item>
+    </plurals>
+</resources>

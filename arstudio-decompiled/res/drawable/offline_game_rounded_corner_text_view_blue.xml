@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/bondi_personalized_footer_reward_actiavtion_bottom_text_padding" />
+    <solid android:color="@color/offline_game_blue" />
+</shape>

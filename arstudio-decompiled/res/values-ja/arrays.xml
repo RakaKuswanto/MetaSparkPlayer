@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>チャット</item>
+        <item>ブロック・ブロックを解除</item>
+        <item>通話</item>
+        <item>オンラインのステータス</item>
+        <item>検索</item>
+        <item>お知らせ</item>
+        <item>[ハイライト]タブ</item>
+        <item>その他</item>
+    </string-array>
+</resources>

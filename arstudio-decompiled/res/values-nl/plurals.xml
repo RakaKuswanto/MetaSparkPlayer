@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s pagina-vind-ik-leuks</item>
+        <item quantity="one">%1$s pagina-vind-ik-leuk</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s vind-ik-leuks</item>
+        <item quantity="one">%1$s vind-ik-leuk</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d uur geleden</item>
+        <item quantity="one">1 uur geleden</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%1$d uur vanaf nu</item>
+        <item quantity="one">1 uur vanaf nu</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%1$d minuten vanaf nu</item>
+        <item quantity="one">1 minuut vanaf nu</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d minuten geleden</item>
+        <item quantity="one">1 minuut geleden</item>
+    </plurals>
+</resources>

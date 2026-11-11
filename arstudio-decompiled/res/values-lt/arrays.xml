@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Pokalbiai</item>
+        <item>Blokuoti / atblokuoti</item>
+        <item>Skambučiai</item>
+        <item>Aktyvumo būsena</item>
+        <item>Paieška</item>
+        <item>Pranešimai</item>
+        <item>Skirtukas „Paryškinti elementai“</item>
+        <item>Kita</item>
+    </string-array>
+</resources>

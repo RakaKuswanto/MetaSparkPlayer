@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light" />
+    <style name="Base.Widget.AppCompat.Toolbar" parent="@style/Base.V26.Widget.AppCompat.Toolbar" />
+    <style name="MigMaterialAlertDialog.Button.Dark.Material3" parent="@style/MigMaterialAlertDialog.Button.Dark.SentenceCase">
+        <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
+        <item name="android:letterSpacing">@dimen/mds_alert_dialog_button_letter_spacing_material3</item>
+        <item name="android:fontWeight">@dimen/mds_alert_dialog_button_font_weight_material3</item>
+        <item name="android:lineHeight">@dimen/abc_text_size_title_material</item>
+    </style>
+    <style name="MigMaterialAlertDialog.Button.Light.Material3" parent="@style/MigMaterialAlertDialog.Button.Light.SentenceCase">
+        <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
+        <item name="android:letterSpacing">@dimen/mds_alert_dialog_button_letter_spacing_material3</item>
+        <item name="android:fontWeight">@dimen/mds_alert_dialog_button_font_weight_material3</item>
+        <item name="android:lineHeight">@dimen/abc_text_size_title_material</item>
+    </style>
+    <style name="Base.V26.Theme.AppCompat" parent="@style/Base.V23.Theme.AppCompat">
+        <item name="colorError">?android:colorError</item>
+    </style>
+    <style name="Base.V26.Theme.AppCompat.Light" parent="@style/Base.V23.Theme.AppCompat.Light">
+        <item name="colorError">?android:colorError</item>
+    </style>
+    <style name="Base.V26.Widget.AppCompat.Toolbar" parent="@style/Base.V7.Widget.AppCompat.Toolbar">
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
+</resources>

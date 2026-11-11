@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s lehe meeldivaks märkimist</item>
+        <item quantity="one">%1$s lehe meeldimine</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s meeldimist</item>
+        <item quantity="one">%1$s meeldimine</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d tundi tagasi</item>
+        <item quantity="one">1 tund tagasi</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%1$d tunni pärast</item>
+        <item quantity="one">1 tunni pärast</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%1$d minuti pärast</item>
+        <item quantity="one">1 minuti pärast</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d minutit tagasi</item>
+        <item quantity="one">1 minut tagasi</item>
+    </plurals>
+</resources>

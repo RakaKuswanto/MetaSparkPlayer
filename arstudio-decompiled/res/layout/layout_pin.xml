@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/pin_layout" android:background="?pinLayoutBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <X.4Qk android:textSize="@dimen/fbui_text_size_xxxlarge_2" android:gravity="center|bottom" android:id="@id/header" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/text_guideline" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/text_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="0.0dip" app:layout_constraintGuide_percent="0.25" />
+    <X.4Qk android:textSize="15.0sp" android:gravity="center" android:id="@id/action_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/text_guideline" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/dots_top" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="0.0dip" app:layout_constraintGuide_percent="0.35" />
+    <ImageView android:id="@id/dots_1" app:layout_constraintBottom_toTopOf="@id/dots_bottom" app:layout_constraintEnd_toStartOf="@id/dots_2" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/dots_top" style="@style/PinDotStyle" />
+    <ImageView android:id="@id/dots_2" app:layout_constraintBottom_toTopOf="@id/dots_bottom" app:layout_constraintEnd_toStartOf="@id/dots_3" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toEndOf="@id/dots_1" app:layout_constraintTop_toBottomOf="@id/dots_top" style="@style/PinDotStyle" />
+    <ImageView android:id="@id/dots_3" app:layout_constraintBottom_toTopOf="@id/dots_bottom" app:layout_constraintEnd_toStartOf="@id/dots_4" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toEndOf="@id/dots_2" app:layout_constraintTop_toBottomOf="@id/dots_top" style="@style/PinDotStyle" />
+    <ImageView android:id="@id/dots_4" app:layout_constraintBottom_toTopOf="@id/dots_bottom" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toEndOf="@id/dots_3" app:layout_constraintTop_toBottomOf="@id/dots_top" style="@style/PinDotStyle" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/dots_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="0.0dip" app:layout_constraintGuide_percent="0.4" />
+    <GridLayout android:id="@id/keypad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:rowCount="4" android:columnCount="3" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/dots_bottom">
+        <X.4OA android:id="@id/key_1" android:tag="1" android:text="1" android:contentDescription="1" style="@style/PinButtonStyle" />
+        <X.4OA android:id="@id/key_2" android:tag="2" android:text="2" android:contentDescription="2" style="@style/PinButtonStyle" />
+        <X.4OA android:id="@id/key_3" android:tag="3" android:text="3" android:contentDescription="3" style="@style/PinButtonStyle" />
+        <X.4OA android:id="@id/key_4" android:tag="4" android:text="4" android:contentDescription="4" style="@style/PinButtonStyle" />
+        <X.4OA android:id="@id/key_5" android:tag="5" android:text="5" android:contentDescription="5" style="@style/PinButtonStyle" />
+        <X.4OA android:id="@id/key_6" android:tag="6" android:text="6" android:contentDescription="6" style="@style/PinButtonStyle" />
+        <X.4OA android:id="@id/key_7" android:tag="7" android:text="7" android:contentDescription="7" style="@style/PinButtonStyle" />
+        <X.4OA android:id="@id/key_8" android:tag="8" android:text="8" android:contentDescription="8" style="@style/PinButtonStyle" />
+        <X.4OA android:id="@id/key_9" android:tag="9" android:text="9" android:contentDescription="9" style="@style/PinButtonStyle" />
+        <View android:layout_width="@dimen/abc_list_item_height_material" android:layout_height="@dimen/abc_list_item_height_material" android:layout_margin="@dimen/abc_button_padding_horizontal_material" />
+        <X.4OA android:id="@id/key_0" android:tag="0" android:text="0" android:contentDescription="0" style="@style/PinButtonStyle" />
+        <ImageView android:id="@id/key_backspace" android:padding="15.0dip" android:focusable="true" android:src="@drawable/fb_ic_backspace_filled_20" style="@style/PinButtonStyle" />
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

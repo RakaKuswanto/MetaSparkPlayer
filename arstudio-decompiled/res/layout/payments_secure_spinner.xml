@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <X.4KI android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="@dimen/fbui_content_view_tw3l_thumbnail_width_height" android:layout_height="@dimen/fbui_content_view_tw3l_thumbnail_width_height" android:indeterminateDrawable="@drawable/payments_spinner_background" />
+        <X.4OH android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fb_ic_privacy_24" fb:glyphColor="?fds_usage_progress_ring_blue_foreground" />
+    </X.4KI>
+</merge>

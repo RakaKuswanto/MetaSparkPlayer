@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s לייקים בדף</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s לייקים</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">לפני %1$d שעות</item>
+        <item quantity="one">לפני שעה</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%1$d שעות מעכשיו</item>
+        <item quantity="one">שעה אחת מעכשיו</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%1$d דקות מעכשיו</item>
+        <item quantity="one">דקה מעכשיו</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">לפני %1$d דקות</item>
+        <item quantity="one">לפני דקה</item>
+    </plurals>
+</resources>

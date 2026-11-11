@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:variablePadding="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#33ffffff" />
+            <stroke android:width="1.0dip" android:color="@color/fbui_btn_dark_primary_stroke_enabled" />
+            <size android:height="@dimen/abc_dropdownitem_icon_width" android:width="@dimen/abc_dropdownitem_icon_width" />
+        </shape>
+    </item>
+    <item android:state_enabled="true">
+        <shape android:shape="oval">
+            <solid android:color="#0dffffff" />
+            <stroke android:width="1.0dip" android:color="@color/fbui_btn_dark_primary_stroke_enabled" />
+            <size android:height="@dimen/abc_dropdownitem_icon_width" android:width="@dimen/abc_dropdownitem_icon_width" />
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape android:shape="oval">
+            <solid android:color="#0dffffff" />
+            <stroke android:width="1.0dip" android:color="@color/fbui_btn_dark_primary_stroke_disabled" />
+            <size android:height="@dimen/abc_dropdownitem_icon_width" android:width="@dimen/abc_dropdownitem_icon_width" />
+        </shape>
+    </item>
+</selector>

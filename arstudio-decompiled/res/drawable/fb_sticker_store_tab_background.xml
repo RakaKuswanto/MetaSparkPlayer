@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="@color/abc_decor_view_status_guard_light" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/fds_gray_30_alpha15" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/fds_gray_95" />
+        </shape>
+    </item>
+</selector>

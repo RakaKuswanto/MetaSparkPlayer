@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/browser_menu_footer_bg" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/fds_black_alpha20" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/abc_button_padding_horizontal_material" />
+    <TextView android:id="@id/footer_text_view" android:paddingLeft="@dimen/abc_floating_window_z" android:paddingTop="@dimen/abc_floating_window_z" android:paddingRight="@dimen/abc_floating_window_z" android:paddingBottom="@dimen/abc_floating_window_z" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/__external__browser_lite_menu_footer" />
+</LinearLayout>

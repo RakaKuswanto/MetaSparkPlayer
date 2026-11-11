@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/save_contact_address_as_billing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/abc_select_dialog_padding_start_material"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <X.4Qk android:textAppearance="@style/headline4" android:id="@id/save_contact_address_as_billing_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/action_button_optional_padding_right" android:text="@string/__external__save_contact_address_as_billing" android:layout_weight="1.0" android:layout_marginEnd="@dimen/action_button_optional_padding_right" />
+    <X.4OD android:id="@id/save_contact_address_as_billing_selector" android:layout_width="wrap_content" android:layout_height="@dimen/abc_select_dialog_padding_start_material" android:layout_weight="0.0" />
+</LinearLayout>

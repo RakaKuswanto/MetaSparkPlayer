@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">[%1$s Page likes#16dce385893463de38a372ec77682145:1]</item>
+        <item quantity="one">[%1$s Page like#febfab00965598ecd5f1b48b839291ab:1]</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">[%1$s Likes#51aee683d3635554ed9b201faded73ad:1]</item>
+        <item quantity="one">[%1$s like#543c5cc7e72f1ec4d0925eafa0f46f6e:1]</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">[%1$d hours ago#d3a779b0c82a0680b8873133a20be5e8:1]</item>
+        <item quantity="one">[1 hour ago#1950e239b00371dbe854e8493610c744:1]</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">[%1$d hours from now#c435fa7d34e943a6f74a6a257659d4e8:1]</item>
+        <item quantity="one">[1 hour from now#29811164424905a3a45678c837e55fb7:1]</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">[%1$d minutes from now#bf778dada44946ca9ea7766493319f33:1]</item>
+        <item quantity="one">[1 minute from now#fb5a83217f0e432d1ea3235639336c1a:1]</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">[%1$d minutes ago#bb71980604c700f0ca0ee5a8bee7f342:1]</item>
+        <item quantity="one">[1 minute ago#0d7927c9c4eba09d6285f8c0a1d8b161:1]</item>
+    </plurals>
+</resources>

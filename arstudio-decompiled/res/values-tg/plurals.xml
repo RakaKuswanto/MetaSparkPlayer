@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s маъқули Саҳифа</item>
+        <item quantity="one">%1$s қайди \"маъқули\" Саҳифа</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s маъқул</item>
+        <item quantity="one">%1$s like</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d соат пеш</item>
+        <item quantity="one">1 соат пеш</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%1$d соат пас</item>
+        <item quantity="one">1 соат пас</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%1$d дақиқа пас</item>
+        <item quantity="one">1 дақиқа пас</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d дақиқа пеш</item>
+        <item quantity="one">1 дақиқа пеш</item>
+    </plurals>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Conversaţii</item>
+        <item>Blochează/deblochează</item>
+        <item>Apeluri</item>
+        <item>Vizibilitatea prezenţei</item>
+        <item>Căutare</item>
+        <item>Notificări</item>
+        <item>Fila Repere</item>
+        <item>Altele</item>
+    </string-array>
+</resources>

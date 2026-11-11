@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s pëlqime të Faqes</item>
+        <item quantity="one">%1$s pëlqime të faqes</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s pëlqime</item>
+        <item quantity="one">%1$s pëlqim</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d orë më parë</item>
+        <item quantity="one">1 orë më parë</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%1$d orë nga tani</item>
+        <item quantity="one">1 ditë nga tani</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%1$d minuta nga tani</item>
+        <item quantity="one">1 minutë nga tani</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d minuta më parë</item>
+        <item quantity="one">1 minutë më parë</item>
+    </plurals>
+</resources>

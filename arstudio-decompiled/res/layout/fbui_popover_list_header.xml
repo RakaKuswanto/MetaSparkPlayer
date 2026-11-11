@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<X.4Qk android:paddingLeft="@dimen/abc_floating_window_z" android:paddingRight="@dimen/abc_floating_window_z" android:layout_width="fill_parent" android:layout_height="@dimen/autofill_bottom_sheet_margin_top" style="?popoverMenuWindowHeaderStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

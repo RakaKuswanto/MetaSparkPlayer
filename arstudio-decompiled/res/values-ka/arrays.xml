@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>საუბრები</item>
+        <item>დაბლოკვა/განბლოკვა</item>
+        <item>ზარები</item>
+        <item>აქტიური სტატუსი</item>
+        <item>ძიება</item>
+        <item>ცნობები</item>
+        <item>გამორჩეულების ჩანართი</item>
+        <item>სხვა</item>
+    </string-array>
+</resources>

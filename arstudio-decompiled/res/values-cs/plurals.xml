@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s To se mi líbí stránky</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s To se mi líbí</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">před %1$d h</item>
+        <item quantity="one">před hodinou</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%1$d h od této chvíle</item>
+        <item quantity="one">1 h od této chvíle</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%1$d min od této chvíle</item>
+        <item quantity="one">během 1 min od této chvíle</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">před %1$d min</item>
+        <item quantity="one">před 1 min</item>
+    </plurals>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/offer_ads_browser_bar_container_bg_1">
+        <shape>
+            <solid android:color="@color/fbui_grey_20" />
+            <corners android:topLeftRadius="@dimen/action_button_optional_padding_right" android:topRightRadius="@dimen/action_button_optional_padding_right" />
+        </shape>
+    </item>
+    <item android:id="@id/offer_ads_browser_bar_container_bg_2" android:top="@dimen/awareness_footer_divider_height">
+        <shape>
+            <solid android:color="@color/abc_decor_view_status_guard_light" />
+            <corners android:topLeftRadius="@dimen/action_button_optional_padding_right" android:topRightRadius="@dimen/action_button_optional_padding_right" />
+        </shape>
+    </item>
+</layer-list>

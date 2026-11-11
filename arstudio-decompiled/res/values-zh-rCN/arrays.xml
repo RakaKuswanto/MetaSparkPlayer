@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>聊天</item>
+        <item>拉黑/取消拉黑</item>
+        <item>通话</item>
+        <item>在线状态</item>
+        <item>搜索</item>
+        <item>通知</item>
+        <item>“精选”选项卡</item>
+        <item>其他</item>
+    </string-array>
+</resources>

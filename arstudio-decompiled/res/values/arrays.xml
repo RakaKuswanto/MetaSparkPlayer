@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="job_scheduler_bugreporterretry_alljobs">
+        <item>@id/jobscheduler_bugreporterretry</item>
+    </array>
+    <array name="job_scheduler_conditionalworker_alljobs">
+        <item>@id/jobscheduler_conditionalworker</item>
+    </array>
+    <array name="jobscheduler_offline_mutations_retry_ids">
+        <item>@id/jobscheduler_offline_mutations_retry</item>
+    </array>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Chats</item>
+        <item>Block/Unblock</item>
+        <item>Calls</item>
+        <item>Active Status</item>
+        <item>Search</item>
+        <item>Notifications</item>
+        <item>Highlights Tab</item>
+        <item>Other</item>
+    </string-array>
+</resources>

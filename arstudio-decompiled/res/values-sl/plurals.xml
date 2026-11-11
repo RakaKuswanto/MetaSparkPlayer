@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">Št. všečkov strani: %1$s</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">Št. všečkov: %1$s</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">Pred toliko urami: %1$d</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">Čez toliko ur: %1$d</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">Čez toliko minut: %1$d</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">Pred toliko minutami: %1$d</item>
+    </plurals>
+</resources>

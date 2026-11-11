@@ -1,0 +1,257 @@
+.class public final LX/5dO;
+.super LX/5ds;
+.source ""
+
+# interfaces
+.implements LX/5fB;
+.implements LX/5gI;
+
+
+# instance fields
+.field public A00:I
+
+.field public A01:I
+
+.field public A02:I
+
+.field public A03:I
+
+.field public A04:LX/5ec;
+
+.field public A05:LX/5fA;
+
+.field public A06:LX/5eu;
+
+.field public A07:LX/5eH;
+
+.field public A08:Ljava/lang/Integer;
+
+.field public A09:Z
+
+.field public final A0A:Landroid/os/Handler;
+
+.field public final A0B:LX/5p9;
+
+.field public final A0C:LX/5eU;
+
+.field public final A0D:LX/5ge;
+
+.field public final A0E:LX/5dv;
+
+.field public final A0F:LX/5or;
+
+.field public final A0G:LX/5b2;
+
+.field public final A0H:LX/5p9;
+
+
+# direct methods
+.method public constructor <init>(LX/5dm;)V
+    .locals 4
+
+    .line 0
+    invoke-direct {p0, p1}, LX/5ds;-><init>(LX/5dm;)V
+
+    .line 1
+    .line 2
+    .line 3
+    const/4 v1, 0x1
+
+    .line 4
+    new-instance v0, LX/5b2;
+
+    .line 5
+    .line 6
+    invoke-direct {v0, v1}, LX/5b2;-><init>(Z)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, LX/5dO;->A0G:LX/5b2;
+
+    .line 10
+    .line 11
+    new-instance v0, LX/5eT;
+
+    .line 12
+    .line 13
+    invoke-direct {v0, p0}, LX/5eT;-><init>(LX/5dO;)V
+
+    .line 14
+    .line 15
+    .line 16
+    iput-object v0, p0, LX/5dO;->A0D:LX/5ge;
+
+    .line 17
+    .line 18
+    new-instance v0, LX/5dL;
+
+    .line 19
+    .line 20
+    invoke-direct {v0, p0}, LX/5dL;-><init>(LX/5dO;)V
+
+    .line 21
+    .line 22
+    .line 23
+    iput-object v0, p0, LX/5dO;->A0B:LX/5p9;
+
+    .line 24
+    .line 25
+    new-instance v0, LX/5ct;
+
+    .line 26
+    .line 27
+    invoke-direct {v0, p0}, LX/5ct;-><init>(LX/5dO;)V
+
+    .line 28
+    .line 29
+    .line 30
+    iput-object v0, p0, LX/5dO;->A0H:LX/5p9;
+
+    .line 31
+    .line 32
+    sget-object v1, LX/5dv;->A00:LX/5gV;
+
+    .line 33
+    .line 34
+    iget-object v3, p0, LX/5ds;->A00:LX/5dm;
+
+    .line 35
+    .line 36
+    invoke-interface {v3, v1}, LX/5dm;->AQ2(LX/5gV;)Z
+
+    .line 37
+    .line 38
+    .line 39
+    move-result v0
+
+    .line 40
+    const/4 v2, 0x0
+
+    .line 41
+    if-eqz v0, :cond_1
+
+    .line 42
+    .line 43
+    invoke-interface {v3, v1}, LX/5dm;->ADS(LX/5gV;)LX/5gJ;
+
+    .line 44
+    .line 45
+    .line 46
+    move-result-object v0
+
+    .line 47
+    check-cast v0, LX/5dv;
+
+    .line 48
+    .line 49
+    :goto_0
+    iput-object v0, p0, LX/5dO;->A0E:LX/5dv;
+
+    .line 50
+    .line 51
+    sget-object v1, LX/5dF;->A00:LX/5gV;
+
+    .line 52
+    .line 53
+    invoke-interface {v3, v1}, LX/5dm;->AQ2(LX/5gV;)Z
+
+    .line 54
+    .line 55
+    .line 56
+    move-result v0
+
+    .line 57
+    if-eqz v0, :cond_0
+
+    .line 58
+    .line 59
+    invoke-interface {v3, v1}, LX/5dm;->ADS(LX/5gV;)LX/5gJ;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object v2
+
+    .line 63
+    check-cast v2, LX/5dF;
+
+    .line 64
+    .line 65
+    :cond_0
+    sget-object v0, LX/5eO;->A00:LX/5gV;
+
+    .line 66
+    .line 67
+    invoke-interface {v3, v0}, LX/5dm;->ADS(LX/5gV;)LX/5gJ;
+
+    .line 68
+    .line 69
+    .line 70
+    move-result-object v1
+
+    .line 71
+    check-cast v1, LX/5eO;
+
+    .line 72
+    .line 73
+    const-string v0, "Lite-Controller-Thread"
+
+    .line 74
+    .line 75
+    invoke-interface {v1, v0}, LX/5eO;->AGM(Ljava/lang/String;)Landroid/os/Handler;
+
+    .line 76
+    .line 77
+    .line 78
+    move-result-object v0
+
+    .line 79
+    iput-object v0, p0, LX/5dO;->A0A:Landroid/os/Handler;
+
+    .line 80
+    .line 81
+    new-instance v0, LX/5eU;
+
+    .line 82
+    .line 83
+    invoke-direct {v0, p0}, LX/5eU;-><init>(LX/5dO;)V
+
+    .line 84
+    .line 85
+    .line 86
+    iput-object v0, p0, LX/5dO;->A0C:LX/5eU;
+
+    .line 87
+    .line 88
+    sget-object v0, LX/5gI;->A01:LX/5gR;
+
+    .line 89
+    .line 90
+    invoke-interface {v3, v0}, LX/5dm;->ADc(LX/5gR;)Ljava/lang/Object;
+
+    .line 91
+    .line 92
+    .line 93
+    new-instance v0, LX/5bB;
+
+    .line 94
+    .line 95
+    invoke-direct {v0, v2}, LX/5bB;-><init>(LX/5dF;)V
+
+    .line 96
+    .line 97
+    .line 98
+    iput-object v0, p0, LX/5dO;->A0F:LX/5or;
+
+    .line 99
+    .line 100
+    return-void
+
+    .line 101
+    :cond_1
+    move-object v0, v2
+
+    .line 102
+    goto :goto_0
+.end method

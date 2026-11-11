@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/preview_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" fb:layout_anchorIndex="4" fb:layout_anchorTo="bottom"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/preview_thumbnail" android:layout_width="100.0dip" android:layout_height="0.0dip" />
+    <X.4Qk android:textSize="@dimen/abc_text_size_caption_material" android:textColor="@color/abc_decor_view_status_guard_light" android:gravity="center" android:id="@id/preview_elapsed_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Чатове</item>
+        <item>Блокиране/отблокиране</item>
+        <item>Обаждания</item>
+        <item>Състояние на активност</item>
+        <item>Търсене</item>
+        <item>Известия</item>
+        <item>Раздел „Акценти“</item>
+        <item>Друго</item>
+    </string-array>
+</resources>

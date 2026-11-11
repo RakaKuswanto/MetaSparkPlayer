@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Συνομιλίες</item>
+        <item>Μπλοκάρισμα/Ξεμπλοκάρισμα</item>
+        <item>Κλήσεις</item>
+        <item>Ενεργή κατάσταση</item>
+        <item>Αναζήτηση</item>
+        <item>Ειδοποιήσεις</item>
+        <item>Καρτέλα Highlights</item>
+        <item>Άλλο</item>
+    </string-array>
+</resources>

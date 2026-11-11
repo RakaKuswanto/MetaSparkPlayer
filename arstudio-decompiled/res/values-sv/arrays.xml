@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Chattar</item>
+        <item>Blockera/avblockera</item>
+        <item>Samtal</item>
+        <item>Aktivitetsstatus</item>
+        <item>Sök</item>
+        <item>Aviseringar</item>
+        <item>Fliken Höjdpunkter</item>
+        <item>Annat</item>
+    </string-array>
+</resources>

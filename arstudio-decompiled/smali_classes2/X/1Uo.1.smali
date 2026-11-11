@@ -1,0 +1,237 @@
+.class public final LX/1Uo;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements LX/0V7;
+
+
+# instance fields
+.field public A00:Ljava/lang/Object;
+
+.field public final A01:I
+
+
+# direct methods
+.method public constructor <init>(LX/0Gd;)V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x4
+
+    .line 1
+    iput v0, p0, LX/1Uo;->A01:I
+
+    .line 2
+    .line 3
+    iput-object p1, p0, LX/1Uo;->A00:Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public constructor <init>(LX/30G;I)V
+    .locals 0
+
+    .line 268435456
+    iput p2, p0, LX/1Uo;->A01:I
+
+    .line 268435457
+    .line 268435458
+    if-eqz p2, :cond_0
+
+    .line 268435459
+    .line 268435460
+    iput-object p1, p0, LX/1Uo;->A00:Ljava/lang/Object;
+
+    .line 268435461
+    .line 268435462
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435463
+    .line 268435464
+    .line 268435465
+    return-void
+
+    .line 268435466
+    :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435467
+    .line 268435468
+    .line 268435469
+    iput-object p1, p0, LX/1Uo;->A00:Ljava/lang/Object;
+
+    .line 268435470
+    .line 268435471
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 2
+
+    .line 0
+    iget v0, p0, LX/1Uo;->A01:I
+
+    .line 1
+    .line 2
+    packed-switch v0, :pswitch_data_0
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p0, LX/1Uo;->A00:Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    check-cast v0, LX/0Gd;
+
+    .line 8
+    .line 9
+    invoke-interface {v0}, LX/0Gd;->get()Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    return-object v0
+
+    .line 14
+    :pswitch_0
+    iget-object v0, p0, LX/1Uo;->A00:Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    check-cast v0, LX/30G;
+
+    .line 17
+    .line 18
+    iget-object v0, v0, LX/30G;->A0H:LX/0Na;
+
+    .line 19
+    .line 20
+    invoke-interface {v0}, LX/0Na;->get()Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    .line 23
+    move-result-object v0
+
+    .line 24
+    return-object v0
+
+    .line 25
+    :pswitch_1
+    iget-object v0, p0, LX/1Uo;->A00:Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    check-cast v0, LX/30G;
+
+    .line 28
+    .line 29
+    iget-object v0, v0, LX/30G;->A0N:LX/1an;
+
+    .line 30
+    .line 31
+    invoke-virtual {v0}, LX/1an;->A00()Ljava/lang/String;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v0
+
+    .line 35
+    return-object v0
+
+    .line 36
+    :pswitch_2
+    iget-object v0, p0, LX/1Uo;->A00:Ljava/lang/Object;
+
+    .line 37
+    .line 38
+    check-cast v0, LX/30G;
+
+    .line 39
+    .line 40
+    iget-object v0, v0, LX/30G;->A0B:LX/0Na;
+
+    .line 41
+    .line 42
+    invoke-static {v0}, LX/0Yg;->A0G(LX/0Na;)LX/3EH;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v1
+
+    .line 46
+    const/16 v0, 0x12
+
+    .line 47
+    .line 48
+    goto :goto_0
+
+    .line 49
+    :pswitch_3
+    iget-object v0, p0, LX/1Uo;->A00:Ljava/lang/Object;
+
+    .line 50
+    .line 51
+    check-cast v0, LX/30G;
+
+    .line 52
+    .line 53
+    iget-object v0, v0, LX/30G;->A0B:LX/0Na;
+
+    .line 54
+    .line 55
+    invoke-static {v0}, LX/0Yg;->A0G(LX/0Na;)LX/3EH;
+
+    .line 56
+    .line 57
+    .line 58
+    move-result-object v1
+
+    .line 59
+    const/16 v0, 0x14
+
+    .line 60
+    .line 61
+    :goto_0
+    invoke-static {v1, v0}, LX/3EH;->A01(LX/3EH;I)Z
+
+    .line 62
+    .line 63
+    .line 64
+    move-result v0
+
+    .line 65
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    .line 66
+    .line 67
+    .line 68
+    move-result-object v0
+
+    .line 69
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
+.end method

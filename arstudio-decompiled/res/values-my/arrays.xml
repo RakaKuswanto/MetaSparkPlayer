@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>စကားဝိုင်းများ</item>
+        <item>ပိတ်ပင်ရန်/ပြန်ဖွင့်ပေးရန်</item>
+        <item>ခေါ်ဆိုမှုများ</item>
+        <item>အသုံးပြုနေခြင်းရှိ၊ မရှိ အခြေအနေ</item>
+        <item>ရှာရန်</item>
+        <item>အသိပေးချက်များ</item>
+        <item>ဦးစားပေးဖော်ပြမှုများ တက်ဘ်</item>
+        <item>အခြား</item>
+    </string-array>
+</resources>

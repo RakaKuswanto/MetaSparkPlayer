@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <X.6H3 android:layout_gravity="center_vertical" android:id="@id/autofill_payment_data_entry_icon" android:layout_width="@dimen/action_sheet_native_base_header_dragger_width" android:layout_height="@dimen/fb_autofill_payment_card_icon_height" android:layout_marginRight="@dimen/action_button_optional_padding_right" android:layout_weight="0.0" android:layout_marginEnd="@dimen/action_button_optional_padding_right" />
+    <LinearLayout android:orientation="vertical" android:id="@id/autofill_payment_data_entry_texts" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <X.4Qk android:id="@id/autofill_payment_data_entry_primary_line" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/headline4" />
+        <X.4Qk android:gravity="start" android:id="@id/autofill_payment_data_entry_secondary_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/autofill_missing_payment_info_button_top_margin" style="@style/meta4" />
+    </LinearLayout>
+    <X.4OB android:enabled="false" android:layout_gravity="center_vertical" android:id="@id/autofill_payment_data_entry_radio_icon" android:focusable="false" android:clickable="false" android:layout_width="@dimen/abc_select_dialog_padding_start_material" android:layout_height="@dimen/abc_select_dialog_padding_start_material" android:button="@drawable/radio_icon" android:layout_weight="0.0" />
+</merge>

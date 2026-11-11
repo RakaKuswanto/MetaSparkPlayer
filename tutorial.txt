@@ -1,0 +1,40 @@
+--CARI PATH APK
+adb shell pm path pl.trpaslik.babynoise
+
+package:/data/app/~~hkn37bGMHEdHFjZERrweUw==/pl.trpaslik.babynoise-jDSQ06zy1pWUlP2EuydQDg==/base.apk
+package:/data/app/~~hkn37bGMHEdHFjZERrweUw==/pl.trpaslik.babynoise-jDSQ06zy1pWUlP2EuydQDg==/split_config.en.apk
+package:/data/app/~~hkn37bGMHEdHFjZERrweUw==/pl.trpaslik.babynoise-jDSQ06zy1pWUlP2EuydQDg==/split_config.xxhdpi.apk
+
+--BACKUP APK
+adb pull "/data/app/~~hkn37bGMHEdHFjZERrweUw==/pl.trpaslik.babynoise-jDSQ06zy1pWUlP2EuydQDg==/base.apk" ./com.facebook.arstudio.player.apk
+adb pull "/data/app/~~hkn37bGMHEdHFjZERrweUw==/pl.trpaslik.babynoise-jDSQ06zy1pWUlP2EuydQDg==/split_config.en.apk" ./pl.trpaslik.babynoise-en.apk
+adb pull "/data/app/~~hkn37bGMHEdHFjZERrweUw==/pl.trpaslik.babynoise-jDSQ06zy1pWUlP2EuydQDg==/split_config.xxhdpi.apk" ./pl.trpaslik.babynoise-xxhdpi.apk
+
+--DECOMPILE
+java -jar apktool_2.12.1.jar d com.facebook.arstudio.player.apk -o arstudio-decompiled
+
+--RECOMPILE 
+java -jar apktool_2.12.1.jar b arstudio-decompiled -o babynoise-recompiled.apk
+
+--INSTALL
+#####################adb install-multiple alquran-recompiled.apk com.andi.alquran.id-arm64.apk com.andi.alquran.id-en.apk com.andi.alquran.id-xxhdpi.apk
+adb install-multiple base.apk config.en.apk config.xxhdpi.apk
+
+--SIGN AFTER MERGE
+java -jar uber-apk-signer-1.3.0.jar --apks output.apk --overwrite
+
+--SIGNING
+java -jar uber-apk-signer-1.3.0.jar ^
+--apks babynoise-recompiled.apk pl.trpaslik.babynoise-en.apk pl.trpaslik.babynoise-xxhdpi.apk ^
+--overwrite ^
+--allowResign ^
+--ks my-debug.keystore ^
+--ksAlias mykey ^
+--ksPass 123456 ^
+--ksKeyPass 123456
+
+--MERGE APK
+java -jar APKEditor-1.4.5.jar m -i recompiled
+
+--DEBUG
+adb logcat *:E | findstr pl.trpaslik.babynoise

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>ಚಾಟ್‍‌ಗಳು</item>
+        <item>ಬ್ಲಾಕ್/ಅನ್‍ಬ್ಲಾಕ್</item>
+        <item>ಕರೆಗಳು</item>
+        <item>ಸಕ್ರಿಯ ಸ್ಧಿತಿ</item>
+        <item>ಹುಡುಕಿ</item>
+        <item>ಅಧಿಸೂಚನೆಗಳು</item>
+        <item>ಹೈಲೈಟ್‌ಗಳ ಟ್ಯಾಬ್</item>
+        <item>ಇತರೆ</item>
+    </string-array>
+</resources>

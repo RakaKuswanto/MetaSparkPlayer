@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Bate-papos</item>
+        <item>Bloquear/desbloquear</item>
+        <item>Ligações</item>
+        <item>Status online</item>
+        <item>Pesquisar</item>
+        <item>Notificações</item>
+        <item>Aba Destaques</item>
+        <item>Outro</item>
+    </string-array>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Chaty</item>
+        <item>Blokovat / zrušit blokování</item>
+        <item>Hovory</item>
+        <item>Aktivní stav</item>
+        <item>Hledat</item>
+        <item>Upozornění</item>
+        <item>Karta Výběr</item>
+        <item>Něco jiného</item>
+    </string-array>
+</resources>

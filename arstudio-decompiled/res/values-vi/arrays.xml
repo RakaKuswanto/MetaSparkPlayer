@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Chat</item>
+        <item>Chặn/Bỏ chặn</item>
+        <item>Cuộc gọi</item>
+        <item>Trạng thái hoạt động</item>
+        <item>Tìm kiếm</item>
+        <item>Thông báo</item>
+        <item>Tab Tin nổi bật</item>
+        <item>Khác</item>
+    </string-array>
+</resources>

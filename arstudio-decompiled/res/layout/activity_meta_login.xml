@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<X.4KJ android:gravity="center" android:orientation="vertical" android:id="@id/login_fragment_host" android:background="@color/ic_launcher_spark_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+    <X.6H3 android:layout_gravity="center" android:id="@id/meta_spark_player_logo_view" android:layout_width="125.0dip" android:layout_height="72.0dip" android:src="@drawable/meta_logo" />
+    <Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+    <X.4KJ android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="320.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+        <X.4KI android:id="@id/meta_fb_login_button" android:background="@drawable/meta_fb_login_button" style="@style/meta_login_button_full">
+            <X.4KJ android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <X.4OH android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/meta_fb_logo" />
+                <X.4Qk android:textColor="@color/background_floating_material_light" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/meta_fb_login_button_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/meta_fb_login_button_text" android:maxLength="30" style="@style/meta_login_button" />
+            </X.4KJ>
+        </X.4KI>
+        <Space android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_weight="16.0" />
+        <X.4KI android:id="@id/meta_ig_login_button" android:background="@drawable/meta_ig_login_button" style="@style/meta_login_button_full">
+            <X.4KJ android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <X.4OH android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/meta_ig_logo" />
+                <X.4Qk android:textColor="@color/login_meta_with_ig_text_color" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/meta_ig_login_button_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/meta_ig_login_button_text" android:maxLength="30" style="@style/meta_login_button" />
+            </X.4KJ>
+        </X.4KI>
+        <Space android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_weight="16.0" />
+        <X.4OA android:textColor="@android:color/white" android:id="@id/meta_email_reg_button" android:background="@drawable/meta_setup_account_button" android:text="@string/meta_email_reg_button_text" style="@style/meta_login_button_full" />
+        <Space android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_weight="16.0" />
+        <X.4OA android:textColor="@android:color/white" android:id="@id/meta_email_login_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/meta_email_login_button_text" style="@style/meta_login_button" />
+        <Space android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_weight="16.0" />
+        <X.4OA android:textColor="@android:color/white" android:id="@id/meta_skip_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/meta_skip_button_text" style="@style/meta_login_button" />
+    </X.4KJ>
+    <Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/abc_action_bar_overflow_padding_end_material" android:textColor="@android:color/white" android:textColorHighlight="@android:color/transparent" android:textColorLink="@android:color/white" android:gravity="center" android:id="@id/tos_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/meta_tos" />
+    <Space android:layout_width="0.0dip" android:layout_height="48.0dip" />
+</X.4KJ>

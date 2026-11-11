@@ -1,0 +1,421 @@
+.class public final Lcom/facebook/login/LoginClient$Result;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+
+
+# instance fields
+.field public A00:Ljava/util/Map;
+
+.field public final A01:Lcom/facebook/login/LoginClient$Request;
+
+.field public final A02:Lcom/facebook/AccessToken;
+
+.field public final A03:LX/23w;
+
+.field public final A04:Ljava/lang/String;
+
+.field public final A05:Ljava/lang/String;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    const/16 v0, 0x2b
+
+    .line 1
+    .line 2
+    invoke-static {v0}, LX/14m;->A00(I)LX/14m;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    sput-object v0, Lcom/facebook/login/LoginClient$Result;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    invoke-static {v0}, LX/23w;->valueOf(Ljava/lang/String;)LX/23w;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v0
+
+    .line 11
+    iput-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A03:LX/23w;
+
+    .line 12
+    .line 13
+    const-class v0, Lcom/facebook/AccessToken;
+
+    .line 14
+    .line 15
+    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v0
+
+    .line 19
+    check-cast v0, Lcom/facebook/AccessToken;
+
+    .line 20
+    .line 21
+    iput-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A02:Lcom/facebook/AccessToken;
+
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object v0
+
+    .line 27
+    iput-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A05:Ljava/lang/String;
+
+    .line 28
+    .line 29
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-object v0
+
+    .line 33
+    iput-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A04:Ljava/lang/String;
+
+    .line 34
+    .line 35
+    const-class v0, Lcom/facebook/login/LoginClient$Request;
+
+    .line 36
+    .line 37
+    invoke-static {p1, v0}, LX/0Ye;->A0D(Landroid/os/Parcel;Ljava/lang/Class;)Landroid/os/Parcelable;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v0
+
+    .line 41
+    check-cast v0, Lcom/facebook/login/LoginClient$Request;
+
+    .line 42
+    .line 43
+    iput-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A01:Lcom/facebook/login/LoginClient$Request;
+
+    .line 44
+    .line 45
+    invoke-static {p1}, LX/2Sz;->A06(Landroid/os/Parcel;)Ljava/util/HashMap;
+
+    .line 46
+    .line 47
+    .line 48
+    move-result-object v0
+
+    .line 49
+    iput-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A00:Ljava/util/Map;
+
+    .line 50
+    .line 51
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;LX/23w;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    const-string v0, "code"
+
+    .line 268435460
+    .line 268435461
+    invoke-static {p3, v0}, Lcom/facebook/internal/Validate;->A01(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 268435462
+    .line 268435463
+    .line 268435464
+    iput-object p2, p0, Lcom/facebook/login/LoginClient$Result;->A01:Lcom/facebook/login/LoginClient$Request;
+
+    .line 268435465
+    .line 268435466
+    iput-object p1, p0, Lcom/facebook/login/LoginClient$Result;->A02:Lcom/facebook/AccessToken;
+
+    .line 268435467
+    .line 268435468
+    iput-object p4, p0, Lcom/facebook/login/LoginClient$Result;->A05:Ljava/lang/String;
+
+    .line 268435469
+    .line 268435470
+    iput-object p3, p0, Lcom/facebook/login/LoginClient$Result;->A03:LX/23w;
+
+    .line 268435471
+    .line 268435472
+    iput-object p5, p0, Lcom/facebook/login/LoginClient$Result;->A04:Ljava/lang/String;
+
+    .line 268435473
+    .line 268435474
+    return-void
+.end method
+
+.method public static A00(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;)Lcom/facebook/login/LoginClient$Result;
+    .locals 5
+
+    .line 0
+    sget-object v3, LX/23w;->SUCCESS:LX/23w;
+
+    .line 1
+    .line 2
+    const/4 v4, 0x0
+
+    .line 3
+    new-instance v0, Lcom/facebook/login/LoginClient$Result;
+
+    .line 4
+    .line 5
+    move-object v1, p0
+
+    .line 6
+    move-object v2, p1
+
+    .line 7
+    move-object p0, v4
+
+    .line 8
+    invoke-direct/range {v0 .. v5}, Lcom/facebook/login/LoginClient$Result;-><init>(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;LX/23w;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-object v0
+.end method
+
+.method public static A01(Lcom/facebook/login/LoginClient$Request;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/login/LoginClient$Result;
+    .locals 5
+
+    .line 0
+    const/4 v4, 0x2
+
+    .line 1
+    new-array v3, v4, [Ljava/lang/String;
+
+    .line 2
+    .line 3
+    invoke-static {v3, p1, p2}, LX/001;->A1D([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-static {}, LX/002;->A0H()Ljava/util/ArrayList;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v2
+
+    .line 10
+    const/4 v1, 0x0
+
+    .line 11
+    :cond_0
+    aget-object v0, v3, v1
+
+    .line 12
+    .line 13
+    if-eqz v0, :cond_1
+
+    .line 14
+    .line 15
+    invoke-virtual {v2, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    .line 16
+    .line 17
+    .line 18
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    .line 19
+    .line 20
+    if-lt v1, v4, :cond_0
+
+    .line 21
+    .line 22
+    const-string v0, ": "
+
+    .line 23
+    .line 24
+    invoke-static {v0, v2}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object p2
+
+    .line 28
+    sget-object p1, LX/23w;->ERROR:LX/23w;
+
+    .line 29
+    .line 30
+    const/4 v4, 0x0
+
+    .line 31
+    new-instance v3, Lcom/facebook/login/LoginClient$Result;
+
+    .line 32
+    .line 33
+    invoke-direct/range {v3 .. v8}, Lcom/facebook/login/LoginClient$Result;-><init>(Lcom/facebook/AccessToken;Lcom/facebook/login/LoginClient$Request;LX/23w;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 34
+    .line 35
+    .line 36
+    return-object v3
+.end method
+
+.method public static A02(Lcom/facebook/login/LoginClient;Ljava/lang/Throwable;)V
+    .locals 4
+
+    .line 0
+    iget-object v3, p0, Lcom/facebook/login/LoginClient;->A03:Lcom/facebook/login/LoginClient$Request;
+
+    .line 1
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v2
+
+    .line 6
+    const-string v1, "Caught exception"
+
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    invoke-static {v3, v1, v2, v0}, Lcom/facebook/login/LoginClient$Result;->A01(Lcom/facebook/login/LoginClient$Request;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/login/LoginClient$Result;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v0
+
+    .line 13
+    invoke-virtual {p0, v0}, Lcom/facebook/login/LoginClient;->A03(Lcom/facebook/login/LoginClient$Result;)V
+
+    .line 14
+    .line 15
+    .line 16
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A03:LX/23w;
+
+    .line 1
+    .line 2
+    invoke-static {p1, v0}, LX/0Yd;->A0b(Landroid/os/Parcel;Ljava/lang/Enum;)V
+
+    .line 3
+    .line 4
+    .line 5
+    iget-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A02:Lcom/facebook/AccessToken;
+
+    .line 6
+    .line 7
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    .line 8
+    .line 9
+    .line 10
+    iget-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A05:Ljava/lang/String;
+
+    .line 11
+    .line 12
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 13
+    .line 14
+    .line 15
+    iget-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A04:Ljava/lang/String;
+
+    .line 16
+    .line 17
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 18
+    .line 19
+    .line 20
+    iget-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A01:Lcom/facebook/login/LoginClient$Request;
+
+    .line 21
+    .line 22
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    .line 23
+    .line 24
+    .line 25
+    iget-object v0, p0, Lcom/facebook/login/LoginClient$Result;->A00:Ljava/util/Map;
+
+    .line 26
+    .line 27
+    invoke-static {p1, v0}, LX/2Sz;->A09(Landroid/os/Parcel;Ljava/util/Map;)V
+
+    .line 28
+    .line 29
+    .line 30
+    return-void
+.end method

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s отметок \"Нравится\" Страницы</item>
+        <item quantity="one">%1$s отметка \"Нравится\" Страницы</item>
+        <item quantity="few">%1$s отметки \"Нравится\" Страницы</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s отметок \"Нравится\"</item>
+        <item quantity="one">%1$s отметка \"Нравится\"</item>
+        <item quantity="few">%1$s отметки \"Нравится\"</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d ч. назад</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">Через %1$d часов</item>
+        <item quantity="one">Через %1$d час</item>
+        <item quantity="few">Через %1$d часа</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">Через %1$d минут</item>
+        <item quantity="one">Через %1$d минуту</item>
+        <item quantity="few">Через %1$d минуты</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d мин. назад</item>
+    </plurals>
+</resources>

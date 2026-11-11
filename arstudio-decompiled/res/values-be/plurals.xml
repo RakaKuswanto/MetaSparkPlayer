@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">Адзнакі \"Падабаецца\" Старонкі: %1$s</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s упадабалі</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d гадз таму</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">Праз %1$d гадзін</item>
+        <item quantity="one">Праз %1$d гадзіну</item>
+        <item quantity="few">Праз %1$d гадзіны</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">Праз %1$d хвілін</item>
+        <item quantity="one">Праз %1$d хвіліну</item>
+        <item quantity="few">Праз %1$d хвіліны</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d хвілін таму</item>
+        <item quantity="one">%1$d хвіліну таму</item>
+        <item quantity="few">%1$d хвіліны таму</item>
+    </plurals>
+</resources>

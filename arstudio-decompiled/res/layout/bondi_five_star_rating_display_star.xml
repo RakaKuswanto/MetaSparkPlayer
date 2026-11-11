@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<X.4KH android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <X.4OG android:gravity="center" android:id="@id/bondi_fsrd_star_background" android:layout_width="@dimen/abc_floating_window_z" android:layout_height="wrap_content" android:src="@drawable/fb_ic_star_outline_20" android:importantForAccessibility="no" fb:glyphColor="@color/bondi_fsrd_disabled_star_color" />
+    <X.4OG android:gravity="center" android:id="@id/bondi_fsrd_star_main" android:layout_width="@dimen/abc_floating_window_z" android:layout_height="wrap_content" android:src="@drawable/fb_ic_star_half_filled_20" android:importantForAccessibility="no" fb:glyphColor="@color/bondi_fsrd_filled_star_color" />
+</X.4KH>

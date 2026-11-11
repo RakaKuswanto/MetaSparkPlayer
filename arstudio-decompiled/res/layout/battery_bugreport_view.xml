@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <X.4Qk android:textSize="@dimen/abc_text_size_body_1_material" android:textColor="#ff777777" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/action_button_optional_padding_right" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/action_button_optional_padding_right" android:layout_marginBottom="@dimen/action_button_optional_padding_right" android:text="@string/battery_take_bugreport_hint" android:layout_marginStart="@dimen/action_button_optional_padding_right" android:layout_marginEnd="@dimen/action_button_optional_padding_right" />
+    <X.4OA android:gravity="center" android:id="@id/bugreport_button" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/battery_take_bugreport_btn_text" style="?buttonPrimaryLarge" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Разговори</item>
+        <item>Блокира/одблокирај</item>
+        <item>Повици</item>
+        <item>Активен статус</item>
+        <item>Пребарај</item>
+        <item>Известувања</item>
+        <item>Картичка за истакнати работи</item>
+        <item>Друго</item>
+    </string-array>
+</resources>

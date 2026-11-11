@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Chats</item>
+        <item>Blockieren/Nicht mehr blockieren</item>
+        <item>Anrufe</item>
+        <item>Aktiv-Status</item>
+        <item>Suche</item>
+        <item>Benachrichtigungen</item>
+        <item>Highlights-Tab</item>
+        <item>Sonstiges</item>
+    </string-array>
+</resources>

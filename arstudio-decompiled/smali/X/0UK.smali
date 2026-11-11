@@ -1,0 +1,143 @@
+.class public final LX/0UK;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements LX/04p;
+
+
+# instance fields
+.field public final A00:Landroid/view/inputmethod/InputContentInfo;
+
+
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;Landroid/content/ClipDescription;Landroid/net/Uri;)V
+    .locals 1
+
+    .line 268435456
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 268435457
+    .line 268435458
+    .line 268435459
+    new-instance v0, Landroid/view/inputmethod/InputContentInfo;
+
+    .line 268435460
+    .line 268435461
+    invoke-direct {v0, p1, p2, p3}, Landroid/view/inputmethod/InputContentInfo;-><init>(Landroid/net/Uri;Landroid/content/ClipDescription;Landroid/net/Uri;)V
+
+    .line 268435462
+    .line 268435463
+    .line 268435464
+    iput-object v0, p0, LX/0UK;->A00:Landroid/view/inputmethod/InputContentInfo;
+
+    .line 268435465
+    .line 268435466
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    check-cast p1, Landroid/view/inputmethod/InputContentInfo;
+
+    .line 4
+    .line 5
+    iput-object p1, p0, LX/0UK;->A00:Landroid/view/inputmethod/InputContentInfo;
+
+    .line 6
+    .line 7
+    return-void
+.end method
+
+
+# virtual methods
+.method public final ADj()Landroid/net/Uri;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0UK;->A00:Landroid/view/inputmethod/InputContentInfo;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Landroid/view/inputmethod/InputContentInfo;->getContentUri()Landroid/net/Uri;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final AEX()Landroid/content/ClipDescription;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0UK;->A00:Landroid/view/inputmethod/InputContentInfo;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Landroid/view/inputmethod/InputContentInfo;->getDescription()Landroid/content/ClipDescription;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final AH7()Ljava/lang/Object;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0UK;->A00:Landroid/view/inputmethod/InputContentInfo;
+
+    .line 1
+    .line 2
+    return-object v0
+.end method
+
+.method public final AHv()Landroid/net/Uri;
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0UK;->A00:Landroid/view/inputmethod/InputContentInfo;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Landroid/view/inputmethod/InputContentInfo;->getLinkUri()Landroid/net/Uri;
+
+    .line 3
+    .line 4
+    .line 5
+    move-result-object v0
+
+    .line 6
+    return-object v0
+.end method
+
+.method public final Ajq()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, LX/0UK;->A00:Landroid/view/inputmethod/InputContentInfo;
+
+    .line 1
+    .line 2
+    invoke-virtual {v0}, Landroid/view/inputmethod/InputContentInfo;->requestPermission()V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method

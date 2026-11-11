@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">စာမ်က္ႏွာ ႏွစ္သက္မွု %1$s ခု</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">ႏွစ္သက္မွု %1$s ခု</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">လြန္ခဲ့တဲ့ %1$d နာရီ</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">ယခုအခ်ိန္မွ %1$d နာရီအတြင္း</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">ယခုမွ %1$d မိနစ္အတြင္း</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">လြန္ခဲ့တဲ့ %1$d မိနစ္</item>
+    </plurals>
+</resources>

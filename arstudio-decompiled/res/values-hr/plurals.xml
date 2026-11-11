@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s oznaka \"sviđa mi se\" za stranicu</item>
+        <item quantity="few">%1$s oznake \"sviđa mi se\" za stranicu</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s oznaka \"sviđa mi se\"</item>
+        <item quantity="few">%1$s oznake \"sviđa mi se\"</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">Prije %1$d h</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">za %1$d h</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">za %1$d min</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">prije %1$d min</item>
+    </plurals>
+</resources>

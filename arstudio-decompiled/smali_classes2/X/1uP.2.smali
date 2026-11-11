@@ -1,0 +1,106 @@
+.class public final LX/1uP;
+.super Ljava/lang/Object;
+.source ""
+
+
+# instance fields
+.field public final A00:Landroid/content/Context;
+
+.field public final A01:Landroid/os/Handler;
+
+.field public final A02:LX/2sj;
+
+.field public final A03:Ljava/util/concurrent/ExecutorService;
+
+.field public volatile A04:Z
+
+.field public volatile A05:LX/1uQ;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 3
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1
+    .line 2
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    sget v0, LX/2eq;->A5B:I
+
+    .line 5
+    .line 6
+    invoke-static {v1, v1, v0}, LX/1zE;->A0A(Landroid/content/Context;LX/1zG;I)Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object v2
+
+    .line 10
+    check-cast v2, Landroid/content/Context;
+
+    .line 11
+    .line 12
+    sget v0, LX/2eq;->A73:I
+
+    .line 13
+    .line 14
+    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v1
+
+    .line 18
+    check-cast v1, LX/2sj;
+
+    .line 19
+    .line 20
+    sget v0, LX/2eq;->A6A:I
+
+    .line 21
+    .line 22
+    invoke-static {v0}, LX/1z6;->A0T(I)Ljava/lang/Object;
+
+    .line 23
+    .line 24
+    .line 25
+    move-result-object v0
+
+    .line 26
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
+
+    .line 27
+    .line 28
+    iput-object v2, p0, LX/1uP;->A00:Landroid/content/Context;
+
+    .line 29
+    .line 30
+    iput-object v1, p0, LX/1uP;->A02:LX/2sj;
+
+    .line 31
+    .line 32
+    iput-object v0, p0, LX/1uP;->A03:Ljava/util/concurrent/ExecutorService;
+
+    .line 33
+    .line 34
+    invoke-static {}, LX/0Yd;->A09()Landroid/os/Handler;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    iput-object v0, p0, LX/1uP;->A01:Landroid/os/Handler;
+
+    .line 39
+    .line 40
+    return-void
+.end method

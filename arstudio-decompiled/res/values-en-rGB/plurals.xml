@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s likes</item>
+        <item quantity="one">%1$s like</item>
+    </plurals>
+</resources>

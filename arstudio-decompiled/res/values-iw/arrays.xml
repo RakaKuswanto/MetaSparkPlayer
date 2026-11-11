@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>"צ'אטים"</item>
+        <item>חסימה/הסרת חסימה</item>
+        <item>שיחות</item>
+        <item>סטטוס פעיל</item>
+        <item>חיפוש</item>
+        <item>התראות</item>
+        <item>"כרטיסיית 'מובילים'"</item>
+        <item>אחר</item>
+    </string-array>
+</resources>

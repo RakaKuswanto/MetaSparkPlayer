@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Vestlused</item>
+        <item>Blokeeri / eemalda blokeering</item>
+        <item>Kõned</item>
+        <item>Aktiivne olek</item>
+        <item>Otsing</item>
+        <item>Märguanded</item>
+        <item>Vahekaart Esile tõstetud</item>
+        <item>Muu</item>
+    </string-array>
+</resources>

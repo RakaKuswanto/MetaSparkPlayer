@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>ચેટ</item>
+        <item>બ્લૉક કરો/અનબ્લૉક કરો</item>
+        <item>કૉલ</item>
+        <item>એક્ટિવ સ્ટેટસ</item>
+        <item>શોધ</item>
+        <item>નોટિફિકેશન</item>
+        <item>\"હાઇલાઇટ કરો\" ટેબ</item>
+        <item>અન્ય</item>
+    </string-array>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<X.4KI android:layout_gravity="center" android:background="@drawable/bondi_bottom_toolbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <X.4OA android:id="@id/iaw_ar_try_on_persistent_button" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_button_min_width_overflow_material" android:layout_marginLeft="@dimen/abc_floating_window_z" android:layout_marginTop="@dimen/abc_button_padding_horizontal_material" android:layout_marginRight="@dimen/abc_floating_window_z" android:layout_marginBottom="@dimen/abc_button_padding_horizontal_material" android:text="@string/__external__ar_try_on_bottomsheet_button_title" android:layout_marginStart="@dimen/abc_floating_window_z" android:layout_marginEnd="@dimen/abc_floating_window_z" style="@style/ArTryOnBottomsheet.Button.Primary" />
+</X.4KI>

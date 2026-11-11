@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="__external__browser_close_button_description">Iyyaafataa Cufii</string>
+    <string name="__external__browser_lite_partial_permission_unsupported">Maaloo miidiyaaleen hundi filannoo faayilii akka fayyadaman hayyami</string>
+    <string name="__external__browser_lite_permission_allow">Eeyyamuu</string>
+    <string name="__external__browser_lite_permission_block">Ugguri</string>
+    <string name="__external__feed_browser_cannot_load_page">"Toori fuula hin fe'amne"</string>
+    <string name="__external__feed_browser_more_options">Filannoowwan dabalataa</string>
+    <string name="__external__tabs_nux">"Geessituuwwan dhiyeenya bante sakatta'uu itti fufuuf cancala fayyadami."</string>
+    <string name="__external__tabs_tooltip_dialog_close">"Ibsa mi'aa cufi"</string>
+    <string name="accessibility_search_clear">Barreeffama haqi</string>
+    <string name="dialog_cancel">Dhiisi</string>
+    <string name="dialog_close">Cufi</string>
+    <string name="dialog_dismiss">Haqi</string>
+    <string name="generic_error_message">"Dogoggorri ta'e uumameera. Maaloo ammas yaali."</string>
+    <string name="processing">Adeemsisaa jira...</string>
+</resources>

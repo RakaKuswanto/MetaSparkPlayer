@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:enterFadeDuration="@android:integer/config_shortAnimTime" android:exitFadeDuration="@android:integer/config_shortAnimTime"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true">
+        <shape android:shape="oval">
+            <solid android:color="?pinCircleSelectedColor" />
+            <size android:height="@dimen/arplayer_fps_pill_fps_font_size" android:width="@dimen/arplayer_fps_pill_fps_font_size" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/player_pin_dot_normal" />
+            <size android:height="@dimen/arplayer_fps_pill_fps_font_size" android:width="@dimen/arplayer_fps_pill_fps_font_size" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="orca_reg_text_size_small">@dimen/abc_text_size_body_1_material</item>
+</resources>

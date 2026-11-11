@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">\"Mi piace\" sulla Pagina: %1$s</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">\"Mi piace\": %1$s</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d ore fa</item>
+        <item quantity="one">1 ora fa</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">Tra %1$d ore</item>
+        <item quantity="one">"Tra un'ora"</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">Tra %1$d minuti</item>
+        <item quantity="one">Tra 1 minuto</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d minuti fa</item>
+        <item quantity="one">1 minuto fa</item>
+    </plurals>
+</resources>

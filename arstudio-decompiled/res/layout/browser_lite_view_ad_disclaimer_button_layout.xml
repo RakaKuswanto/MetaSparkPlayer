@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button android:textSize="@dimen/abc_text_size_caption_material" android:textColor="@color/browser_secondary_text" android:id="@id/view_ad_disclaimer_button" android:background="@drawable/view_ad_disclaimer_button_bg" android:paddingTop="@dimen/abc_button_padding_horizontal_material" android:paddingBottom="@dimen/abc_button_padding_horizontal_material" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

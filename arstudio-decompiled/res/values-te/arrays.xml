@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>చాట్‌లు</item>
+        <item>బ్లాక్ చేయండి/అన్‌బ్లాక్ చేయండి</item>
+        <item>కాల్‌లు</item>
+        <item>యాక్టివ్ స్థితి</item>
+        <item>వెతకండి</item>
+        <item>నోటిఫికేషన్‌లు</item>
+        <item>హైలైట్‌ల ట్యాబ్</item>
+        <item>ఇతరం</item>
+    </string-array>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>चैट</item>
+        <item>ब्लॉक/अनब्लॉक</item>
+        <item>कॉल</item>
+        <item>एक्टिव स्टेटस</item>
+        <item>सर्च</item>
+        <item>नोटिफ़िकेशन</item>
+        <item>हाइलाइट</item>
+        <item>अन्य</item>
+    </string-array>
+</resources>

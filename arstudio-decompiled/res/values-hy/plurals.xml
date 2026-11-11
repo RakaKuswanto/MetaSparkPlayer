@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s էջի հավանում</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s հավանում</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d ժամ առաջ</item>
+        <item quantity="one">1 ժամ առաջ</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">Այս պահից սկսած %1$d ժամ</item>
+        <item quantity="one">Այս պահից սկսած 1 ժամ</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">այս պահից սկսած %1$d րոպե</item>
+        <item quantity="one">այս պահից սկսած 1 րոպե</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d րոպե առաջ</item>
+        <item quantity="one">1 րոպե առաջ</item>
+    </plurals>
+</resources>

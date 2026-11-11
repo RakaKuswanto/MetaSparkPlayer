@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>ការជជែក</item>
+        <item>ទប់ស្កាត់/ដោះការទប់ស្កាត់</item>
+        <item>ការហៅ</item>
+        <item>ស្ថានភាពដែលសកម្ម</item>
+        <item>ស្វែងរក</item>
+        <item>ការជូនដំណឹង</item>
+        <item>ផ្ទាំងរំលេច</item>
+        <item>ផ្សេងទៀត</item>
+    </string-array>
+</resources>

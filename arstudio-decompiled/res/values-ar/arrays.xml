@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>الدردشات</item>
+        <item>حظر/إلغاء حظر</item>
+        <item>المكالمات</item>
+        <item>حالة النشاط</item>
+        <item>بحث</item>
+        <item>الإشعارات</item>
+        <item>علامة تبويب أبرز المنشورات</item>
+        <item>غير ذلك</item>
+    </string-array>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:shareInterpolator="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale android:interpolator="@android:anim/linear_interpolator" android:duration="@integer/fbui_popover_window_anim_exit_duration" android:pivotX="@dimen/fbui_popover_window_anim_pivot_center" android:pivotY="@dimen/fbui_popover_window_anim_pivot_bottom" android:fromXScale="@dimen/design_snackbar_action_text_color_alpha" android:toXScale="@dimen/fbui_popover_window_anim_min_scale" android:fromYScale="@dimen/design_snackbar_action_text_color_alpha" android:toYScale="@dimen/fbui_popover_window_anim_min_scale" />
+    <alpha android:interpolator="@android:anim/linear_interpolator" android:duration="@integer/fbui_popover_window_anim_exit_duration" android:fromAlpha="@dimen/design_snackbar_action_text_color_alpha" android:toAlpha="@dimen/fbui_popover_window_anim_exit_min_alpha" />
+</set>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/abc_decor_view_status_guard_light" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/abc_text_size_menu_material" android:textStyle="bold" android:textColor="@color/abc_decor_view_status_guard" android:id="@id/ad_disclaimer_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/action_button_optional_padding_right" android:layout_marginBottom="@dimen/action_button_optional_padding_right" android:textAlignment="center" />
+    <View android:background="@color/browser_more_menu_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/awareness_footer_divider_height" />
+    <WebView android:id="@id/ad_disclaimer_webview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

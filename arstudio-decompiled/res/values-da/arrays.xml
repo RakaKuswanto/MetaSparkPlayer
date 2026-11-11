@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Chats</item>
+        <item>Bloker/fjern blokering</item>
+        <item>Opkald</item>
+        <item>Aktiv status</item>
+        <item>Søg</item>
+        <item>Notifikationer</item>
+        <item>Fanen Højdepunkter</item>
+        <item>Andet</item>
+    </string-array>
+</resources>

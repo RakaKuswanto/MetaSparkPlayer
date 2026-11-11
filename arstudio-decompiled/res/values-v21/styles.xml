@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ARPlayerCameraSelectableItemStyle">
+        <item name="android:theme">@style/ARPlayerCameraSelectableItemTheme</item>
+        <item name="android:background">@drawable/camera_button_bg</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat" parent="@android:style/TextAppearance.Material" />
+    <style name="Base.TextAppearance.AppCompat.Body1" parent="@android:style/TextAppearance.Material.Body1" />
+    <style name="Base.TextAppearance.AppCompat.Button" parent="@android:style/TextAppearance.Material.Button" />
+    <style name="Base.TextAppearance.AppCompat.Caption" parent="@android:style/TextAppearance.Material.Caption" />
+    <style name="Base.TextAppearance.AppCompat.Inverse" parent="@android:style/TextAppearance.Material.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Large" parent="@android:style/TextAppearance.Material.Large" />
+    <style name="Base.TextAppearance.AppCompat.Large.Inverse" parent="@android:style/TextAppearance.Material.Large.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Medium" parent="@android:style/TextAppearance.Material.Medium" />
+    <style name="Base.TextAppearance.AppCompat.Medium.Inverse" parent="@android:style/TextAppearance.Material.Medium.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Menu" parent="@android:style/TextAppearance.Material.Menu" />
+    <style name="Base.TextAppearance.AppCompat.SearchResult.Subtitle" parent="@android:style/TextAppearance.Material.SearchResult.Subtitle" />
+    <style name="Base.TextAppearance.AppCompat.SearchResult.Title" parent="@android:style/TextAppearance.Material.SearchResult.Title" />
+    <style name="Base.TextAppearance.AppCompat.Small" parent="@android:style/TextAppearance.Material.Small" />
+    <style name="Base.TextAppearance.AppCompat.Small.Inverse" parent="@android:style/TextAppearance.Material.Small.Inverse" />
+    <style name="Base.TextAppearance.AppCompat.Subhead" parent="@android:style/TextAppearance.Material.Subhead" />
+    <style name="Base.TextAppearance.AppCompat.Title" parent="@android:style/TextAppearance.Material.Title" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionMode.Subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionMode.Subtitle" />
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionMode.Title" parent="@android:style/TextAppearance.Material.Widget.ActionMode.Title" />
+    <style name="Base.TextAppearance.AppCompat.Widget.Button" parent="@android:style/TextAppearance.Material.Widget.Button" />
+    <style name="Base.TextAppearance.AppCompat.Widget.PopupMenu.Header" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat.Widget.PopupMenu.Large" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Large" />
+    <style name="Base.TextAppearance.AppCompat.Widget.PopupMenu.Small" parent="@android:style/TextAppearance.Material.Widget.PopupMenu.Small" />
+    <style name="Base.TextAppearance.AppCompat.Widget.Switch" parent="@android:style/TextAppearance.Material.Button" />
+    <style name="Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem" parent="@android:style/TextAppearance.Material.Widget.TextView.SpinnerItem" />
+    <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle" />
+    <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Title" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title" />
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V21.Theme.AppCompat" />
+    <style name="Base.Theme.AppCompat.Dialog" parent="@style/Base.V21.Theme.AppCompat.Dialog" />
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V21.Theme.AppCompat.Light" />
+    <style name="Base.Theme.AppCompat.Light.Dialog" parent="@style/Base.V21.Theme.AppCompat.Light.Dialog" />
+    <style name="Base.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V21.ThemeOverlay.AppCompat.Dialog" />
+    <style name="Base.Widget.AppCompat.ActionBar.TabText" parent="@android:style/Widget.Material.ActionBar.TabText" />
+    <style name="Base.Widget.AppCompat.ActionBar.TabView" parent="@android:style/Widget.Material.ActionBar.TabView" />
+    <style name="Base.Widget.AppCompat.ActionButton" parent="@android:style/Widget.Material.ActionButton" />
+    <style name="Base.Widget.AppCompat.ActionButton.CloseMode" parent="@android:style/Widget.Material.ActionButton.CloseMode">
+        <item name="android:minWidth">56.0dip</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ActionButton.Overflow" parent="@android:style/Widget.Material.ActionButton.Overflow">
+        <item name="android:src">@null</item>
+        <item name="srcCompat">@drawable/abc_ic_menu_overflow_material</item>
+    </style>
+    <style name="Base.Widget.AppCompat.AutoCompleteTextView" parent="@android:style/Widget.Material.AutoCompleteTextView">
+        <item name="android:background">?editTextBackground</item>
+    </style>
+    <style name="Base.Widget.AppCompat.Button" parent="@android:style/Widget.Material.Button" />
+    <style name="Base.Widget.AppCompat.Button.Borderless" parent="@android:style/Widget.Material.Button.Borderless" />
+    <style name="Base.Widget.AppCompat.Button.Borderless.Colored" parent="@android:style/Widget.Material.Button.Borderless.Colored">
+        <item name="android:textColor">@color/abc_btn_colored_borderless_text_material</item>
+    </style>
+    <style name="Base.Widget.AppCompat.Button.Small" parent="@android:style/Widget.Material.Button.Small" />
+    <style name="Base.Widget.AppCompat.ButtonBar" parent="@android:style/Widget.Material.ButtonBar" />
+    <style name="Base.Widget.AppCompat.CompoundButton.CheckBox" parent="@android:style/Widget.Material.CompoundButton.CheckBox" />
+    <style name="Base.Widget.AppCompat.CompoundButton.RadioButton" parent="@android:style/Widget.Material.CompoundButton.RadioButton" />
+    <style name="Base.Widget.AppCompat.DropDownItem.Spinner" parent="@android:style/Widget.Material.DropDownItem.Spinner" />
+    <style name="Base.Widget.AppCompat.EditText" parent="@android:style/Widget.Material.EditText">
+        <item name="android:background">?editTextBackground</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ImageButton" parent="@android:style/Widget.Material.ImageButton" />
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabText" parent="@android:style/Widget.Material.Light.ActionBar.TabText" />
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabView" parent="@android:style/Widget.Material.Light.ActionBar.TabView" />
+    <style name="Base.Widget.AppCompat.Light.PopupMenu" parent="@android:style/Widget.Material.Light.PopupMenu" />
+    <style name="Base.Widget.AppCompat.Light.PopupMenu.Overflow" parent="@style/Base.Widget.AppCompat.Light.PopupMenu">
+        <item name="android:dropDownHorizontalOffset">-4.0dip</item>
+        <item name="android:overlapAnchor">true</item>
+    </style>
+    <style name="Base.Widget.AppCompat.ListPopupWindow" parent="@android:style/Widget.Material.ListPopupWindow" />
+    <style name="Base.Widget.AppCompat.ListView" parent="@android:style/Widget.Material.ListView" />
+    <style name="Base.Widget.AppCompat.ListView.DropDown" parent="@android:style/Widget.Material.ListView.DropDown" />
+    <style name="Base.Widget.AppCompat.ListView.Menu" parent="@style/Base.Widget.AppCompat.ListView" />
+    <style name="Base.Widget.AppCompat.PopupMenu" parent="@android:style/Widget.Material.PopupMenu" />
+    <style name="Base.Widget.AppCompat.PopupMenu.Overflow" parent="@style/Base.Widget.AppCompat.PopupMenu">
+        <item name="android:dropDownHorizontalOffset">-4.0dip</item>
+        <item name="android:overlapAnchor">true</item>
+    </style>
+    <style name="Base.Widget.AppCompat.RatingBar" parent="@android:style/Widget.Material.RatingBar" />
+    <style name="Base.Widget.AppCompat.SeekBar" parent="@android:style/Widget.Material.SeekBar" />
+    <style name="Base.Widget.AppCompat.Spinner" parent="@android:style/Widget.Material.Spinner" />
+    <style name="Base.Widget.AppCompat.TextView" parent="@android:style/Widget.Material.TextView" />
+    <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="@android:style/Widget.Material.TextView.SpinnerItem" />
+    <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="@android:style/Widget.Material.Toolbar.Button.Navigation" />
+    <style name="Base.Widget.MaterialComponents.Chip" parent="@android:style/Widget">
+        <item name="android:textAppearance">?textAppearanceBody2</item>
+        <item name="android:textColor">@color/mtrl_chip_text_color</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:text">@null</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:checkable">false</item>
+        <item name="android:stateListAnimator">@animator/mtrl_chip_state_list_anim</item>
+        <item name="checkedIcon">@drawable/ic_mtrl_chip_checked_circle</item>
+        <item name="checkedIconVisible">true</item>
+        <item name="chipBackgroundColor">@color/mtrl_chip_background_color</item>
+        <item name="chipEndPadding">6.0dip</item>
+        <item name="chipIcon">@null</item>
+        <item name="chipIconSize">24.0dip</item>
+        <item name="chipIconVisible">true</item>
+        <item name="chipMinHeight">32.0dip</item>
+        <item name="chipMinTouchTargetSize">48.0dip</item>
+        <item name="chipStartPadding">4.0dip</item>
+        <item name="chipStrokeColor">?colorOnSurface</item>
+        <item name="chipStrokeWidth">0.0dip</item>
+        <item name="chipSurfaceColor">@color/mtrl_chip_surface_color</item>
+        <item name="closeIcon">@drawable/ic_mtrl_chip_close_circle</item>
+        <item name="closeIconEndPadding">2.0dip</item>
+        <item name="closeIconSize">18.0dip</item>
+        <item name="closeIconStartPadding">2.0dip</item>
+        <item name="closeIconTint">@color/mtrl_chip_close_icon_tint</item>
+        <item name="closeIconVisible">true</item>
+        <item name="enforceMaterialTheme">true</item>
+        <item name="enforceTextAppearance">true</item>
+        <item name="ensureMinTouchTargetSize">true</item>
+        <item name="iconEndPadding">0.0dip</item>
+        <item name="iconStartPadding">0.0dip</item>
+        <item name="rippleColor">@color/mtrl_on_surface_ripple_color</item>
+        <item name="shapeAppearance">?shapeAppearanceSmallComponent</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialComponents.Chip</item>
+        <item name="textEndPadding">6.0dip</item>
+        <item name="textStartPadding">8.0dip</item>
+    </style>
+    <style name="FDSDarkMode" parent="@style/FDSBaseLightMode">
+        <item name="android:navigationBarColor">@color/abc_decor_view_status_guard</item>
+        <item name="fds_dark_mode">true</item>
+        <item name="fds_mobile_wash_fix_me">?fds_usage_wash</item>
+        <item name="fds_usage_accent">@color/fds_blue_45</item>
+        <item name="fds_usage_accent_deemphasized">@color/fds_blue_55_alpha_20</item>
+        <item name="fds_usage_active_switch_track">@color/fds_blue_90</item>
+        <item name="fds_usage_always_transparent">@color/fbui_transparent</item>
+        <item name="fds_usage_always_white">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_attachment_footer_background">@color/cds_white_a10</item>
+        <item name="fds_usage_background_deemphasized">@color/cds_white_a10</item>
+        <item name="fds_usage_badge_border">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_banana_shadow_emphasis_light">@color/fds_black_alpha10</item>
+        <item name="fds_usage_banana_shadow_emphasis_medium">@color/fds_black_alpha10</item>
+        <item name="fds_usage_banana_shadow_emphasis_strong">@color/fds_black_alpha15</item>
+        <item name="fds_usage_banana_shadow_responsive">@color/fds_black_alpha10</item>
+        <item name="fds_usage_black_solidarity_primary_button_background">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_black_solidarity_primary_button_text">@color/fds_gray_00</item>
+        <item name="fds_usage_blue_badge">@color/cds_facebook_blue</item>
+        <item name="fds_usage_blue_link">@color/fds_blue_65</item>
+        <item name="fds_usage_border_persistent_ui">@color/cds_white_a10</item>
+        <item name="fds_usage_border_responsive_ui">@color/cds_white_a05</item>
+        <item name="fds_usage_border_ui_emphasis">@color/cds_white_a05</item>
+        <item name="fds_usage_bottom_sheet_background_deemphasized">@color/fds_gray_15</item>
+        <item name="fds_usage_bottom_sheet_handle">@color/cds_white_a20</item>
+        <item name="fds_usage_card_background">@color/fds_gray_20</item>
+        <item name="fds_usage_card_background_flat">@color/fds_gray_20</item>
+        <item name="fds_usage_card_background_flat_fix_me">?fds_usage_card_background_flat</item>
+        <item name="fds_usage_card_border">@color/fbui_transparent</item>
+        <item name="fds_usage_card_shadow_light">@color/fds_black_alpha10</item>
+        <item name="fds_usage_card_shadow_medium">@color/fds_black_alpha10</item>
+        <item name="fds_usage_card_shadow_strong">@color/fds_black_alpha15</item>
+        <item name="fds_usage_client_bottom_sheet_pressed">@color/fds_gray_25</item>
+        <item name="fds_usage_comment_background">@color/fds_gray_20</item>
+        <item name="fds_usage_comment_background_deemphasized">@color/fds_gray_20_alpha_60</item>
+        <item name="fds_usage_comment_background_fix_me">?fds_usage_comment_background</item>
+        <item name="fds_usage_comment_background_on_color">@color/cds_white_a15</item>
+        <item name="fds_usage_comment_background_on_media">@color/fds_gray_10_alpha_60</item>
+        <item name="fds_usage_comment_threading_lines">@color/fds_gray_25</item>
+        <item name="fds_usage_comment_threading_lines_on_color">@color/cds_white_a10</item>
+        <item name="fds_usage_comment_threading_lines_on_media">@color/cds_white_a15</item>
+        <item name="fds_usage_content_liquidity_ig">@color/fds_cyan_55</item>
+        <item name="fds_usage_decorative_chat_blue">@color/fds_blue_15</item>
+        <item name="fds_usage_decorative_icon_blue">@color/fds_blue_45</item>
+        <item name="fds_usage_decorative_icon_green">@color/fds_green_60</item>
+        <item name="fds_usage_decorative_icon_pink">@color/fds_pink_50</item>
+        <item name="fds_usage_decorative_icon_purple">@color/fds_purple_50</item>
+        <item name="fds_usage_decorative_icon_red">@color/fds_red_45</item>
+        <item name="fds_usage_decorative_icon_reels">@color/fds_red_50</item>
+        <item name="fds_usage_decorative_icon_teal">@color/fds_teal_60</item>
+        <item name="fds_usage_decorative_icon_whatsapp">@color/fds_whatsapp_light_green</item>
+        <item name="fds_usage_decorative_icon_yellow">@color/fds_yellow_60</item>
+        <item name="fds_usage_device_background">@color/abc_decor_view_status_guard</item>
+        <item name="fds_usage_device_icon">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_device_text">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_disabled_button_background">@color/cds_white_a10</item>
+        <item name="fds_usage_disabled_button_background_growth">@color/fds_blue_70</item>
+        <item name="fds_usage_disabled_button_text">@color/fds_gray_35</item>
+        <item name="fds_usage_disabled_icon">@color/fds_gray_50</item>
+        <item name="fds_usage_disabled_text">@color/fds_gray_50</item>
+        <item name="fds_usage_disabled_text_fix_me">?fds_usage_disabled_text</item>
+        <item name="fds_usage_divider">@color/fds_gray_40</item>
+        <item name="fds_usage_event_date">@color/fds_red_40</item>
+        <item name="fds_usage_facepile_overflow_overlay">@color/fds_black_alpha30</item>
+        <item name="fds_usage_fb_wordmark">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_fblite_rtc_answer_background">@color/fds_green_60</item>
+        <item name="fds_usage_fblite_rtc_dismiss_background">@color/cds_white_a30</item>
+        <item name="fds_usage_fblite_strong_secondary">@color/fds_gray_80</item>
+        <item name="fds_usage_fblite_wash">@color/fds_gray_00</item>
+        <item name="fds_usage_glimmer_base_opaque">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_glimmer_index_0">@color/cds_white_a20</item>
+        <item name="fds_usage_glimmer_index_1">@color/fds_white_alpha_16</item>
+        <item name="fds_usage_glimmer_index_2">@color/fds_white_alpha_13</item>
+        <item name="fds_usage_glimmer_index_3">@color/fds_white_alpha_09</item>
+        <item name="fds_usage_glimmer_index_4">@color/cds_white_a05</item>
+        <item name="fds_usage_hidden_comment_overlay">@color/fds_gray_15_alpha_60</item>
+        <item name="fds_usage_high_contrast_button_pressed">@color/fds_gray_80_alpha_15</item>
+        <item name="fds_usage_highlight_cell_background">@color/fds_blue_95</item>
+        <item name="fds_usage_hosted_view_selected_state">@color/fds_blue_55_alpha_10</item>
+        <item name="fds_usage_instant_feedback_border">@color/fbui_transparent</item>
+        <item name="fds_usage_instant_feedback_shadow">@color/fds_black_alpha10</item>
+        <item name="fds_usage_last_active_state_background">@color/fds_green_10</item>
+        <item name="fds_usage_last_active_state_text">@color/fds_green_70</item>
+        <item name="fds_usage_link_on_color">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_link_on_media">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_list_cell_background">@color/fds_gray_15</item>
+        <item name="fds_usage_loading_state">@color/fds_gray_90</item>
+        <item name="fds_usage_media_inner_border">@color/cds_white_a05</item>
+        <item name="fds_usage_media_outer_border">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_media_pressed">@color/cds_white_a30</item>
+        <item name="fds_usage_media_pressed_fix_me">?fds_usage_media_pressed</item>
+        <item name="fds_usage_mobile_wash_fix_me">?fds_usage_wash</item>
+        <item name="fds_usage_nav_bar_background">@color/fds_gray_15</item>
+        <item name="fds_usage_nav_bar_icon">@color/fds_gray_90</item>
+        <item name="fds_usage_nav_bar_text">@color/fds_gray_90</item>
+        <item name="fds_usage_negative">@color/fds_red_40</item>
+        <item name="fds_usage_negative_deemphasized">@color/fds_red_40_alpha_20</item>
+        <item name="fds_usage_new_notification_background">@color/fds_blue_55_alpha_10</item>
+        <item name="fds_usage_non_media_hovered">@color/cds_black_a05</item>
+        <item name="fds_usage_non_media_pressed">@color/cds_white_a20</item>
+        <item name="fds_usage_non_media_pressed_fix_me">?fds_usage_non_media_pressed</item>
+        <item name="fds_usage_non_media_pressed_on_dark">@color/cds_white_a30</item>
+        <item name="fds_usage_notification_badge">@color/fds_red_35</item>
+        <item name="fds_usage_optimistic_post_tint">@color/fds_gray_15_alpha_60</item>
+        <item name="fds_usage_overlay_on_media">@color/fds_black_alpha80</item>
+        <item name="fds_usage_overlay_on_media_light">@color/fds_black_alpha35</item>
+        <item name="fds_usage_overlay_on_surface">@color/cds_black_a60</item>
+        <item name="fds_usage_persistent_cta_shadow">@color/fds_black_alpha15</item>
+        <item name="fds_usage_persistentcta_shadow">@color/fds_black_alpha15</item>
+        <item name="fds_usage_placeholder_icon">@color/fds_gray_55</item>
+        <item name="fds_usage_placeholder_icon_on_color">@color/fds_white_alpha_90</item>
+        <item name="fds_usage_placeholder_icon_on_media">@color/fds_white_alpha50</item>
+        <item name="fds_usage_placeholder_image">@color/fds_gray_65</item>
+        <item name="fds_usage_placeholder_text">@color/fds_gray_55</item>
+        <item name="fds_usage_placeholder_text_on_color">@color/fds_white_alpha_90</item>
+        <item name="fds_usage_placeholder_text_on_media">@color/fds_white_alpha50</item>
+        <item name="fds_usage_popover_background">@color/fds_gray_25</item>
+        <item name="fds_usage_positive">@color/fds_green_50</item>
+        <item name="fds_usage_positive_fix_me">?fds_usage_positive</item>
+        <item name="fds_usage_primary_button_background">@color/fds_blue_45</item>
+        <item name="fds_usage_primary_button_background_fix_me">?fds_usage_primary_button_background</item>
+        <item name="fds_usage_primary_button_background_on_color">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_primary_button_background_on_media">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_primary_button_icon">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_primary_button_icon_on_color">@color/abc_decor_view_status_guard</item>
+        <item name="fds_usage_primary_button_icon_on_media">@color/fds_gray_00</item>
+        <item name="fds_usage_primary_button_pressed_background">@color/fds_blue_60</item>
+        <item name="fds_usage_primary_button_text">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_primary_button_text_fix_me">?fds_usage_primary_button_text</item>
+        <item name="fds_usage_primary_button_text_on_color">@color/abc_decor_view_status_guard</item>
+        <item name="fds_usage_primary_button_text_on_media">@color/fds_gray_00</item>
+        <item name="fds_usage_primary_deemphasized_button_background">@color/fds_blue_55_alpha_20</item>
+        <item name="fds_usage_primary_deemphasized_button_background_fix_me">?fds_usage_primary_deemphasized_button_background</item>
+        <item name="fds_usage_primary_deemphasized_button_icon">@color/fds_blue_70</item>
+        <item name="fds_usage_primary_deemphasized_button_text">@color/fds_blue_70</item>
+        <item name="fds_usage_primary_icon">@color/fds_gray_90</item>
+        <item name="fds_usage_primary_icon_on_color">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_primary_icon_on_media">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_primary_text">@color/fds_gray_90</item>
+        <item name="fds_usage_primary_text_fix_me">?fds_usage_primary_text</item>
+        <item name="fds_usage_primary_text_on_color">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_primary_text_on_media">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_progress_ring_blue_background">@color/fds_blue_55_alpha_20</item>
+        <item name="fds_usage_progress_ring_blue_foreground">@color/fds_blue_55</item>
+        <item name="fds_usage_progress_ring_disabled_background">@color/fds_gray_50_alpha_20</item>
+        <item name="fds_usage_progress_ring_disabled_foreground">@color/fds_gray_50</item>
+        <item name="fds_usage_progress_ring_neutral_background">@color/cds_white_a20</item>
+        <item name="fds_usage_progress_ring_neutral_foreground">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_progress_ring_on_color_background">@color/cds_white_a15</item>
+        <item name="fds_usage_progress_ring_on_color_foreground">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_progress_ring_on_media_background">@color/cds_white_a20</item>
+        <item name="fds_usage_progress_ring_on_media_foreground">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_rating_star_active">@color/fds_orange_60</item>
+        <item name="fds_usage_rating_star_active_on_color">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_rating_star_active_on_media">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_rooms_app_icon">@color/fds_cyan_55</item>
+        <item name="fds_usage_secondary_button_background">@color/cds_white_a10</item>
+        <item name="fds_usage_secondary_button_background_fix_me">?fds_usage_secondary_button_background</item>
+        <item name="fds_usage_secondary_button_background_on_color">@color/cds_white_a15</item>
+        <item name="fds_usage_secondary_button_background_on_color_deprecated">@color/cds_white_a10</item>
+        <item name="fds_usage_secondary_button_background_on_media">@color/fds_gray_10_alpha_60</item>
+        <item name="fds_usage_secondary_button_icon">@color/fds_gray_90</item>
+        <item name="fds_usage_secondary_button_icon_on_color">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_secondary_button_icon_on_media">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_secondary_button_pressed">@color/cds_white_a20</item>
+        <item name="fds_usage_secondary_button_pressed_fix_me">?fds_usage_secondary_button_pressed</item>
+        <item name="fds_usage_secondary_button_text">@color/fds_gray_90</item>
+        <item name="fds_usage_secondary_button_text_fix_me">?fds_usage_secondary_button_text</item>
+        <item name="fds_usage_secondary_button_text_on_color">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_secondary_button_text_on_media">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_secondary_deemphasized_button_background">@color/fbui_transparent</item>
+        <item name="fds_usage_secondary_deemphasized_button_text">@color/cds_facebook_blue</item>
+        <item name="fds_usage_secondary_icon">@color/fds_gray_70</item>
+        <item name="fds_usage_secondary_icon_on_color">@color/fds_white_alpha_90</item>
+        <item name="fds_usage_secondary_icon_on_media">@color/fds_white_alpha80</item>
+        <item name="fds_usage_secondary_text">@color/fds_gray_70</item>
+        <item name="fds_usage_secondary_text_fix_me">?fds_usage_secondary_text</item>
+        <item name="fds_usage_secondary_text_on_color">@color/fds_white_alpha_90</item>
+        <item name="fds_usage_secondary_text_on_media">@color/fds_white_alpha80</item>
+        <item name="fds_usage_see_less_selected_subtopic">@color/fds_yellow_40</item>
+        <item name="fds_usage_see_more_selected_subtopic">@color/fds_green_45</item>
+        <item name="fds_usage_shadow_persistent_ui">@color/fds_black_alpha30</item>
+        <item name="fds_usage_shadow_responsive_ui">@color/fds_black_alpha10</item>
+        <item name="fds_usage_shadow_text_and_icon_on_media">@color/fds_black_alpha_62</item>
+        <item name="fds_usage_shadow_ui_emphasis">@color/fds_black_alpha10</item>
+        <item name="fds_usage_stepper_active">@color/fds_blue_55</item>
+        <item name="fds_usage_stepper_inactive">@color/cds_white_a20</item>
+        <item name="fds_usage_surface_background">@color/fds_gray_15</item>
+        <item name="fds_usage_surface_background_fix_me">?fds_usage_surface_background</item>
+        <item name="fds_usage_tertiary_icon">@color/fds_gray_55</item>
+        <item name="fds_usage_tertiary_text">@color/fds_gray_55</item>
+        <item name="fds_usage_tertiary_text_fix_me">?fds_usage_tertiary_text</item>
+        <item name="fds_usage_text_highlight">@color/fds_blue_55_alpha_45</item>
+        <item name="fds_usage_text_input_active_inner_border">@color/fds_blue_55</item>
+        <item name="fds_usage_text_input_active_outer_border">@color/fds_blue_55_alpha_20</item>
+        <item name="fds_usage_text_input_active_text">@color/fds_blue_60</item>
+        <item name="fds_usage_text_input_bar_background">@color/cds_white_a10</item>
+        <item name="fds_usage_text_input_bar_background_on_color">@color/cds_white_a10</item>
+        <item name="fds_usage_text_input_bar_background_on_media">@color/fds_gray_10_alpha_60</item>
+        <item name="fds_usage_text_input_inactive_inner_border">@color/fds_gray_40</item>
+        <item name="fds_usage_text_input_inactive_outer_border">@color/fbui_transparent</item>
+        <item name="fds_usage_toggle_active_background">@color/fds_blue_55</item>
+        <item name="fds_usage_toggle_active_icon">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_toggle_active_text">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_tooltip_shadow">@color/fds_black_alpha10</item>
+        <item name="fds_usage_transparent">@color/fbui_transparent</item>
+        <item name="fds_usage_verified_badge">@color/fds_gray_90</item>
+        <item name="fds_usage_verified_badge_on_color">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_verified_badge_on_media">@color/abc_decor_view_status_guard_light</item>
+        <item name="fds_usage_warning">@color/fds_yellow_65</item>
+        <item name="fds_usage_wash">@color/fds_gray_10</item>
+        <item name="fds_usage_web_wash">@color/fds_gray_10</item>
+        <item name="sutro_usage_button_border">@color/fds_gray_55</item>
+        <item name="sutro_usage_button_text">@color/fds_gray_90</item>
+        <item name="sutro_usage_comment_highlight">@color/cds_white_a20</item>
+        <item name="sutro_usage_toggle_icon">@color/fds_gray_90</item>
+    </style>
+    <style name="MigMaterialAlertDialog.Button.Dark.Material3" parent="@style/MigMaterialAlertDialog.Button.Dark.SentenceCase">
+        <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
+        <item name="android:letterSpacing">@dimen/mds_alert_dialog_button_letter_spacing_material3</item>
+    </style>
+    <style name="MigMaterialAlertDialog.Button.Light.Material3" parent="@style/MigMaterialAlertDialog.Button.Light.SentenceCase">
+        <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
+        <item name="android:letterSpacing">@dimen/mds_alert_dialog_button_letter_spacing_material3</item>
+    </style>
+    <style name="MigMaterialAlertDialog.Dark.Material3" parent="@style/MigMaterialAlertDialog.Dark.SentenceCase">
+        <item name="android:windowBackground">@drawable/mds_dialog_background_dark_material3</item>
+        <item name="android:windowTitleStyle">@style/MigMaterialAlertDialogTitle.Dark.Material3</item>
+        <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
+        <item name="android:letterSpacing">@dimen/mds_alert_dialog_body_letter_spacing_material3</item>
+        <item name="buttonBarNegativeButtonStyle">@style/MigMaterialAlertDialog.Button.Dark.Material3</item>
+        <item name="buttonBarNeutralButtonStyle">@style/MigMaterialAlertDialog.Button.Dark.Material3</item>
+        <item name="buttonBarPositiveButtonStyle">@style/MigMaterialAlertDialog.Button.Dark.Material3</item>
+        <item name="buttonBarStyle">@style/MigMaterialAlertDialogButtonBar.Material3</item>
+    </style>
+    <style name="MigMaterialAlertDialog.Light.Material3" parent="@style/MigMaterialAlertDialog.Light.SentenceCase">
+        <item name="android:windowBackground">@drawable/mds_dialog_background_light_material3</item>
+        <item name="android:windowTitleStyle">@style/MigMaterialAlertDialogTitle.Light.Material3</item>
+        <item name="android:textSize">@dimen/abc_text_size_body_1_material</item>
+        <item name="android:letterSpacing">@dimen/mds_alert_dialog_body_letter_spacing_material3</item>
+        <item name="buttonBarNegativeButtonStyle">@style/MigMaterialAlertDialog.Button.Light.Material3</item>
+        <item name="buttonBarNeutralButtonStyle">@style/MigMaterialAlertDialog.Button.Light.Material3</item>
+        <item name="buttonBarPositiveButtonStyle">@style/MigMaterialAlertDialog.Button.Light.Material3</item>
+        <item name="buttonBarStyle">@style/MigMaterialAlertDialogButtonBar.Material3</item>
+    </style>
+    <style name="MigMaterialAlertDialogTitle.Material3" parent="@style/MigMaterialAlertDialogTitle">
+        <item name="android:textSize">@dimen/fbui_text_size_xxxlarge_1</item>
+        <item name="android:layout_marginTop">@dimen/abc_button_padding_horizontal_material</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">@dimen/fbui_popover_window_anim_enter_min_alpha</item>
+    </style>
+    <style name="PinLayout.CameraPreview" parent="@style/Theme.MsqrdPlayer">
+        <item name="android:textColor">@color/fds_white_alpha65</item>
+        <item name="pinCircleSelectedColor">@color/player_pin_dot_selected_transparent</item>
+        <item name="pinLayoutBackground">@color/browser_subtitle_text_color</item>
+    </style>
+    <style name="Platform.AppCompat" parent="@style/Platform.V21.AppCompat" />
+    <style name="Platform.AppCompat.Light" parent="@style/Platform.V21.AppCompat.Light" />
+    <style name="Platform.ThemeOverlay.AppCompat" parent="">
+        <item name="android:colorControlNormal">?colorControlNormal</item>
+        <item name="android:colorControlActivated">?colorControlActivated</item>
+        <item name="android:colorButtonNormal">?colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?colorControlHighlight</item>
+        <item name="android:colorPrimary">?colorPrimary</item>
+        <item name="android:colorPrimaryDark">?colorPrimaryDark</item>
+        <item name="android:colorAccent">?colorAccent</item>
+    </style>
+    <style name="Platform.ThemeOverlay.AppCompat.Dark" parent="@style/Platform.ThemeOverlay.AppCompat" />
+    <style name="Theme.FBUi.BottomsheetDialog" parent="@style/Theme.FBUi">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:statusBarColor">@color/fbui_transparent</item>
+    </style>
+    <style name="Theme.Facebook" parent="@style/Theme.FacebookBase">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:checkboxStyle">@style/Widget.CheckBox.FBUi.Material</item>
+        <item name="android:progressBarStyle">@style/Widget.Holo.ProgressBar.Clockwise</item>
+        <item name="android:progressBarStyleSmall">@style/Widget.Holo.ProgressBar.Small.Clockwise</item>
+        <item name="android:progressBarStyleLarge">@style/Widget.Holo.ProgressBar.Large.Clockwise</item>
+        <item name="android:textColorTertiary">@color/fig_usage_secondary_text</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="bsodBackgroundColor">@color/fds_blue_35</item>
+        <item name="bsodCtaButtonBackgroundColor">@color/fds_blue_95</item>
+        <item name="bsodTextColor">#ffffffff</item>
+        <item name="chatHeadBubbleViewNubColor">@color/fds_blue_35</item>
+        <item name="colorControlActivated">@color/fds_blue_35</item>
+        <item name="colorControlNormal">#8a000000</item>
+        <item name="iconTabbedViewPagerIndicatorChildStyle">@style/Widget.IconTabbedViewPagerIndicatorChild.Caspian</item>
+        <item name="popoverMenuWindowTheme">@style/Theme.FacebookBase.PopoverMenuWindow.Caspian</item>
+        <item name="statusBarColorOpaque">@color/blue_20a</item>
+        <item name="statusBarColorTransparent">#33000000</item>
+        <item name="stickerStoreTheme">@style/Theme.Orca.StickerStore.Fb</item>
+        <item name="switchCompatStyle">@style/Widget.Switch.Material</item>
+        <item name="tabbedViewPagerIndicatorChildStyle">@style/Widget.TabbedViewPagerIndicatorChild.Caspian</item>
+        <item name="tabbedViewPagerIndicatorStyle">@style/Widget.TabbedViewPagerIndicator.Caspian.FB4A</item>
+        <item name="toolbarStyle">@style/Widget.Toolbar.Light</item>
+    </style>
+    <style name="Theme.Facebook.Transparent" parent="@style/Theme.FacebookBase.Transparent">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Theme.Remix.Default" parent="@android:style/Theme.Material.Light">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:colorPrimaryDark">#ff000000</item>
+    </style>
+    <style name="Toolbar.MsqrdPlayer" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:elevation">@dimen/abc_action_bar_elevation_material</item>
+        <item name="theme">@style/Theme.Toolbar.MsqrdPlayer</item>
+    </style>
+    <style name="Widget.Design.BottomSheet.Modal" parent="@android:style/Widget">
+        <item name="android:background">?android:colorBackground</item>
+        <item name="android:elevation">@dimen/abc_floating_window_z</item>
+        <item name="backgroundTint">?android:colorBackground</item>
+        <item name="behavior_hideable">true</item>
+        <item name="behavior_peekHeight">auto</item>
+        <item name="behavior_skipCollapsed">false</item>
+        <item name="enforceMaterialTheme">false</item>
+        <item name="shapeAppearance">@null</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+    <style name="Widget.MaterialComponents.Button" parent="@style/Widget.AppCompat.Button">
+        <item name="android:textAppearance">?textAppearanceButton</item>
+        <item name="android:textColor">@color/mtrl_btn_text_color_selector</item>
+        <item name="android:background">@empty</item>
+        <item name="android:paddingLeft">@dimen/abc_floating_window_z</item>
+        <item name="android:paddingTop">@dimen/abc_action_bar_elevation_material</item>
+        <item name="android:paddingRight">@dimen/abc_floating_window_z</item>
+        <item name="android:paddingBottom">@dimen/abc_action_bar_elevation_material</item>
+        <item name="android:maxWidth">@dimen/abc_search_view_preferred_width</item>
+        <item name="android:insetLeft">0.0dip</item>
+        <item name="android:insetRight">0.0dip</item>
+        <item name="android:insetTop">@dimen/abc_action_bar_overflow_padding_start_material</item>
+        <item name="android:insetBottom">@dimen/abc_action_bar_overflow_padding_start_material</item>
+        <item name="android:stateListAnimator">@animator/mtrl_btn_state_list_anim</item>
+        <item name="backgroundTint">@color/mtrl_btn_bg_color_selector</item>
+        <item name="cornerRadius">@null</item>
+        <item name="elevation">@dimen/abc_control_corner_material</item>
+        <item name="enforceMaterialTheme">true</item>
+        <item name="enforceTextAppearance">true</item>
+        <item name="iconPadding">@dimen/abc_button_padding_horizontal_material</item>
+        <item name="iconTint">@color/mtrl_btn_text_color_selector</item>
+        <item name="rippleColor">@color/mtrl_btn_ripple_color</item>
+        <item name="shapeAppearance">?shapeAppearanceSmallComponent</item>
+    </style>
+    <style name="meta_login_button">
+        <item name="android:textSize">@dimen/arplayer_fps_pill_fps_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.025</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat" parent="@style/Base.V7.Theme.AppCompat">
+        <item name="android:colorControlNormal">?colorControlNormal</item>
+        <item name="android:colorControlActivated">?colorControlActivated</item>
+        <item name="android:colorButtonNormal">?colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?colorControlHighlight</item>
+        <item name="android:colorPrimary">?colorPrimary</item>
+        <item name="android:colorPrimaryDark">?colorPrimaryDark</item>
+        <item name="android:colorAccent">?colorAccent</item>
+        <item name="actionBarDivider">?android:actionBarDivider</item>
+        <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
+        <item name="actionBarSize">?android:actionBarSize</item>
+        <item name="actionButtonStyle">?android:actionButtonStyle</item>
+        <item name="actionModeBackground">?android:actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?android:actionModeCloseDrawable</item>
+        <item name="borderlessButtonStyle">?android:borderlessButtonStyle</item>
+        <item name="buttonStyle">?android:buttonStyle</item>
+        <item name="buttonStyleSmall">?android:buttonStyleSmall</item>
+        <item name="checkboxStyle">?android:checkboxStyle</item>
+        <item name="checkedTextViewStyle">?android:checkedTextViewStyle</item>
+        <item name="dividerHorizontal">?android:dividerHorizontal</item>
+        <item name="dividerVertical">?android:dividerVertical</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+        <item name="editTextColor">?android:editTextColor</item>
+        <item name="homeAsUpIndicator">?android:homeAsUpIndicator</item>
+        <item name="listChoiceBackgroundIndicator">?android:listChoiceBackgroundIndicator</item>
+        <item name="listPreferredItemHeightSmall">?android:listPreferredItemHeightSmall</item>
+        <item name="radioButtonStyle">?android:radioButtonStyle</item>
+        <item name="ratingBarStyle">?android:ratingBarStyle</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackgroundBorderless</item>
+        <item name="spinnerStyle">?android:spinnerStyle</item>
+        <item name="textAppearanceLargePopupMenu">?android:textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?android:textAppearanceSmallPopupMenu</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat.Dialog" parent="@style/Base.V7.Theme.AppCompat.Dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat.Light" parent="@style/Base.V7.Theme.AppCompat.Light">
+        <item name="android:colorControlNormal">?colorControlNormal</item>
+        <item name="android:colorControlActivated">?colorControlActivated</item>
+        <item name="android:colorButtonNormal">?colorButtonNormal</item>
+        <item name="android:colorControlHighlight">?colorControlHighlight</item>
+        <item name="android:colorPrimary">?colorPrimary</item>
+        <item name="android:colorPrimaryDark">?colorPrimaryDark</item>
+        <item name="android:colorAccent">?colorAccent</item>
+        <item name="actionBarDivider">?android:actionBarDivider</item>
+        <item name="actionBarItemBackground">@drawable/abc_action_bar_item_background_material</item>
+        <item name="actionBarSize">?android:actionBarSize</item>
+        <item name="actionButtonStyle">?android:actionButtonStyle</item>
+        <item name="actionModeBackground">?android:actionModeBackground</item>
+        <item name="actionModeCloseDrawable">?android:actionModeCloseDrawable</item>
+        <item name="borderlessButtonStyle">?android:borderlessButtonStyle</item>
+        <item name="buttonStyle">?android:buttonStyle</item>
+        <item name="buttonStyleSmall">?android:buttonStyleSmall</item>
+        <item name="checkboxStyle">?android:checkboxStyle</item>
+        <item name="checkedTextViewStyle">?android:checkedTextViewStyle</item>
+        <item name="dividerHorizontal">?android:dividerHorizontal</item>
+        <item name="dividerVertical">?android:dividerVertical</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+        <item name="editTextColor">?android:editTextColor</item>
+        <item name="homeAsUpIndicator">?android:homeAsUpIndicator</item>
+        <item name="listChoiceBackgroundIndicator">?android:listChoiceBackgroundIndicator</item>
+        <item name="listPreferredItemHeightSmall">?android:listPreferredItemHeightSmall</item>
+        <item name="radioButtonStyle">?android:radioButtonStyle</item>
+        <item name="ratingBarStyle">?android:ratingBarStyle</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackgroundBorderless</item>
+        <item name="spinnerStyle">?android:spinnerStyle</item>
+        <item name="textAppearanceLargePopupMenu">?android:textAppearanceLargePopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">?android:textAppearanceSmallPopupMenu</item>
+    </style>
+    <style name="Base.V21.Theme.AppCompat.Light.Dialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="Base.V21.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V7.ThemeOverlay.AppCompat.Dialog">
+        <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="Platform.V21.AppCompat" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorLink">?android:colorAccent</item>
+        <item name="android:buttonBarStyle">?buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:colorAccent</item>
+    </style>
+    <style name="Platform.V21.AppCompat.Light" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorLink">?android:colorAccent</item>
+        <item name="android:buttonBarStyle">?buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:colorAccent</item>
+    </style>
+</resources>

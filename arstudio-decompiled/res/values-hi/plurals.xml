@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s पेज लाइक</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s लाइक</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d घंटे पहले</item>
+        <item quantity="one">1 घंटा पहले</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">अभी से %1$d घंटे</item>
+        <item quantity="one">अभी से 1 घंटा</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">अभी से %1$d मिनट</item>
+        <item quantity="one">अभी से 1 मिनट</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d मिनट पहले</item>
+        <item quantity="one">1 मिनट पहले</item>
+    </plurals>
+</resources>

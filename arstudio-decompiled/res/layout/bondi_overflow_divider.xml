@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/arplayer_terms_policy_padding_button_large" android:layout_marginLeft="@dimen/bondi_overflow_row_component_margin_horizontal" android:layout_marginRight="@dimen/bondi_overflow_row_component_margin_horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center_vertical" android:background="?fds_usage_divider" android:layout_width="fill_parent" android:layout_height="@dimen/action_sheet_native_base_section_divider_height" />
+</LinearLayout>

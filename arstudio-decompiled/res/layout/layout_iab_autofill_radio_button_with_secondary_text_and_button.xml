@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/radio_group_linear_layout" android:paddingRight="@dimen/abc_floating_window_z" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <X.4Qk android:textSize="@dimen/abc_text_size_title_material" android:textColor="?fds_usage_primary_text" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <X.4Qk android:textSize="@dimen/autofill_payment_autofill_save_subtitle2_text_size" android:textColor="@color/fig_usage_secondary_text" android:ellipsize="end" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" />
+    </LinearLayout>
+    <View android:id="@id/radio_icon" android:background="@drawable/radio_icon" android:duplicateParentState="true" android:layout_width="@dimen/browser_error_view_back_button_top_margin" android:layout_height="@dimen/browser_error_view_back_button_top_margin" />
+    <X.4OA android:textSize="@dimen/autofill_data_migration_disclosure_title" android:textStyle="bold" android:textColor="@color/cds_facebook_blue" android:id="@id/extra_btn" android:background="@drawable/autofill_edit_button_light_blue_background" android:paddingLeft="12.0dip" android:paddingTop="9.0dip" android:paddingRight="12.0dip" android:paddingBottom="9.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" />
+</merge>

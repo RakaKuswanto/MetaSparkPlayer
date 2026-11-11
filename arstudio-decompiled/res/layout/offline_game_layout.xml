@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<X.4KH android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/offline_game_game_area_layout" />
+    <include android:id="@id/offline_game_time_bonus_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/offline_game_user_alert_layout" />
+    <include android:id="@id/offline_game_overlay_menu_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/offline_game_overlay_menu_layout" />
+    <include android:id="@id/offline_game_top_row_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/abc_dialog_padding_material" layout="@layout/offline_game_top_row_layout" />
+</X.4KH>

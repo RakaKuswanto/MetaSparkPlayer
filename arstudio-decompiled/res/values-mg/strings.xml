@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="__external__browser_close_button_description">Hanakatona mpitety tranonkala</string>
+    <string name="__external__browser_lite_location_permission_prompt">Te-hampiasa ny toerana misy ny fitaovan-tseraseranao i %1$s.</string>
+    <string name="__external__browser_lite_partial_permission_unsupported">Mba omeo lalana ny haino vaky jery rehetra hampiasa fisafidianan-drakitra azafady.</string>
+    <string name="__external__browser_lite_permission_allow">Manome lalana</string>
+    <string name="__external__browser_lite_permission_block">Manakana</string>
+    <string name="__external__browser_ssl_error_message">"Misy olana ny sertifikà fiarovan'ity tranonkala ity"</string>
+    <string name="__external__browser_ssl_error_positive_button_text">Miverina</string>
+    <string name="__external__browser_ssl_error_title">"Tsy fetezan'ny fiarovana"</string>
+    <string name="__external__feed_browser_cannot_load_page">Tsy mety afatratra ilay Pejy</string>
+    <string name="__external__feed_browser_menu_item_open_with">"Sokafina amin'i…"</string>
+    <string name="__external__feed_browser_menu_item_open_with_specific_app">"Sokafina ao amin'i %1$s"</string>
+    <string name="__external__feed_browser_more_options">Safidy bebe kokoa</string>
+    <string name="__external__tabs_nux">Mampiasà vakizoro hanohizana ny fitetezana ireo rohy izay nosokafanao vao tsy ela.</string>
+    <string name="__external__tabs_tooltip_dialog_close">Manakatona info-bulle</string>
+    <string name="accessibility_search_clear">Mamafa ny soratra</string>
+    <string name="dialog_cancel">Manafoana</string>
+    <string name="dialog_close">Akatony</string>
+    <string name="dialog_dismiss">Tsy miraharaha</string>
+    <string name="generic_error_message">Nisy zavatra tsy nety. Andramo indray azafady.</string>
+    <string name="network_error_message">Zahao azafady ny fifandraisana aterinetonao ary andramo indray.</string>
+    <string name="processing">Eo am-pikarakarana…</string>
+    <string name="publish_invalid_tag_error_message">Misy tondro tsy mety ilay statut.</string>
+    <string name="report_error_button">Mitatitra hadisoana</string>
+</resources>

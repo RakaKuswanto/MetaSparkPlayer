@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>Mga Chat</item>
+        <item>I-block/I-unblock</item>
+        <item>Mga Tawag</item>
+        <item>Online na Status</item>
+        <item>Maghanap</item>
+        <item>Mga Notification</item>
+        <item>Tab ng Mga Highlight</item>
+        <item>Iba pa</item>
+    </string-array>
+</resources>

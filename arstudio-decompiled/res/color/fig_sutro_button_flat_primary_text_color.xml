@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:color="?fds_usage_disabled_text" />
+    <item android:state_pressed="true" android:color="?fds_usage_primary_button_pressed_background" />
+    <item android:color="?fds_usage_accent" />
+</selector>

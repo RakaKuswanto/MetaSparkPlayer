@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="__external__browser_close_button_description">Fufe burauza</string>
+    <string name="__external__browser_lite_location_permission_prompt">"%1$s na son yin amfani da wurin na'urarka."</string>
+    <string name="__external__browser_lite_partial_permission_unsupported">Daure ka ba duk midiya damar yin amfani da mai zaɓa fayil</string>
+    <string name="__external__browser_lite_permission_allow">Yarda</string>
+    <string name="__external__browser_lite_permission_block">Toshe</string>
+    <string name="__external__browser_ssl_error_message">Akwai matsaloli tattare da takardar shaidar tsaro na wannan shafin yanar gizon</string>
+    <string name="__external__browser_ssl_error_positive_button_text">Koma Baya</string>
+    <string name="__external__browser_ssl_error_title">Kuskuren tsaro</string>
+    <string name="__external__feed_browser_cannot_load_page">An kasa loda shafi</string>
+    <string name="__external__feed_browser_menu_item_open_with">Buɗe da...</string>
+    <string name="__external__feed_browser_menu_item_open_with_specific_app">Buɗe a cikin %1$s</string>
+    <string name="__external__feed_browser_more_options">Ƙarin zaɓuɓɓuka</string>
+    <string name="__external__tabs_nux">Yi amfani da madannai domin ka ci gaba da bincika kafafen da ka buɗe kwanan nan.</string>
+    <string name="__external__tabs_tooltip_dialog_close">Rufe saƙon da ke bayyana</string>
+    <string name="accessibility_search_clear">Share rubutu</string>
+    <string name="dialog_cancel">Soke</string>
+    <string name="dialog_close">Rufe</string>
+    <string name="dialog_dismiss">Kora</string>
+    <string name="generic_error_message">Wani abu ya sami matsala. Sake gwadawa.</string>
+    <string name="network_error_message">Ka ɗan Bincika Haɗin Intanet Ɗinka sannan ka Sake Gwadawa</string>
+</resources>

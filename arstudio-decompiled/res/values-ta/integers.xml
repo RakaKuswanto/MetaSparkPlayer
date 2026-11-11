@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="integer" name="language_line_height">@integer/language_line_height_tall</item>
+</resources>

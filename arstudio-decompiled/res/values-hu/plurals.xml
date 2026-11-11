@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s oldalkedvelés</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s kedvelés</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d órája</item>
+        <item quantity="one">1 órája</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%1$d óra múlva</item>
+        <item quantity="one">1 óra múlva</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%1$d perc múlva</item>
+        <item quantity="one">1 perc múlva</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d perce</item>
+        <item quantity="one">1 perce</item>
+    </plurals>
+</resources>

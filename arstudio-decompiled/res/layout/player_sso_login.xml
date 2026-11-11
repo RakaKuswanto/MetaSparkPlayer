@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<X.4KH android:background="@color/player_login_page_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <X.4KJ android:gravity="center" android:orientation="vertical" android:id="@id/login_logo_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/login_main_group" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <X.6H3 android:layout_width="96.0dip" android:layout_height="96.0dip" android:src="@drawable/ic_meta_player" />
+    </X.4KJ>
+    <X.4KJ android:gravity="center|top" android:orientation="vertical" android:id="@id/login_main_group" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <X.4Qk android:textSize="@dimen/fbui_text_size_large" android:textColor="@color/abc_decor_view_status_guard_light" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_facebook_description" />
+        <X.4OA android:id="@id/player_sso_login_button" android:layout_marginTop="24.0dip" style="@style/login_button" />
+        <X.4KI android:id="@id/player_sso_change_account_button" android:background="@color/player_login_login_button_background" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="24.0dip">
+            <X.4KJ android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <X.4OH android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fb_ic_app_facebook_circle_filled_20" app:glyphColor="@color/player_login_fb_icon" />
+                <X.4Qk android:textSize="@dimen/autofill_payment_autofill_save_subtitle2_text_size" android:textColor="@color/abc_decor_view_status_guard_light" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/msqrdplayer_sso_change_account" />
+            </X.4KJ>
+        </X.4KI>
+        <X.4Qk android:textSize="@dimen/autofill_data_migration_disclosure_description" android:textColor="@color/abc_decor_view_status_guard_light" android:gravity="center" android:id="@id/btn_signup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/login_sso_signup_message" />
+        <X.4KJ android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="44.0dip">
+            <X.4Qk android:theme="@style/ARPlayerCameraSelectableItemTheme" android:textAppearance="@style/TextAppearance.Fig.MediumSize.WhiteColor" android:textSize="@dimen/autofill_data_migration_disclosure_description" android:textColor="@color/abc_decor_view_status_guard_light" android:gravity="center" android:id="@id/btn_terms" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/msqrdplayer_login_terms_of_service" android:layout_weight="1.0" />
+            <X.4Qk android:theme="@style/ARPlayerCameraSelectableItemTheme" android:textAppearance="@style/TextAppearance.Fig.MediumSize.WhiteColor" android:textSize="@dimen/autofill_data_migration_disclosure_description" android:textColor="@color/abc_decor_view_status_guard_light" android:gravity="center" android:id="@id/btn_privacy_policy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/msqrdplayer_goto_privacy_policy_page" android:layout_weight="1.0" />
+        </X.4KJ>
+    </X.4KJ>
+    <X.4KI android:gravity="bottom" android:orientation="horizontal" android:id="@id/login_bottom_group" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_alignParentBottom="true">
+        <X.4Qk android:theme="@style/ARPlayerCameraSelectableItemTheme" android:textAppearance="@style/TextAppearance.Fig.MediumSize.WhiteColor" android:textSize="@dimen/autofill_payment_autofill_save_subtitle2_text_size" android:textStyle="bold" android:textColor="@color/abc_decor_view_status_guard_light" android:gravity="center" android:id="@id/btn_skip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_skip" />
+    </X.4KI>
+</X.4KH>

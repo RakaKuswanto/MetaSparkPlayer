@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s polubień strony</item>
+        <item quantity="one">%1$s polubienie strony</item>
+        <item quantity="few">%1$s polubienia strony</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s polubień</item>
+        <item quantity="one">%1$s polubienie</item>
+        <item quantity="few">%1$s polubienia</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%1$d godz. temu</item>
+        <item quantity="one">1 godz. temu</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%1$d godz. temu</item>
+        <item quantity="one">1 godz. temu</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%1$d min temu</item>
+        <item quantity="one">1 minutę temu</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%1$d min temu</item>
+        <item quantity="one">1 minutę temu</item>
+    </plurals>
+</resources>

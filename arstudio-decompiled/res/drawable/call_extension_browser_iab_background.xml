@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/abc_decor_view_status_guard_light" />
+            <corners android:topLeftRadius="@dimen/abc_floating_window_z" android:topRightRadius="@dimen/abc_floating_window_z" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:variablePadding="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="?fds_usage_secondary_button_background" />
+            <corners android:radius="@dimen/abc_action_bar_elevation_material" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/fbui_transparent" />
+            <corners android:radius="@dimen/abc_action_bar_elevation_material" />
+        </shape>
+    </item>
+</selector>

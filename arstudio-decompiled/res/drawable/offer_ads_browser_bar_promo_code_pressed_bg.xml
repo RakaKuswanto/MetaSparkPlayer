@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/bondi_security_icon_padding_right" />
+    <stroke android:width="@dimen/awareness_footer_divider_height" android:color="@color/fds_blue_45" android:dashWidth="@dimen/autofill_missing_payment_info_button_top_margin" android:dashGap="@dimen/abc_control_corner_material" />
+</shape>

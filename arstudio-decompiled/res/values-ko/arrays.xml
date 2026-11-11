@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="messaging_bug_report_problem_tags">
+        <item>채팅</item>
+        <item>차단/차단 해제</item>
+        <item>통화</item>
+        <item>활동 상태</item>
+        <item>검색</item>
+        <item>알림</item>
+        <item>하이라이트 탭</item>
+        <item>기타</item>
+    </string-array>
+</resources>

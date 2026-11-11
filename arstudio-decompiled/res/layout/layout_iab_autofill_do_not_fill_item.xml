@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/autofill_list_item_click_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <X.4Qk android:textAppearance="@style/headline4" android:id="@id/autofill_do_not_fill_item_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/__external__do_not_autofill" android:layout_weight="1.0" />
+    <X.4OB android:enabled="false" android:layout_gravity="center_vertical" android:id="@id/autofill_do_not_fill_item_radio_icon" android:focusable="false" android:clickable="false" android:layout_width="@dimen/abc_select_dialog_padding_start_material" android:layout_height="@dimen/abc_select_dialog_padding_start_material" android:button="@drawable/radio_icon" android:layout_weight="0.0" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%s Page likes</item>
+        <item quantity="one">%s Page like</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s Likes</item>
+        <item quantity="one">%1$s like</item>
+    </plurals>
+    <plurals name="fake_plural">
+        <item quantity="other">5</item>
+        <item quantity="zero">0</item>
+        <item quantity="one">1</item>
+        <item quantity="two">2</item>
+        <item quantity="few">3</item>
+        <item quantity="many">4</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">%d hours ago</item>
+        <item quantity="one">1 hour ago</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">%d hours from now</item>
+        <item quantity="one">1 hour from now</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">%d minutes from now</item>
+        <item quantity="one">1 minute from now</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d minutes ago</item>
+        <item quantity="one">1 minute ago</item>
+    </plurals>
+</resources>

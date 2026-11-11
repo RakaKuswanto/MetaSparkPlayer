@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="__external__bondi_personalized_footer_facebook_like_count">
+        <item quantity="other">%1$s gilla-markeringar för sida</item>
+        <item quantity="one">%1$s gilla-markering för sida</item>
+    </plurals>
+    <plurals name="__external__pages_surface_info_subtitle_like">
+        <item quantity="other">%1$s gilla-markeringar</item>
+        <item quantity="one">%1$s gilla-markering</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="other">För %1$d timmar sedan</item>
+        <item quantity="one">För 1 timme sedan</item>
+    </plurals>
+    <plurals name="time_in_x_hours">
+        <item quantity="other">om %1$d timmar</item>
+        <item quantity="one">om 1 timme</item>
+    </plurals>
+    <plurals name="time_in_x_minutes">
+        <item quantity="other">om %1$d minuter</item>
+        <item quantity="one">om 1 minut</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">För %1$d minuter sedan</item>
+        <item quantity="one">För 1 minut sedan</item>
+    </plurals>
+</resources>

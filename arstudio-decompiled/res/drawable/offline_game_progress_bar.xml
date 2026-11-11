@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="@dimen/abc_action_bar_overflow_padding_end_material" />
+            <solid android:color="@color/offline_game_blue" />
+            <stroke android:width="@dimen/bondi_security_icon_padding_right" android:color="@color/offline_game_blue" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress" android:left="@dimen/bondi_security_icon_padding_right" android:top="@dimen/bondi_security_icon_padding_right" android:right="@dimen/bondi_security_icon_padding_right" android:bottom="@dimen/bondi_security_icon_padding_right">
+        <clip>
+            <scale android:scaleWidth="100%">
+                <shape>
+                    <corners android:radius="@dimen/abc_action_bar_overflow_padding_end_material" />
+                    <solid android:color="@color/offline_game_light_green" />
+                </shape>
+            </scale>
+        </clip>
+    </item>
+</layer-list>

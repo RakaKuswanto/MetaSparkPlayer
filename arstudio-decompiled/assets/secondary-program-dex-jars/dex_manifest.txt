@@ -1,0 +1,2 @@
+Lsecondary/dex01/Canary;,ordinal=0,coldstart=0,extended=0,primary=0,scroll=0,background=0
+Lsecondary/dex02/Canary;,ordinal=1,coldstart=0,extended=0,primary=0,scroll=0,background=0

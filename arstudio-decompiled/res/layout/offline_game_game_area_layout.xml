@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/offline_game_spawning_locations" android:background="@color/fds_blue_65" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/row_layout" />
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/row_layout" />
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/row_layout" />
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/row_layout" />
+        <X.4KH android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ProgressBar android:layout_gravity="start" android:id="@id/offline_game_progress_bar" android:paddingLeft="@dimen/bondi_personalized_footer_reward_actiavtion_bottom_text_padding" android:layout_width="fill_parent" android:layout_height="@dimen/abc_select_dialog_padding_start_material" android:layout_margin="@dimen/autofill_payment_autofill_save_design_variant_action_button_top_margin" android:progressDrawable="@drawable/offline_game_progress_bar" android:paddingStart="@dimen/bondi_personalized_footer_reward_actiavtion_bottom_text_padding" style="@style/FbProgressHorizontal" />
+            <X.4Qk android:textSize="@dimen/abc_text_size_caption_material" android:textStyle="bold" android:gravity="center_horizontal" android:id="@id/offline_game_current_time_text" android:background="@drawable/offline_game_rounded_corner_text_view_blue" android:padding="@dimen/abc_button_padding_horizontal_material" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/abc_button_padding_horizontal_material" android:layout_marginTop="@dimen/abc_button_padding_horizontal_material" android:drawablePadding="@dimen/abc_button_padding_horizontal_material" android:layout_marginStart="@dimen/abc_button_padding_horizontal_material" />
+        </X.4KH>
+    </LinearLayout>
+</LinearLayout>

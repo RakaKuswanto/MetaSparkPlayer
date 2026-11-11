@@ -1,0 +1,27 @@
+.class public Lcom/facebook/mobileconfig/MobileConfigDependenciesInWearables;
+.super Ljava/lang/Object;
+.source ""
+
+
+# instance fields
+.field public final mHybridData:Lcom/facebook/jni/HybridData;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 0
+
+    .line 0
+    invoke-static {}, LX/0Yh;->A0l()V
+
+    .line 1
+    .line 2
+    .line 3
+    return-void
+.end method
+
+.method private native createManagerInternal(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/res/AssetManager;ZLcom/facebook/mobileconfig/MobileConfigManagerParamsHolder;Ljava/util/Map;)Lcom/facebook/mobileconfig/MobileConfigManagerHolderImpl;
+.end method
+
+.method public static native initHybrid(Lcom/facebook/common/jniexecutors/AndroidAsyncExecutorFactory;Lcom/facebook/tigon/iface/TigonServiceHolder;ZLcom/facebook/mobileconfig/MobileConfigCxxLogger;)Lcom/facebook/jni/HybridData;
+.end method

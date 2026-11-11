@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#66000000" />
+    <corners android:radius="@dimen/action_button_optional_padding_right" />
+    <size android:height="@dimen/abc_dialog_padding_material" android:width="@dimen/abc_dialog_padding_material" />
+    <padding android:left="@dimen/action_button_optional_padding_right" android:top="@dimen/arplayer_fps_pill_vertical_padding" android:right="@dimen/action_button_optional_padding_right" android:bottom="@dimen/arplayer_fps_pill_vertical_padding" />
+</shape>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <X.4OG android:id="@id/save_auto_fill_fb_logo" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="24.0dip" android:src="@drawable/fb_ic_app_facebook_circle_filled_32" fb:glyphColor="@color/fds_blue_35" />
+    <X.4Qk android:textSize="@dimen/fbui_text_size_xxxlarge_1" android:textStyle="bold" android:textColor="?fds_usage_primary_text" android:gravity="center" android:id="@id/save_autofill_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/abc_floating_window_z" android:layout_marginBottom="4.0dip" android:text="@string/__external__save_autofill_title" />
+</LinearLayout>

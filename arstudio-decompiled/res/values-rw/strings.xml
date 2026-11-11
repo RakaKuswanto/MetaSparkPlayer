@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="__external__browser_close_button_description">Gufunga mushakisha</string>
+    <string name="__external__browser_lite_location_permission_prompt">"%1$s irashaka gukoresha ahantu y'igikoresho cyawe."</string>
+    <string name="__external__browser_lite_partial_permission_unsupported">Emerera mediya zose gukoresha mutoranyadosiye</string>
+    <string name="__external__browser_lite_permission_allow">Kwemerera</string>
+    <string name="__external__browser_lite_permission_block">Guhagarika</string>
+    <string name="__external__browser_ssl_error_message">"Icyemezo cy'umutekano cy'uru rubuga gifite ibibazo"</string>
+    <string name="__external__browser_ssl_error_positive_button_text">Gusubira inyuma</string>
+    <string name="__external__browser_ssl_error_title">"Ikosa ry'umutekano"</string>
+    <string name="__external__feed_browser_cannot_load_page">Paji ntishobora gufunguka</string>
+    <string name="__external__feed_browser_menu_item_open_with">Gufunguza …</string>
+    <string name="__external__feed_browser_menu_item_open_with_specific_app">Gufungira muri %1$s</string>
+    <string name="__external__feed_browser_more_options">Andi mahitamo</string>
+    <string name="__external__tabs_nux">Koresha utudirishya kugira ngo ukomeze kureba amahuza uheruka gufungura.</string>
+    <string name="__external__tabs_tooltip_dialog_close">Gufunga ubufasha</string>
+    <string name="accessibility_search_clear">Gusiba umwandiko</string>
+    <string name="dialog_cancel">Kureka</string>
+    <string name="dialog_close">Gufunga</string>
+    <string name="dialog_dismiss">Kwanga</string>
+    <string name="dialog_ok">YEGO</string>
+    <string name="generic_error_message">Hari ikibazo cyabayeho. Ongera ugerageze.</string>
+    <string name="network_error_message">Suzuma ukwihuza kuri interineti kwawe, maze wongere ugerageze.</string>
+    <string name="ok">Yego</string>
+    <string name="processing">Kunonosora…</string>
+    <string name="publish_invalid_tag_error_message">Imimerere irimo uturango tutemewe.</string>
+    <string name="report_error_button">Menyekanisha ikosa</string>
+</resources>

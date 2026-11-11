@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/autofill_data_migration_disclosure_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/autofillDataMigrationDislosureLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <X.4Qk android:textAppearance="@style/autofillDataMigrationDisclosureTitle" android:id="@id/autofill_data_migration_disclosure_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="2.0sp" />
+    <X.4Qk android:textAppearance="@style/autofillDataMigrationDisclosureDescription" android:id="@id/autofill_data_migration_disclosure_description" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

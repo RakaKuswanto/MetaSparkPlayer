@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/bondi_moreinfo_contact_row" android:background="?selectableItemBackground" android:paddingLeft="@dimen/bondi_moreinfo_section_margin_horizontal" android:paddingTop="@dimen/abc_button_padding_horizontal_material" android:paddingBottom="@dimen/abc_button_padding_horizontal_material" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <X.4OG android:id="@id/bondi_moreinfo_contact_row_image" android:layout_width="@dimen/abc_select_dialog_padding_start_material" android:layout_height="@dimen/abc_select_dialog_padding_start_material" android:src="@drawable/__static_fb_ic_phone_filled_24" android:importantForAccessibility="no" fb:glyphColor="?fds_usage_secondary_icon" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/action_button_optional_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+        <X.4Qk android:textAppearance="@style/bondi_headline3Deemphasized" android:textColor="?fds_usage_blue_link" android:id="@id/bondi_moreinfo_contact_row_link" android:paddingBottom="@dimen/autofill_missing_payment_info_button_top_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="1-123-456-7890" android:importantForAccessibility="no" />
+        <X.4Qk android:textAppearance="@style/bondi_meta3" android:id="@id/bondi_moreinfo_contact_row_subtext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/__external__bondi_moreinfo_contact_title" android:importantForAccessibility="no" />
+    </LinearLayout>
+</LinearLayout>
