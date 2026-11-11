@@ -235,16 +235,24 @@ MetaSparkStudio/
 ├── brotli-dec.jar                        # Pure-Java library dekompresi Brotli stream
 ├── my-debug.keystore                     # Keystore penandatangan APK (alias: mykey)
 ├── build.bat                             # Script 1-klik build & sign APK
-├── DOKUMENTASI_REVERSE_ENGINEERING.md   # Dokumentasi teknis analisis & reversing lengkap
+├── docs/                                 # Dokumentasi komprehensif terstruktur
+│   ├── README.md                         # Indeks & arsitektur sistem end-to-end
+│   ├── 01_arsitektur_dan_format_filter.md# Spesifikasi format .arexport, .arfx, Brotli TAR
+│   ├── 02_reverse_engineering_android_player.md # Decompilasi APK, C++ Engine & ArfxLoader
+│   ├── 03_reverse_engineering_instagram_graphql.md # GraphQL Query hashes & CDN API
+│   ├── 04_panduan_spark_filter_manager.md # Panduan CLI, Unicode normalizer & katalog JSON
+│   └── 05_rebuild_sign_and_deployment.md  # Rebuild APK, signing & deployment ADB
+├── DOKUMENTASI_REVERSE_ENGINEERING.md   # Ringkasan teknis analisis & reversing lengkap
 └── README.md
 ```
 
 ---
 
-## 🔍 Detail Teknis & Alur Kerja
+## 🔍 Detail Teknis & Dokumentasi Lengkap
 
-Penjelasan lengkap mengenai struktur binary `.arexport`, dekompresi Brotli stream Instagram CDN, analisis error C++ `EffectsFrameworkException`, dan titik hooking smali dapat dibaca pada:
-👉 **[DOKUMENTASI_REVERSE_ENGINEERING.md](DOKUMENTASI_REVERSE_ENGINEERING.md)**
+Penjelasan lengkap mengenai struktur binary `.arexport`, dekompresi Brotli stream Instagram CDN, analisis error C++ `EffectsFrameworkException`, titik hooking smali, dan GraphQL API tersedia di:
+- 👉 **[DOKUMENTASI LENGKAP (docs/README.md)](docs/README.md)**
+- 👉 **[DOKUMENTASI REVERSE ENGINEERING RINGKAS (DOKUMENTASI_REVERSE_ENGINEERING.md)](DOKUMENTASI_REVERSE_ENGINEERING.md)**
 
 ---
 

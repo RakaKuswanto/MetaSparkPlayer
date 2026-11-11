@@ -239,4 +239,29 @@ adb install -r arstudio-modded.apk
    * *Solusi:* Pastikan proyek Spark Studio diekspor dengan menargetkan Android, atau ekstrak dan simpan varian uncompressed.
 
 ---
+
+## 9. Reverse Engineering Instagram GraphQL & CDN API
+
+Selain modifikasi lokal pada APK Android, protokol komunikasi Instagram dieksplorasi secara mendalam untuk mendukung pengunduhan langsung dan penjelajahan galeri filter AR:
+
+1. **Endpoint GraphQL:** `https://i.instagram.com/api/v1/wwwgraphql/ig/query/`
+2. **Kueri Resmi yang Ditemukan:**
+   - `IGAREffectsGalleryCategoriesQuery` (`336239785817217212229034758422`): Mengambil 8 kategori galeri resmi (`TRENDING`, `FOR_YOU`, `APPEARANCE`, `STUDIO`, `GAMES`, `HUMOR`, `SPECIAL_EFFECTS`, `SAVED`).
+   - `IGAREffectCollectionQuery` (`224196792816793989860755450137`): Mengambil daftar efek per kategori dengan URL CDN langsung, hash MD5, dan metadata manifest.
+   - `IGAREffectsByIdQuery` (`221300837212613742979169665279`): Query audit mendalam untuk memeriksa kapabilitas hardware, versi SDK asli, dan ukuran file.
+3. **Format Kompresi CDN:** File `.bin` dari CDN Instagram dikompresi dengan **Brotli TAR** (`TAR_BROTLI`). `spark_filter_manager.py` secara otomatis mendekompresi Brotli, mem-patch `requiredSdkVersion: "175.0"` pada `manifest.json`, dan membungkusnya ke ZIP `.arfx`.
+
+---
+
+## 10. Indeks Dokumentasi Teknis Terperinci (`docs/`)
+
+Untuk pembahasan arsitektur mendalam setiap modul, silakan merujuk ke dokumen terpisah pada folder [`docs/`](docs/):
+
+- 📖 **[docs/01_arsitektur_dan_format_filter.md](docs/01_arsitektur_dan_format_filter.md)**: Analisis format `.arexport`, `.arfx`, Brotli TAR, dan skema `manifest.json`.
+- 📖 **[docs/02_reverse_engineering_android_player.md](docs/02_reverse_engineering_android_player.md)**: Titik injeksi Smali, C++ Native Engine, dan implementasi `ArfxLoader.java`.
+- 📖 **[docs/03_reverse_engineering_instagram_graphql.md](docs/03_reverse_engineering_instagram_graphql.md)**: Parameter kueri GraphQL, bypass signature, dan penanganan error respons.
+- 📖 **[docs/04_panduan_spark_filter_manager.md](docs/04_panduan_spark_filter_manager.md)**: Arsitektur tool CLI, normalisasi font Unicode NFKD, katalog `informasi.json`, dan 9 perintah operasi.
+- 📖 **[docs/05_rebuild_sign_and_deployment.md](docs/05_rebuild_sign_and_deployment.md)**: Panduan rebuild APK, d8 DEX compiler, keystore signing, dan ADB Wireless.
+
+---
 *Dokumentasi ini dibuat untuk referensi pemeliharaan, pengembangan fitur lanjutan, dan reproduksi lingkungan build secara instan tanpa perlu reverse engineering ulang.*
