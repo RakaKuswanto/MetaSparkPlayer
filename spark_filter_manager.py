@@ -130,6 +130,10 @@ def process_ar_payload(raw_bytes, default_name="filter"):
                         out_zip.writestr(item, content)
                 return out_bio.getvalue(), effect_title
 
+    # Validasi jika yang terunduh adalah file gambar (thumbnail/profile pic)
+    if raw_bytes.startswith(b"\xff\xd8\xff") or raw_bytes.startswith(b"\x89PNG") or raw_bytes.startswith(b"RIFF"):
+        raise ValueError("Payload yang diunduh adalah file gambar/thumbnail (.jpg/.png), bukan file paket efek AR (.arfx).")
+
     # KASUS 2: File adalah Brotli TAR (Instagram CDN / .arfx raw)
     if brotli is None:
         raise RuntimeError("Library 'brotli' belum terpasang di Python. Jalankan: pip install brotli")
@@ -202,23 +206,45 @@ def push_filter_to_device(zip_bytes, filter_filename, launch=True):
 
 def extract_effect_download_info(json_data):
     """
-    Mencari URI download dan nama efek dari struktur JSON GraphQL Instagram secara rekursif.
+    Mencari URI download file efek AR (.arfx / TAR_BROTLI) dan nama efek dari struktur JSON GraphQL Instagram.
     """
-    found_uris = []
+    found_packages = []
     found_titles = []
 
     def _walk(item):
         if isinstance(item, dict):
+            # Cek field name / title
+            if "name" in item and isinstance(item["name"], str) and item["name"].strip():
+                found_titles.append(item["name"].strip())
+            elif "title" in item and isinstance(item["title"], str) and item["title"].strip():
+                found_titles.append(item["title"].strip())
+
+            # Cek apakah node ini memiliki best_instance -> packaged_file
+            if "best_instance" in item and isinstance(item["best_instance"], dict):
+                bi = item["best_instance"]
+                if "packaged_file" in bi and isinstance(bi["packaged_file"], dict):
+                    pf_uri = bi["packaged_file"].get("uri")
+                    if pf_uri and isinstance(pf_uri, str) and pf_uri.startswith("http"):
+                        found_packages.insert(0, pf_uri)
+
+            # Cek node packaged_file langsung
+            if "packaged_file" in item and isinstance(item["packaged_file"], dict):
+                pf = item["packaged_file"]
+                pf_uri = pf.get("uri")
+                if pf_uri and isinstance(pf_uri, str) and pf_uri.startswith("http"):
+                    found_packages.insert(0, pf_uri)
+
             for k, v in item.items():
-                if k in ("name", "title", "display_name") and isinstance(v, str) and len(v) > 0:
-                    found_titles.append(v)
                 if k in ("uri", "url", "download_url") and isinstance(v, str) and v.startswith("http"):
-                    # Prioritaskan file AR (.arfx, tar, brotli, lookaside, fbcdn)
-                    lower_v = v.lower()
-                    if any(s in lower_v for s in ["lookaside.fbsbx.com", "fbcdn.net", ".arfx", "tar", "brotli"]):
-                        found_uris.insert(0, v)
-                    else:
-                        found_uris.append(v)
+                    # Filter: Tolak semua file gambar atau video
+                    clean = v.split("?")[0].lower()
+                    if clean.endswith((".jpg", ".jpeg", ".png", ".webp", ".gif", ".mp4")):
+                        continue
+                    if any(bad in v.lower() for bad in ["profile_pic", "dst-jpg", "s150x150", "s300x300"]):
+                        continue
+                    # Prioritaskan link binary CDN
+                    if any(s in v.lower() for s in ["lookaside.fbsbx.com", "ardelivery", ".arfx", "package"]):
+                        found_packages.append(v)
                 else:
                     _walk(v)
         elif isinstance(item, list):
@@ -227,15 +253,7 @@ def extract_effect_download_info(json_data):
 
     _walk(json_data)
     title = found_titles[0] if found_titles else None
-    # Filter URI yang relevan (bukan foto profil / thumbnail kecil jika ada asset package)
-    best_uri = None
-    for u in found_uris:
-        if any(ext in u.lower() for ext in [".arfx", "lookaside.fbsbx.com", "ardelivery", "tar", "brotli"]):
-            best_uri = u
-            break
-    if not best_uri and found_uris:
-        best_uri = found_uris[0]
-
+    best_uri = found_packages[0] if found_packages else None
     return best_uri, title
 
 
@@ -246,6 +264,12 @@ def fetch_instagram_effect(effect_url_or_id, session_id=None):
     """
     # 1. Cek apakah input langsung merupakan direct CDN URL
     if effect_url_or_id.startswith("http") and any(k in effect_url_or_id for k in [".arfx", "fbcdn.net", "lookaside.fbsbx.com"]):
+        # Pastikan bukan URL gambar
+        clean_url = effect_url_or_id.split("?")[0].lower()
+        if clean_url.endswith((".jpg", ".jpeg", ".png", ".webp")):
+            print("[!] URL yang diberikan adalah URL gambar/thumbnail, bukan file paket filter.")
+            return None, None
+
         print(f"[*] Mengunduh langsung dari direct CDN URL: {effect_url_or_id}")
         session = requests.Session()
         dl_resp = session.get(effect_url_or_id, timeout=30)
@@ -283,10 +307,30 @@ def fetch_instagram_effect(effect_url_or_id, session_id=None):
     session = requests.Session()
     graphql_endpoint = "https://i.instagram.com/api/v1/wwwgraphql/ig/query/"
 
-    # Query 1: IGAREffectsByIdQuery (Query utama aplikasi Instagram)
+    # Parameter device capabilities dan target effect yang diwajibkan oleh backend GraphQL
+    device_caps = {
+        "manifest_capabilities": [
+            "faceTracker", "segmentation", "hairSegmentation", "worldTracker",
+            "bodyTracking", "bodyTracking3D", "deviceMotion", "halfFloatRenderPass",
+            "depthShaderRead", "multipleRenderTargets", "vertexTextureFetch",
+            "renderSettingsHigh", "sensor"
+        ],
+        "supported_sdk_versions": {"min_version": 100.0, "max_version": 204.0},
+        "supported_beta_sdk_versions": {"min_version": 182.0, "max_version": 202.0},
+        "texture_compression": "etc"
+    }
+    target_params = {
+        "effect_id": effect_id,
+        "crypto_hash": "",
+        "revision_id": ""
+    }
+
+    # Query 1: IGAREffectsByIdQuery (Query utama aplikasi Instagram yang mengembalikan packaged_file)
     print(f"[*] Menjalankan IGAREffectsByIdQuery...")
     headers["X-FB-Friendly-Name"] = "IGAREffectsByIdQuery"
     var1 = {
+        "device_capabilities": device_caps,
+        "target_effect_params": target_params,
         "requested_effect_ids": [effect_id],
         "target_effect_id": effect_id,
         "preview_width": 240,
@@ -294,7 +338,8 @@ def fetch_instagram_effect(effect_url_or_id, session_id=None):
         "include_preview_image": True,
         "supported_compression_types": ["TAR_BROTLI", "ZIP"],
         "surface_identity": "INSTAGRAM__DIRECT__RTC__EFFECTS_BY_ID",
-        "formatted_media_count_enabled": True
+        "formatted_media_count_enabled": True,
+        "supported_texture_formats": ["ETC", "ASTC", "UNCOMPRESSED"]
     }
     data1 = {
         "signed_body": "SIGNATURE.",
@@ -322,26 +367,18 @@ def fetch_instagram_effect(effect_url_or_id, session_id=None):
                     dl_resp = session.get(download_url, timeout=45)
                     if dl_resp.status_code == 200:
                         return dl_resp.content, effect_name
+                else:
+                    print("[-] Metadata ditemukan tapi paket download binary (.arfx) tidak tersedia.")
     except Exception as e:
         print(f"[-] Percobaan 1 gagal: {e}")
 
-    # Query 2: IGAREffectPreviewByIdQuery (Query pratinjau alternatif)
+    # Query 2: IGAREffectPreviewByIdQuery (Fallback)
     print(f"[*] Menjalankan IGAREffectPreviewByIdQuery (fallback)...")
     headers["X-FB-Friendly-Name"] = "IGAREffectPreviewByIdQuery"
     var2 = {
         "requested_effect_ids": [effect_id],
         "surface": "camera",
-        "device_capabilities": {
-            "manifest_capabilities": [
-                "faceTracker", "segmentation", "hairSegmentation", "worldTracker",
-                "bodyTracking", "bodyTracking3D", "deviceMotion", "halfFloatRenderPass",
-                "depthShaderRead", "multipleRenderTargets", "vertexTextureFetch",
-                "renderSettingsHigh", "sensor"
-            ],
-            "supported_sdk_versions": {"min_version": 100.0, "max_version": 204.0},
-            "supported_beta_sdk_versions": {"min_version": 182.0, "max_version": 202.0},
-            "texture_compression": "etc"
-        }
+        "device_capabilities": device_caps
     }
     data2 = {
         "signed_body": "SIGNATURE.",
