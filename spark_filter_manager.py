@@ -320,9 +320,7 @@ def fetch_instagram_effect(effect_url_or_id, session_id=None):
         "texture_compression": "etc"
     }
     target_params = {
-        "effect_id": effect_id,
-        "crypto_hash": "",
-        "revision_id": ""
+        "effect_id": effect_id
     }
 
     # Query 1: IGAREffectsByIdQuery (Query utama aplikasi Instagram yang mengembalikan packaged_file)
@@ -335,11 +333,9 @@ def fetch_instagram_effect(effect_url_or_id, session_id=None):
         "target_effect_id": effect_id,
         "preview_width": 240,
         "preview_height": 240,
-        "include_preview_image": True,
+        "include_preview_image": False,
         "supported_compression_types": ["TAR_BROTLI", "ZIP"],
-        "surface_identity": "INSTAGRAM__DIRECT__RTC__EFFECTS_BY_ID",
-        "formatted_media_count_enabled": True,
-        "supported_texture_formats": ["ETC", "ASTC", "UNCOMPRESSED"]
+        "formatted_media_count_enabled": False
     }
     data1 = {
         "signed_body": "SIGNATURE.",
@@ -354,8 +350,12 @@ def fetch_instagram_effect(effect_url_or_id, session_id=None):
         if resp.status_code == 200:
             res_json = resp.json()
             if "errors" in res_json and not res_json.get("data"):
-                err_msg = res_json["errors"][0].get("message", "")
-                print(f"[-] Respons GraphQL: {err_msg}")
+                err_obj = res_json["errors"][0]
+                err_msg = err_obj.get("message", "")
+                err_desc = err_obj.get("description", "")
+                err_summary = err_obj.get("summary", "")
+                err_path = err_obj.get("path", "")
+                print(f"[-] Respons GraphQL: {err_msg} ({err_summary}: {err_desc}, path: {err_path})")
                 if "logged out" in err_msg.lower() or "unauthorized" in err_msg.lower():
                     print("[!] Sesi Instagram diperlukan. Silakan sertakan --session \"<sessionid>\".")
             else:
@@ -368,26 +368,21 @@ def fetch_instagram_effect(effect_url_or_id, session_id=None):
                     if dl_resp.status_code == 200:
                         return dl_resp.content, effect_name
                 else:
-                    print("[-] Metadata ditemukan tapi paket download binary (.arfx) tidak tersedia.")
+                    print("[-] Metadata ditemukan di Query 1 tapi binary (.arfx) tidak tersedia.")
     except Exception as e:
         print(f"[-] Percobaan 1 gagal: {e}")
 
-    # Query 2: IGAREffectPreviewByIdQuery (Fallback)
-    print(f"[*] Menjalankan IGAREffectPreviewByIdQuery (fallback)...")
-    headers["X-FB-Friendly-Name"] = "IGAREffectPreviewByIdQuery"
-    var2 = {
-        "requested_effect_ids": [effect_id],
-        "surface": "camera",
-        "device_capabilities": device_caps
-    }
+    # Query 2: FetchSingleMaskEffectQuery (Query alternatif khusus efek kamera Instagram)
+    print(f"[*] Menjalankan FetchSingleMaskEffectQuery...")
+    headers["X-FB-Friendly-Name"] = "FetchSingleMaskEffectQuery"
+    var2 = {"effect_id": effect_id}
     data2 = {
         "signed_body": "SIGNATURE.",
-        "client_doc_id": "117635323116403746990375595472",
+        "client_doc_id": "19898698094692711960218578505",
         "strip_nulls": "true",
         "strip_defaults": "true",
         "variables": json.dumps(var2)
     }
-
     try:
         resp = session.post(graphql_endpoint, data=data2, headers=headers, cookies=cookies, timeout=15)
         if resp.status_code == 200:
@@ -402,6 +397,37 @@ def fetch_instagram_effect(effect_url_or_id, session_id=None):
                     return dl_resp.content, effect_name
     except Exception as e:
         print(f"[-] Percobaan 2 gagal: {e}")
+
+    # Query 3: IGAREffectPreviewByIdQuery (Fallback)
+    print(f"[*] Menjalankan IGAREffectPreviewByIdQuery (fallback)...")
+    headers["X-FB-Friendly-Name"] = "IGAREffectPreviewByIdQuery"
+    var3 = {
+        "requested_effect_ids": [effect_id],
+        "surface": "camera",
+        "device_capabilities": device_caps
+    }
+    data3 = {
+        "signed_body": "SIGNATURE.",
+        "client_doc_id": "117635323116403746990375595472",
+        "strip_nulls": "true",
+        "strip_defaults": "true",
+        "variables": json.dumps(var3)
+    }
+
+    try:
+        resp = session.post(graphql_endpoint, data=data3, headers=headers, cookies=cookies, timeout=15)
+        if resp.status_code == 200:
+            res_json = resp.json()
+            download_url, title = extract_effect_download_info(res_json)
+            if download_url:
+                effect_name = title or f"ig_{effect_id}"
+                print(f"[+] Ditemukan file efek '{effect_name}': {download_url}")
+                print(f"[*] Mengunduh paket filter dari CDN...")
+                dl_resp = session.get(download_url, timeout=45)
+                if dl_resp.status_code == 200:
+                    return dl_resp.content, effect_name
+    except Exception as e:
+        print(f"[-] Percobaan 3 gagal: {e}")
 
     return None, None
 
